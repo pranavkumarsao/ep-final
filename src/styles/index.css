@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -56,13 +56,13 @@ body {
 
 .leadership-carousel .slick-dots li button:before {
   font-size: 10px;
-  color: hsl(var(--primary));
+  color: var(--primary);
   opacity: 0.3;
 }
 
 .leadership-carousel .slick-dots li.slick-active button:before {
   opacity: 1;
-  color: hsl(var(--primary));
+  color: var(--primary);
 }
 
 .leadership-carousel .slick-prev,
@@ -83,7 +83,7 @@ body {
 .leadership-carousel .slick-prev:before,
 .leadership-carousel .slick-next:before {
   font-size: 30px;
-  color: hsl(var(--primary));
+  color: var(--primary);
   opacity: 0.6;
 }
 

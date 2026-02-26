@@ -125,11 +125,11 @@ export default function Philosophy() {
               }
               .dimensions-carousel .slick-dots li button:before {
                 font-size: 10px;
-                color: #7c3aed;
+                color: hsl(235 65% 45%);
                 opacity: 0.3;
               }
               .dimensions-carousel .slick-dots li.slick-active button:before {
-                color: #7c3aed;
+                color: hsl(235 65% 45%);
                 opacity: 1;
               }
             `}</style>

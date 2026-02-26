@@ -2,65 +2,92 @@
 
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --card: #faf9fc;
-  --card-foreground: #0f172a;
-  --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #7c3aed;
-  --primary-foreground: #ffffff;
-  --secondary: #f0f9ff;
-  --secondary-foreground: #0f172a;
-  --muted: #faf9fc;
-  --muted-foreground: #64748b;
-  --accent: #0ea5e9;
-  --accent-foreground: #ffffff;
-  --destructive: #dc2626;
-  --destructive-foreground: #ffffff;
-  --border: #e9e5f3;
+
+  /* ── Core surfaces ── */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(230 15% 18%);
+
+  /* ── Card & popover ── */
+  --card: hsl(230 20% 98%);
+  --card-foreground: hsl(230 15% 18%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(230 15% 18%);
+
+  /* ── Primary: deep indigo-purple ── */
+  --primary: hsl(235 65% 45%);
+  --primary-foreground: hsl(0 0% 100%);
+
+  /* ── Secondary: near-white with cool tint ── */
+  --secondary: hsl(230 20% 96%);
+  --secondary-foreground: hsl(230 15% 18%);
+
+  /* ── Muted ── */
+  --muted: hsl(230 15% 95%);
+  --muted-foreground: hsl(230 10% 50%);
+
+  /* ── Accent: light purple surface ── */
+  --accent: hsl(235 50% 93%);
+  --accent-foreground: hsl(235 65% 35%);
+
+  /* ── Destructive ── */
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+
+  /* ── Borders & inputs ── */
+  --border: hsl(230 20% 90%);
   --input: transparent;
-  --input-background: #faf9fc;
-  --switch-background: #e9e5f3;
+  --input-background: hsl(230 15% 95%);
+  --switch-background: hsl(230 20% 90%);
+
+  /* ── Focus ring ── */
+  --ring: hsl(235 65% 45%);
+
+  /* ── Typography ── */
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #7c3aed;
+
+  /* ── Charts ── */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --radius: 0.625rem;
-  --sidebar: #faf9fc;
-  --sidebar-foreground: #0f172a;
-  --sidebar-primary: #7c3aed;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f0f9ff;
-  --sidebar-accent-foreground: #0f172a;
-  --sidebar-border: #e9e5f3;
-  --sidebar-ring: #7c3aed;
+
+  /* ── Border radius — slightly tighter for minimal feel ── */
+  --radius: 0.5rem;
+
+  /* ── Sidebar ── */
+  --sidebar: hsl(230 20% 98%);
+  --sidebar-foreground: hsl(230 15% 18%);
+  --sidebar-primary: hsl(235 65% 45%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(235 50% 93%);
+  --sidebar-accent-foreground: hsl(235 65% 35%);
+  --sidebar-border: hsl(230 20% 90%);
+  --sidebar-ring: hsl(235 65% 45%);
 }
 
+/* Light-mode only — dark block mirrors root to prevent override */
 .dark {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --card: #faf9fc;
-  --card-foreground: #0f172a;
-  --popover: #ffffff;
-  --popover-foreground: #0f172a;
-  --primary: #7c3aed;
-  --primary-foreground: #ffffff;
-  --secondary: #f0f9ff;
-  --secondary-foreground: #0f172a;
-  --muted: #faf9fc;
-  --muted-foreground: #64748b;
-  --accent: #0ea5e9;
-  --accent-foreground: #ffffff;
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: #e9e5f3;
-  --input: #faf9fc;
-  --ring: #7c3aed;
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(230 15% 18%);
+  --card: hsl(230 20% 98%);
+  --card-foreground: hsl(230 15% 18%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(230 15% 18%);
+  --primary: hsl(235 65% 45%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(230 20% 96%);
+  --secondary-foreground: hsl(230 15% 18%);
+  --muted: hsl(230 15% 95%);
+  --muted-foreground: hsl(230 10% 50%);
+  --accent: hsl(235 50% 93%);
+  --accent-foreground: hsl(235 65% 35%);
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: hsl(230 20% 90%);
+  --input: hsl(230 15% 95%);
+  --ring: hsl(235 65% 45%);
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --chart-1: oklch(0.488 0.243 264.376);
@@ -68,14 +95,14 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: #faf9fc;
-  --sidebar-foreground: #0f172a;
-  --sidebar-primary: #7c3aed;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #f0f9ff;
-  --sidebar-accent-foreground: #0f172a;
-  --sidebar-border: #e9e5f3;
-  --sidebar-ring: #7c3aed;
+  --sidebar: hsl(230 20% 98%);
+  --sidebar-foreground: hsl(230 15% 18%);
+  --sidebar-primary: hsl(235 65% 45%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(235 50% 93%);
+  --sidebar-accent-foreground: hsl(235 65% 35%);
+  --sidebar-border: hsl(230 20% 90%);
+  --sidebar-ring: hsl(235 65% 45%);
 }
 
 @theme inline {
@@ -130,7 +157,7 @@
 
   /**
   * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  * These are in @layer base, so Tailwind utility classes automatically override them.
   */
 
   html {
@@ -139,23 +166,23 @@
 
   h1 {
     font-size: var(--text-2xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
+    font-weight: 600;
+    line-height: 1.4;
     letter-spacing: -0.03em;
   }
 
   h2 {
     font-size: var(--text-xl);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-    letter-spacing: -0.03em;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: -0.025em;
   }
 
   h3 {
     font-size: var(--text-lg);
-    font-weight: var(--font-weight-medium);
+    font-weight: 500;
     line-height: 1.5;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
   }
 
   h4 {
