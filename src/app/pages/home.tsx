@@ -1,319 +1,686 @@
-import { Link } from "react-router";
-import { motion } from "motion/react";
-import { ArrowRight, Eye, Target, Zap, Shield, Users, TrendingUp } from "lucide-react";
-import heroImage from "figma:asset/247e3ff07dddc08d184eb07a6a49e501cb6583d5.png";
+import { useState } from "react";
+import { X } from "lucide-react";
+import heroImage from "@/assets/hero-eagle.jpg";
+import teamImage from "@/assets/team-strategy.jpg";
+import convergenceImage from "@/assets/convergence.jpg";
+import nilakshiImage from "figma:asset/008ee0585922a486d8481eefd553bc58df96f193.png";
+import vivekImage from "figma:asset/e314a4604007185f64e5570d9eaf158f36bd7db1.png";
+import sharmilaImage from "figma:asset/d7b390df77c236edd7af98cfcfc0de6cbeaf3126.png";
+import sanjayImage from "figma:asset/99f74438f5e6de35e1279b2e820e51e4ff2e8d2f.png";
+import vikramImage from "figma:asset/ec0fdb2fa4f0f9f7ceb77f0bce5ef89e466acb0c.png";
+import vinayImage from "figma:asset/c58f54935fbc19bb013e0870062b46e2555d68ae.png";
+import vigyanImage from "figma:asset/8f5998d4cf6e8a4d3768d818eebaac5ee71f11be.png";
+import ronitaImage from "figma:asset/c93f1b93c3de091194dbffdc6c47f527c3efc269.png";
+import bipradeepImage from "figma:asset/66f34e1ef888f51e4e93588ff206041ef921f6f8.png";
+import dipanyitaImage from "figma:asset/99398e657e579b93569ae21a3c80a85d0fa8bbcc.png";
+
+// ─── Data ────────────────────────────────────────────────────────────────────
+
+const services = [
+  {
+    title: "Consumer & Market Intelligence",
+    tagline: "Seeing markets as systems, not snapshots",
+    items: [
+      "Market Entry & Expansion Strategy",
+      "Market Structure & Opportunity Mapping",
+      "Consumer Understanding & Behavioural Insight",
+      "Segmentation & Strategic Personas",
+      "Shopper, Channel & Path-to-Purchase",
+    ],
+  },
+  {
+    title: "Brand, Communication & Media Strategy",
+    tagline: "Building brands that remain relevant under pressure",
+    items: [
+      "Brand Equity & Diagnostic Assessment",
+      "Brand Positioning & Architecture",
+      "Communication Development & Evaluation",
+      "Media & ROI Intelligence",
+    ],
+  },
+  {
+    title: "Product, Innovation & Experience",
+    tagline: "Reducing risk while accelerating progress",
+    items: [
+      "Innovation Strategy & Opportunity Identification",
+      "Concept, Product & Service Development",
+      "Pricing & Revenue Strategy",
+      "Experience & Sensory Intelligence",
+    ],
+  },
+  {
+    title: "AI + Human Intelligence",
+    tagline: "Scale through technology. Direction through strategy.",
+    items: [
+      "Large-scale data analysis & pattern detection",
+      "Structured & unstructured data integration",
+      "Early signal detection & emerging trends",
+      "Contextual strategic interpretation",
+    ],
+  },
+  {
+    title: "Integrated Solutions",
+    tagline: "Designed to converge, not fragment",
+    items: [
+      "Multi-lens convergence frameworks",
+      "Cross-functional insight synthesis",
+      "One coherent strategic narrative",
+      "Leadership alignment & momentum",
+    ],
+  },
+];
+
+const steps = [
+  {
+    num: "01",
+    title: "Strategic Framing",
+    desc: "We align on decision scope, success criteria, time horizons, and key uncertainties. This creates a shared definition of the problem.",
+  },
+  {
+    num: "02",
+    title: "Insight Architecture Design",
+    desc: "We determine which lenses are essential, which data sources are required, and where depth is needed versus breadth.",
+  },
+  {
+    num: "03",
+    title: "Integrated Analysis",
+    desc: "Inputs are analysed both independently and collectively. Contradictions are explored. Patterns are tested across lenses.",
+  },
+  {
+    num: "04",
+    title: "Strategy-led Convergence",
+    desc: "We integrate findings into clear strategic choices, explicit trade-offs, and prioritised pathways. We take responsibility for recommending a way forward.",
+  },
+  {
+    num: "05",
+    title: "Implications & Alignment",
+    desc: "We articulate what this strategy enables, what it deprioritises, and what changes in behaviour or investment are required.",
+  },
+];
+
+const engagementTypes = [
+  {
+    title: "Rapid Strategic Sprints",
+    desc: "Time-sensitive decisions, market shocks, leadership alignment under pressure.",
+  },
+  {
+    title: "Deep Strategic Programmes",
+    desc: "Category redefinition, portfolio resets, market entry or transformation initiatives.",
+  },
+  {
+    title: "Ongoing Strategic Partnerships",
+    desc: "Continuous sensing of change, strategic interpretation, trusted external perspective.",
+  },
+];
+
+interface Leader {
+  name: string;
+  role: string;
+  bio: string;
+  expertise: string[];
+  linkedin: string;
+  image?: string;
+}
+
+const leaders: Leader[] = [
+  {
+    name: "Vivek Gupta",
+    role: "Founder & Managing Partner",
+    bio: "Vivek leads Eagle Perspectives with a clear belief: insight must converge into strategy, and strategy must enable action. With over two decades of experience across market research, analytics, and strategic advisory roles, Vivek has worked across consumer goods, services, technology, financial services, and emerging categories.",
+    expertise: [
+      "Strategic framing of client questions",
+      "Integration and synthesis of diverse inputs",
+      "Development of clear strategic pathways",
+      "Leadership alignment and decision support",
+    ],
+    linkedin: "https://www.linkedin.com/in/vivek-gupta-4608065/",
+    image: vivekImage,
+  },
+  {
+    name: "Nilakshi Sengupta",
+    role: "Partner – Consumer & Cultural Insights",
+    bio: "Nilakshi brings deep expertise in qualitative research, cultural analysis, and behavioural understanding. Her work focuses on uncovering the underlying motivations, tensions, and contextual drivers that shape consumer behaviour.",
+    expertise: [
+      "Deep qualitative and ethnographic programmes",
+      "Cultural and semiotic interpretation",
+      "Consumer immersion and narrative synthesis",
+    ],
+    linkedin: "https://www.linkedin.com/in/findnilakshi/",
+    image: nilakshiImage,
+  },
+  {
+    name: "Sharmila Das",
+    role: "Partner – Brand & Strategic Intelligence",
+    bio: "Sharmila specialises in brand strategy, equity measurement, and long-term brand building. With extensive experience across categories and markets, she brings a sharp strategic lens to brand positioning, architecture, and communication effectiveness.",
+    expertise: [
+      "Brand diagnostics and equity frameworks",
+      "Positioning and portfolio strategy",
+      "Communication development and evaluation",
+    ],
+    linkedin: "https://www.linkedin.com/in/sharmila-das-a642293/",
+    image: sharmilaImage,
+  },
+  {
+    name: "Sanjay Pal",
+    role: "Partner – Analytics & Strategic Intelligence",
+    bio: "Sanjay leads advanced analytics and AI-enabled intelligence at Eagle Perspectives. His expertise lies in translating complex data into meaningful insight that supports strategic decisions.",
+    expertise: [
+      "Advanced modelling and analytics",
+      "Integration of structured and unstructured data",
+      "AI-enabled pattern detection and foresight",
+    ],
+    linkedin: "https://www.linkedin.com/in/sanjay2609/",
+    image: sanjayImage,
+  },
+  {
+    name: "Vikram Jain",
+    role: "Partner – Product Innovation & Strategic Intelligence",
+    bio: "Vikram specialises in product innovation, consumer-led development, and translating market insight into tangible product strategies. He works closely with organisations to shape product roadmaps and innovation pipelines that deliver meaningful consumer value.",
+    expertise: [
+      "Product innovation and development strategy",
+      "Consumer need identification and solution mapping",
+      "Strategic evaluation of innovation opportunities",
+    ],
+    linkedin: "https://www.linkedin.com/in/vikram-jain123/",
+    image: vikramImage,
+  },
+  {
+    name: "Vinay Pant",
+    role: "Partner – Growth Strategy & Consumer Leadership",
+    bio: "Vinay focuses on growth strategy, consumer understanding, and translating market insight into decisive business direction. He works closely with senior leadership teams to align consumer-led thinking with commercial priorities and long-term growth ambitions.",
+    expertise: [
+      "Consumer-led growth and market expansion strategy",
+      "Strategic brand and portfolio direction",
+      "Go-to-market and commercial prioritisation",
+    ],
+    linkedin: "https://www.linkedin.com/in/vinay-pant-5682625/",
+    image: vinayImage,
+  },
+  {
+    name: "Vigyan Verma",
+    role: "Partner – Brand, Marketing & Strategic Intelligence",
+    bio: "Vigyan brings more than two decades of leadership experience in brand strategy, marketing, and communications across global and Indian contexts. He has served in senior roles at major advertising and marketing organisations, where he led brand transformation, strategic positioning, and growth initiatives.",
+    expertise: [
+      "Brand strategy and positioning frameworks",
+      "Marketing and communication strategy integration",
+      "Strategic interpretation of consumer insight",
+    ],
+    linkedin: "https://www.linkedin.com/in/vigyanverma/",
+    image: vigyanImage,
+  },
+  {
+    name: "Ronita Mitra",
+    role: "Partner – Brand & Strategic Growth",
+    bio: "Ronita brings extensive leadership experience in brand strategy, consumer understanding, and strategic marketing direction across consumer goods, financial services, and telecommunications. She has held senior roles driving brand transformation, communication strategy, and growth initiatives in complex markets.",
+    expertise: [
+      "Brand strategy and positioning frameworks",
+      "Consumer experience and strategic response planning",
+      "Integration of market insight into strategic business actions",
+    ],
+    linkedin: "https://www.linkedin.com/in/ronita-mitra-4891713/",
+    image: ronitaImage,
+  },
+  {
+    name: "Venkatnath Kukillaya",
+    role: "Partner – Strategic Operations & Delivery",
+    bio: "Brings deep expertise in managing complex, multi-market research programmes with a strong focus on execution quality and operational rigour.",
+    expertise: [
+      "Strategic operations and programme delivery",
+      "Data quality governance",
+      "Multi-market research coordination",
+    ],
+    linkedin: "https://www.linkedin.com/in/venkatnathkukillaya/",
+  },
+  {
+    name: "Bipradeep Chakraborty",
+    role: "Partner – Consumer Insights & Strategic Analytics",
+    bio: "Extensive experience in consumer research and analytics, supporting strategic decision-making across brand, innovation, and market understanding.",
+    expertise: [
+      "Consumer insight synthesis",
+      "Strategic segmentation and targeting",
+      "Analytics-driven strategic decision support",
+    ],
+    linkedin: "https://www.linkedin.com/in/bipradeep-chakraborty-b1662b4/",
+    image: bipradeepImage,
+  },
+  {
+    name: "Dipanyita Ray",
+    role: "Partner – Strategic Research & Insight Integration",
+    bio: "Specialises in integrating quantitative and qualitative research to deliver clear, actionable insight aligned to business strategy.",
+    expertise: [
+      "Integrated research design",
+      "Insight synthesis and integration",
+      "Strategic implications and recommendations",
+    ],
+    linkedin: "https://www.linkedin.com/in/dipanyitaray/",
+    image: dipanyitaImage,
+  },
+];
+
+const values = [
+  { title: "Strategy First", desc: "Every engagement is anchored in the decision that needs to be made. Insight serves strategy—not the other way around." },
+  { title: "Plurality with Purpose", desc: "We actively seek diverse perspectives, methodologies, and viewpoints—but always with the intent of convergence and clarity." },
+  { title: "Rigour without Rigidity", desc: "We uphold high standards of quality and discipline while remaining flexible and responsive to client needs." },
+  { title: "Ownership of Outcomes", desc: "We take responsibility for synthesis, prioritisation, and recommendation. We do not leave clients to connect the dots alone." },
+  { title: "Learning as a Constant", desc: "Markets evolve. Tools evolve. We invest continuously in learning, capability building, and staying ahead." },
+];
+
+const differentiators = [
+  {
+    title: "Designed to converge, not just inform",
+    description:
+      "Most insight organisations optimise for production. Eagle Perspectives is optimised for decision-making. We integrate multiple inputs into one narrative, balance speed with rigour, and take ownership of synthesis.",
+  },
+  {
+    title: "Senior-led by design",
+    description:
+      "Every engagement is shaped and led by senior practitioners with decades of experience across categories and markets. This ensures consistency, relevance, and strategic depth throughout.",
+  },
+  {
+    title: "Flexible, modular, and responsive",
+    description:
+      "Fast, focused solutions when time is critical. Deep, scenario-based strategy when stakes are high. Value-for-money structures without compromising quality. Our model adapts to the question at hand.",
+  },
+];
+
+// ─── Page ────────────────────────────────────────────────────────────────────
 
 export default function Home() {
-  const fadeInUp = {
-    initial: { opacity: 0, y: 30 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.6 },
-  };
-
-  const staggerChildren = {
-    animate: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+  const [selectedLeader, setSelectedLeader] = useState<Leader | null>(null);
 
   return (
-    <div className="pt-20">
-      {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-        {/* Background Image */}
+    <div>
+      {/* ── Hero ── */}
+      <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={heroImage}
-            alt=""
-            className="w-full h-full object-cover object-center grayscale"
+            alt="Aerial city view representing strategic perspective"
+            className="w-full h-full object-cover photo-filter opacity-30"
           />
-          {/* Heavy white overlay */}
-          <div className="absolute inset-0 bg-white/80"></div>
-          {/* Gradient: fully white at top, fading to lighter mid */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-white/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
         </div>
 
-        {/* Content */}
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 w-full text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-5 sm:mb-6"
-          >
-            <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-primary/10 border border-primary/20 rounded-full text-primary text-xs sm:text-sm font-medium tracking-wide">
-              Strategic Intelligence for Modern Leaders
-            </div>
-          </motion.div>
-
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold mb-5 sm:mb-6 leading-tight text-foreground"
-          >
-            <span className="block">Plurality in <span className="text-primary">Perspectives.</span></span>
-            <span className="block">Clarity in <span className="text-primary">Convergence.</span></span>
-          </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto"
-          >
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
+          <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-8">
+            Strategic Intelligence & Insight
+          </p>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            <span className="text-primary-gradient">Plurality</span> in Perspectives.
+            <br />
+            <span className="text-primary-gradient">Clarity</span> in Convergence.
+          </h1>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
             We help organisations convert complexity into clarity—and clarity into strategy.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
-          >
-            <Link
-              to="/work-with-us"
-              className="group w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-primary/20"
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="#contact"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] transition-colors"
             >
-              <span className="font-medium text-sm sm:text-base">Start a Strategic Conversation</span>
-              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/philosophy"
-              className="w-full sm:w-auto px-6 sm:px-7 py-3 sm:py-3.5 bg-white border border-border text-foreground rounded-lg hover:bg-secondary/50 transition-all duration-300 flex items-center justify-center text-sm sm:text-base"
+              Start a Strategic Conversation
+            </a>
+            <a
+              href="#philosophy"
+              className="inline-flex items-center justify-center px-8 py-3.5 border border-border text-foreground text-sm font-medium tracking-wide hover:border-primary hover:text-primary transition-colors"
             >
-              <span className="font-medium">Explore Our Approach</span>
-            </Link>
-          </motion.div>
+              Explore Our Approach
+            </a>
+          </div>
         </div>
       </section>
 
-      {/* The Challenge */}
-      <section className="py-14 md:py-20 lg:py-28 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-            className="max-w-4xl mx-auto text-center mb-10 sm:mb-14"
-          >
-            <motion.h2
-              variants={fadeInUp}
-              className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6"
-            >
-              The hardest thing to achieve is still{" "}
-              <span className="text-primary">decisiveness</span>
-            </motion.h2>
-            <motion.p variants={fadeInUp} className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-              Despite an abundance of data, tools, and analytics, organisations struggle with
-              convergence. Research outputs multiply. Dashboards compete. Teams interpret the same
-              signals differently. Complexity increases, but confidence does not.
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-            className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
-          >
-            {[
-              {
-                icon: Eye,
-                title: "The Problem",
-                description: "Not the lack of information, but the lack of convergence.",
-              },
-              {
-                icon: Target,
-                title: "The Need",
-                description: "Clarity, prioritisation, and a defensible strategy.",
-              },
-              {
-                icon: Zap,
-                title: "The Solution",
-                description: "Strategy-led synthesis that enables confident action.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="bg-secondary border border-border rounded-xl p-6 sm:p-8 hover:border-primary/30 transition-all duration-300"
-              >
-                <item.icon className="w-10 h-10 sm:w-12 sm:h-12 text-primary mb-4" />
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{item.title}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* When Clients Call Us */}
-      <section className="py-14 md:py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-            className="max-w-3xl mb-10 sm:mb-14"
-          >
-            <motion.h2
-              variants={fadeInUp}
-              className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6"
-            >
-              When organisations work with us
-            </motion.h2>
-            <motion.p variants={fadeInUp} className="text-base sm:text-lg text-muted-foreground">
-              We step in when clarity matters most and the path forward is not obvious.
-            </motion.p>
-          </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6"
-          >
-            {[
-              "Markets are evolving faster than planning cycles",
-              "Consumer behaviour appears contradictory or unstable",
-              "Growth opportunities are visible but difficult to prioritise",
-              "Strategic choices carry high financial or reputational risk",
-              "Leadership teams need alignment, not more debate",
-              "Decisions are delayed while data accumulates",
-            ].map((scenario, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="flex items-start space-x-3 sm:space-x-4 p-4 sm:p-6 bg-card border border-border rounded-lg hover:border-primary/30 transition-all duration-300"
-              >
-                <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">{scenario}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* What We Do Differently */}
-      <section className="py-14 md:py-20 lg:py-28 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-            className="text-center mb-10 sm:mb-14"
-          >
-            <motion.h2
-              variants={fadeInUp}
-              className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6"
-            >
-              What makes us <span className="text-primary">different</span>
-            </motion.h2>
-          </motion.div>
-
-          <motion.div
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-            variants={staggerChildren}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8"
-          >
-            {[
-              {
-                icon: Target,
-                title: "Designed to Converge",
-                description:
-                  "We integrate multiple inputs into one narrative. Our optimization is for decision-making, not production.",
-              },
-              {
-                icon: Users,
-                title: "Senior-Led by Design",
-                description:
-                  "Every engagement is shaped and led by senior practitioners with decades of cross-category experience.",
-              },
-              {
-                icon: Shield,
-                title: "Ownership of Synthesis",
-                description:
-                  "We take responsibility for strategy-led convergence. We don't leave prioritisation to chance.",
-              },
-              {
-                icon: Zap,
-                title: "AI + Human Intelligence",
-                description:
-                  "We combine AI-enabled pattern detection with experienced strategic leadership for clarity at scale.",
-              },
-              {
-                icon: TrendingUp,
-                title: "Flexible & Responsive",
-                description:
-                  "Our operating model adapts to the question at hand—fast sprints or deep strategic programmes.",
-              },
-              {
-                icon: Eye,
-                title: "The Eagle Perspective",
-                description:
-                  "We see widely across markets and signals, but act decisively with precision and clarity.",
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="bg-secondary border border-border rounded-xl p-6 sm:p-8 hover:border-primary/30 hover:bg-secondary/80 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors">
-                  <item.icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
-                </div>
-                <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">{item.title}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-14 md:py-20 lg:py-28">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-8 sm:p-12 md:p-16 text-center"
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4 sm:mb-6">
-              Navigate complexity with <span className="text-primary">clarity</span>
+      {/* ── About ── */}
+      <section id="about" className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">About Us</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              Built for complexity.{" "}
+              <span className="text-primary-gradient">Designed for decisiveness.</span>
             </h2>
-            <p className="text-base sm:text-lg text-muted-foreground mb-8 sm:mb-10 max-w-2xl mx-auto">
-              When decisions matter, perspective matters. Let's define the way forward together.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Link
-                to="/work-with-us"
-                className="group w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg shadow-primary/20"
-              >
-                <span className="font-medium">Start a Conversation</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/leadership"
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-secondary border border-border text-foreground rounded-lg hover:bg-secondary/80 transition-all duration-300 flex items-center justify-center"
-              >
-                <span className="font-medium">Meet the Leadership Team</span>
-              </Link>
+            <div className="section-divider" />
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+            <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
+              <p>
+                The structure of markets has fundamentally changed. Consumers today do not behave in linear or predictable ways. Their choices vary by context, occasion, channel, price sensitivity, and cultural environment.
+              </p>
+              <p>
+                Despite this complexity, one requirement remains unchanged: <strong className="text-foreground">organisations still need singular strategies.</strong> They need clarity on where to play and where not to. They need prioritisation when resources are constrained. They need alignment across leadership teams.
+              </p>
+              <p>
+                Eagle Perspectives was founded to bridge the widening gap between complexity and decisiveness. We are a one-stop insights and strategic intelligence partner designed to integrate diverse perspectives without passing complexity on to our clients.
+              </p>
+              <div className="pt-4 space-y-2 border-l-2 border-primary/20 pl-6">
+                <p className="text-foreground font-medium text-sm">We are not a data vendor.</p>
+                <p className="text-foreground font-medium text-sm">We are not a research factory.</p>
+                <p className="text-foreground font-medium text-sm">We are not a dashboard provider.</p>
+                <p className="text-primary font-semibold text-sm mt-3">We are a strategic partner for leaders who value rigour, integration, and clarity.</p>
+              </div>
             </div>
-          </motion.div>
+
+            <div className="relative">
+              <img
+                src={teamImage}
+                alt="Strategic boardroom discussion"
+                className="w-full aspect-[4/3] object-cover photo-filter"
+              />
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary" />
+            </div>
+          </div>
         </div>
       </section>
+
+      {/* ── Philosophy ── */}
+      <section id="philosophy" className="py-24 lg:py-32 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Philosophy</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              The <span className="text-primary-gradient">Eagle</span> Perspective
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Plurality is the input. Singularity is the output. Strategy is the destination.
+            </p>
+            <div className="section-divider-center mt-6" />
+          </div>
+
+          <div className="relative mb-16 max-w-4xl mx-auto">
+            <img
+              src={convergenceImage}
+              alt="Convergence of multiple perspectives into one"
+              className="w-full aspect-[21/9] object-cover photo-filter"
+            />
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                An eagle does not see the world in fragments. From its vantage point, it integrates distance, depth, movement, and contrast into a single coherent view. It filters relentlessly—ignoring what does not matter, focusing only on what does.
+              </p>
+              <p>
+                We believe plurality of perspectives is essential. No single dataset, methodology, or analytical lens can explain modern markets. Quantitative data must be complemented by qualitative depth. AI-enabled pattern recognition must be interpreted through experience and commercial understanding.
+              </p>
+            </div>
+            <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <p>
+                However, <strong className="text-foreground">plurality without convergence creates paralysis.</strong> Too often, organisations are left with multiple truths and no clear direction. Different teams draw different conclusions from the same evidence.
+              </p>
+              <p>
+                Our role is to prevent that outcome. We take responsibility for strategy-led convergence. We integrate evidence, experience, and business reality to arrive at <strong className="text-foreground">one clear way forward.</strong>
+              </p>
+              <p className="text-primary font-medium text-sm pt-2">
+                The Eagle Perspective is about seeing widely—and acting decisively.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Differentiators ── */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">What Makes Us Different</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Designed to <span className="text-primary-gradient">converge</span>, not just inform
+            </h2>
+            <div className="section-divider" />
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {differentiators.map((item, i) => (
+              <div
+                key={i}
+                className="group relative p-8 border border-border hover:border-primary/30 transition-colors"
+              >
+                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                <span className="text-5xl font-bold text-primary/10 mb-4 block">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <h3 className="text-lg font-semibold mb-3">{item.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Services ── */}
+      <section id="services" className="py-24 lg:py-32 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Services</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              One partner. Every insight.{" "}
+              <span className="text-primary-gradient">One clear way forward.</span>
+            </h2>
+            <p className="text-muted-foreground">
+              An integrated suite of insight and strategy services across the full decision lifecycle.
+            </p>
+            <div className="section-divider-center mt-6" />
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {services.map((service, i) => (
+              <div
+                key={i}
+                className={`bg-background p-8 border border-border hover:shadow-lg transition-shadow ${
+                  i === 4 ? "md:col-span-2 lg:col-span-1" : ""
+                }`}
+              >
+                <h3 className="text-lg font-semibold mb-1">{service.title}</h3>
+                <p className="text-xs text-primary font-medium tracking-wide mb-5">{service.tagline}</p>
+                <ul className="space-y-2.5">
+                  {service.items.map((item, j) => (
+                    <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <span className="w-1 h-1 rounded-full bg-primary mt-2 shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── How We Work ── */}
+      <section id="how-we-work" className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">How We Work</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our <span className="text-primary-gradient">Strategic Synthesis</span> Model
+            </h2>
+            <p className="text-muted-foreground">
+              Every engagement begins with clarifying the decision that needs to be made—not with tools, templates, or methodologies.
+            </p>
+            <div className="section-divider mt-6" />
+          </div>
+
+          <div className="space-y-0 mb-24">
+            {steps.map((step, i) => (
+              <div
+                key={i}
+                className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-4 py-8 border-b border-border group"
+              >
+                <span className="text-3xl md:text-4xl font-bold text-primary/15 group-hover:text-primary/40 transition-colors">
+                  {step.num}
+                </span>
+                <div>
+                  <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="max-w-3xl">
+            <h3 className="text-2xl font-bold mb-8">
+              Engagement <span className="text-primary-gradient">Types</span>
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {engagementTypes.map((type, i) => (
+                <div key={i} className="border-l-2 border-primary/20 pl-5">
+                  <h4 className="font-semibold mb-2 text-sm">{type.title}</h4>
+                  <p className="text-xs text-muted-foreground leading-relaxed">{type.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Leadership ── */}
+      <section id="leadership" className="py-24 lg:py-32 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Leadership</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              Built by leaders who have{" "}
+              <span className="text-primary-gradient">navigated complexity</span> before
+            </h2>
+            <div className="section-divider-center mt-6" />
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {leaders.map((leader, i) => (
+              <div
+                key={i}
+                onClick={() => setSelectedLeader(leader)}
+                className="bg-background p-8 border border-border group hover:border-primary/20 transition-colors cursor-pointer"
+              >
+                <div className="w-12 h-12 bg-primary/5 border border-primary/10 flex items-center justify-center mb-5">
+                  <span className="text-sm font-bold text-primary">
+                    {leader.name.split(" ").map((n) => n[0]).join("")}
+                  </span>
+                </div>
+                <h3 className="text-base font-semibold">{leader.name}</h3>
+                <p className="text-xs text-primary font-medium tracking-wide mb-3">{leader.role}</p>
+                <p className="text-xs text-muted-foreground leading-relaxed">{leader.bio}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Values ── */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Culture & Values</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              What defines <span className="text-primary-gradient">how we work</span>
+            </h2>
+            <div className="section-divider" />
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {values.map((v, i) => (
+              <div key={i} className="border-t-2 border-primary/15 pt-5">
+                <h3 className="text-sm font-semibold mb-2">{v.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{v.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Contact ── */}
+      <section id="contact" className="py-24 lg:py-32 bg-foreground">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <p className="text-xs tracking-[0.3em] uppercase text-[hsl(235_65%_55%)] font-medium mb-4">
+            Let's Talk
+          </p>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-background">
+            See the bigger picture.
+            <br />
+            Decide with confidence.
+          </h2>
+          <p className="text-base text-background/60 max-w-xl mx-auto mb-10 leading-relaxed">
+            When decisions matter, perspective matters. Let's define the way forward—together.
+          </p>
+          <a
+            href="mailto:contact@eagleperspectives.com"
+            className="inline-flex items-center justify-center px-10 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_65%_55%)] transition-colors"
+          >
+            Start a Strategic Conversation
+          </a>
+        </div>
+      </section>
+
+      {/* ── Leader Modal ── */}
+      {selectedLeader && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-4"
+          onClick={() => setSelectedLeader(null)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-background border border-border max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl"
+          >
+            <div className="sticky top-0 bg-background border-b border-border px-8 py-5 flex items-center justify-between z-10">
+              <h3 className="text-xl font-semibold">{selectedLeader.name}</h3>
+              <button
+                onClick={() => setSelectedLeader(null)}
+                className="p-1.5 hover:bg-secondary transition-colors"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="p-8">
+              <div className="flex gap-6 mb-8">
+                {selectedLeader.image ? (
+                  <img
+                    src={selectedLeader.image}
+                    alt={selectedLeader.name}
+                    className="w-20 h-20 object-cover flex-shrink-0 photo-filter"
+                  />
+                ) : (
+                  <div className="w-20 h-20 bg-primary/5 border border-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-primary">
+                      {selectedLeader.name.split(" ").map((n) => n[0]).join("")}
+                    </span>
+                  </div>
+                )}
+                <div>
+                  <p className="text-xs text-primary font-medium tracking-wide mb-3">{selectedLeader.role}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{selectedLeader.bio}</p>
+                </div>
+              </div>
+
+              <div className="mb-8">
+                <p className="text-xs tracking-[0.3em] uppercase text-foreground/60 font-medium mb-4">Areas of Focus</p>
+                <ul className="space-y-2">
+                  {selectedLeader.expertise.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="pt-5 border-t border-border">
+                <a
+                  href={selectedLeader.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary hover:text-primary/70 transition-colors"
+                >
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

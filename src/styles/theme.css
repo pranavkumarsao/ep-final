@@ -53,8 +53,13 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
 
-  /* ── Border radius — slightly tighter for minimal feel ── */
-  --radius: 0.5rem;
+  /* ── Primary light/dark variants ── */
+  --primary-light: hsl(235 65% 55%);
+  --primary-lighter: hsl(235 50% 95%);
+  --primary-dark: hsl(235 70% 35%);
+
+  /* ── Border radius — minimal, nearly square ── */
+  --radius: 0.25rem;
 
   /* ── Sidebar ── */
   --sidebar: hsl(230 20% 98%);
@@ -132,10 +137,13 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-primary-light: var(--primary-light);
+  --color-primary-lighter: var(--primary-lighter);
+  --color-primary-dark: var(--primary-dark);
   --color-sidebar: var(--sidebar);
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar-primary: var(--sidebar-primary);

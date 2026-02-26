@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
-import { Linkedin, X } from "lucide-react";
+import { X } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -173,18 +173,8 @@ export default function Leadership() {
     pauseOnHover: true,
     arrows: false,
     responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 640, settings: { slidesToShow: 1 } },
     ],
   };
 
@@ -200,58 +190,68 @@ export default function Leadership() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-background via-secondary to-background overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-6">
-              Leadership & <span className="text-primary">Core Team</span>
+      <section className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Leadership</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              Leadership & <span className="text-primary-gradient">Core Team</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Built by leaders who have navigated complexity before
             </p>
-          </motion.div>
+            <div className="section-divider-center mt-8" />
+          </div>
         </div>
       </section>
 
       {/* Introduction */}
-      <section className="py-14 md:py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 lg:py-32 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="space-y-5 text-base sm:text-lg text-muted-foreground leading-relaxed"
+            className="grid lg:grid-cols-2 gap-12 lg:gap-20"
           >
-            <p>
-              Eagle Perspectives is led by senior practitioners with decades of experience across global
-              research, insights, analytics, and strategic advisory environments. Our leadership team brings
-              together diverse expertise across categories, methodologies, and markets—united by a shared
-              commitment to clarity, rigour, and decisive strategy.
-            </p>
-            <p className="text-foreground text-lg sm:text-xl font-medium">
-              Every engagement is shaped by senior leadership. This ensures that our work reflects
-              experience, perspective, and accountability from start to finish.
-            </p>
+            <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
+              <p>
+                Eagle Perspectives is led by senior practitioners with decades of experience across global
+                research, insights, analytics, and strategic advisory environments. Our leadership team brings
+                together diverse expertise across categories, methodologies, and markets—united by a shared
+                commitment to clarity, rigour, and decisive strategy.
+              </p>
+            </div>
+            <div>
+              <p className="text-foreground text-lg font-semibold leading-relaxed">
+                Every engagement is shaped by senior leadership. This ensures that our work reflects
+                experience, perspective, and accountability from start to finish.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
       {/* Leadership Team Carousel */}
-      <section className="py-14 md:py-20 lg:py-28 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-10 sm:mb-12 text-center">
-            Our <span className="text-primary">Leadership</span>
-          </h2>
+      <section className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Team</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Built by leaders who have{" "}
+              <span className="text-primary-gradient">navigated complexity</span> before
+            </h2>
+            <div className="section-divider mt-6" />
+          </div>
 
-          <Slider {...sliderSettings} className="leadership-carousel mb-6 sm:mb-8">
+          <style>{`
+            .leadership-carousel-eagle .slick-dots { bottom: -40px; }
+            .leadership-carousel-eagle .slick-dots li button:before { font-size: 10px; color: hsl(235 65% 45%); opacity: 0.3; }
+            .leadership-carousel-eagle .slick-dots li.slick-active button:before { opacity: 1; color: hsl(235 65% 45%); }
+          `}</style>
+
+          <Slider {...sliderSettings} className="leadership-carousel-eagle mb-16">
             {firstRowLeaders.map((leader, index) => (
               <div key={index} className="px-2 sm:px-3">
                 <motion.div
@@ -260,16 +260,21 @@ export default function Leadership() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   onClick={() => setSelectedLeader(leader)}
-                  className="bg-secondary border border-border rounded-xl p-4 sm:p-6 cursor-pointer hover:border-primary/50 transition-all duration-300 hover:shadow-lg flex flex-col justify-center text-left"
+                  className="bg-background border border-border p-8 cursor-pointer hover:border-primary/20 transition-colors group"
                 >
-                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold mb-1 truncate">{leader.name}</h3>
-                  <p className="text-primary text-xs sm:text-sm font-medium truncate">{leader.role}</p>
+                  <div className="w-12 h-12 bg-primary/5 border border-primary/10 flex items-center justify-center mb-5">
+                    <span className="text-sm font-bold text-primary">
+                      {leader.name.split(" ").map((n) => n[0]).join("")}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-semibold truncate">{leader.name}</h3>
+                  <p className="text-xs text-primary font-medium tracking-wide mt-1 truncate">{leader.role}</p>
                 </motion.div>
               </div>
             ))}
           </Slider>
 
-          <Slider {...sliderSettingsReverse} className="leadership-carousel">
+          <Slider {...sliderSettingsReverse} className="leadership-carousel-eagle">
             {secondRowLeaders.map((leader, index) => (
               <div key={index} className="px-2 sm:px-3">
                 <motion.div
@@ -278,10 +283,15 @@ export default function Leadership() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                   onClick={() => setSelectedLeader(leader)}
-                  className="bg-secondary border border-border rounded-xl p-4 sm:p-6 cursor-pointer hover:border-primary/50 transition-all duration-300 hover:shadow-lg flex flex-col justify-center text-left"
+                  className="bg-background border border-border p-8 cursor-pointer hover:border-primary/20 transition-colors group"
                 >
-                  <h3 className="text-sm sm:text-base lg:text-lg font-semibold mb-1 truncate">{leader.name}</h3>
-                  <p className="text-primary text-xs sm:text-sm font-medium truncate">{leader.role}</p>
+                  <div className="w-12 h-12 bg-primary/5 border border-primary/10 flex items-center justify-center mb-5">
+                    <span className="text-sm font-bold text-primary">
+                      {leader.name.split(" ").map((n) => n[0]).join("")}
+                    </span>
+                  </div>
+                  <h3 className="text-base font-semibold truncate">{leader.name}</h3>
+                  <p className="text-xs text-primary font-medium tracking-wide mt-1 truncate">{leader.role}</p>
                 </motion.div>
               </div>
             ))}
@@ -292,7 +302,7 @@ export default function Leadership() {
       {/* Modal */}
       {selectedLeader && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-3 sm:p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-background/80 backdrop-blur-sm p-4"
           onClick={() => setSelectedLeader(null)}
         >
           <motion.div
@@ -301,66 +311,59 @@ export default function Leadership() {
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.2 }}
             onClick={(e) => e.stopPropagation()}
-            className="bg-card border border-border rounded-xl max-w-3xl w-full max-h-[92vh] overflow-y-auto shadow-2xl"
+            className="bg-background border border-border max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl"
           >
-            <div className="sticky top-0 bg-card border-b border-border px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between z-10">
-              <h3 className="text-lg sm:text-2xl font-semibold">{selectedLeader.name}</h3>
+            <div className="sticky top-0 bg-background border-b border-border px-8 py-5 flex items-center justify-between z-10">
+              <h3 className="text-xl font-semibold">{selectedLeader.name}</h3>
               <button
                 onClick={() => setSelectedLeader(null)}
-                className="p-1.5 sm:p-2 rounded-lg hover:bg-secondary transition-colors flex-shrink-0 ml-3"
+                className="p-1.5 hover:bg-secondary transition-colors"
               >
-                <X className="w-5 h-5 sm:w-6 sm:h-6" />
+                <X className="w-5 h-5" />
               </button>
             </div>
 
-            <div className="p-4 sm:p-6 md:p-8">
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-5 sm:mb-6">
-                <div className="flex-shrink-0 mx-auto sm:mx-0">
-                  {selectedLeader.image ? (
-                    <img
-                      src={selectedLeader.image}
-                      alt={selectedLeader.name}
-                      className="w-24 h-24 sm:w-32 sm:h-32 object-cover rounded-xl"
-                    />
-                  ) : (
-                    <div className="w-24 h-24 sm:w-32 sm:h-32 bg-primary/10 rounded-xl flex items-center justify-center">
-                      <span className="text-3xl sm:text-4xl font-semibold text-primary">
-                        {selectedLeader.name
-                          .split(" ")
-                          .map((n) => n[0])
-                          .join("")}
-                      </span>
-                    </div>
-                  )}
-                </div>
-                <div className="flex-1 text-center sm:text-left">
-                  <p className="text-primary mb-2 sm:mb-3 font-medium text-base sm:text-lg">{selectedLeader.role}</p>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{selectedLeader.bio}</p>
+            <div className="p-8">
+              <div className="flex gap-6 mb-8">
+                {selectedLeader.image ? (
+                  <img
+                    src={selectedLeader.image}
+                    alt={selectedLeader.name}
+                    className="w-20 h-20 object-cover flex-shrink-0 photo-filter"
+                  />
+                ) : (
+                  <div className="w-20 h-20 bg-primary/5 border border-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl font-bold text-primary">
+                      {selectedLeader.name.split(" ").map((n) => n[0]).join("")}
+                    </span>
+                  </div>
+                )}
+                <div>
+                  <p className="text-xs text-primary font-medium tracking-wide mb-3">{selectedLeader.role}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{selectedLeader.bio}</p>
                 </div>
               </div>
 
-              <div className="mb-5 sm:mb-6">
-                <h4 className="text-xs sm:text-sm font-semibold mb-3 text-foreground/80 uppercase tracking-wide">
-                  Areas of Focus
-                </h4>
+              <div className="mb-8">
+                <p className="text-xs tracking-[0.3em] uppercase text-foreground/60 font-medium mb-4">Areas of Focus</p>
                 <ul className="space-y-2">
                   {selectedLeader.expertise.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 sm:mt-2 flex-shrink-0"></div>
-                      <span className="text-sm sm:text-base text-muted-foreground leading-relaxed">{item}</span>
+                      <span className="w-1 h-1 bg-primary rounded-full mt-2 flex-shrink-0" />
+                      <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="pt-4 sm:pt-5 border-t border-border">
+              <div className="pt-5 border-t border-border">
                 <a
                   href={selectedLeader.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center text-primary hover:text-primary/70 transition-colors duration-200"
                 >
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor">
+                  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </a>
@@ -370,14 +373,18 @@ export default function Leadership() {
         </div>
       )}
 
-      {/* Strategic Advisors */}
-      <section className="py-14 md:py-20 lg:py-28">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-8 sm:mb-12">
-            Strategic <span className="text-primary">Advisors</span>
-          </h2>
+      {/* Strategic Advisors / Values */}
+      <section className="py-24 lg:py-32 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mb-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Culture & Values</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              What defines <span className="text-primary-gradient">how we work</span>
+            </h2>
+            <div className="section-divider mt-6" />
+          </div>
 
-          <div className="space-y-5 sm:space-y-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
               {
                 title: "Strategy First",
@@ -407,14 +414,14 @@ export default function Leadership() {
             ].map((value, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="border-l-4 border-primary pl-5 sm:pl-6 py-3 sm:py-4"
+                className="border-t-2 border-primary/15 pt-5"
               >
-                <h3 className="text-base sm:text-xl font-semibold mb-1 sm:mb-2">{value.title}</h3>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{value.description}</p>
+                <h3 className="text-sm font-semibold mb-2">{value.title}</h3>
+                <p className="text-xs text-muted-foreground leading-relaxed">{value.description}</p>
               </motion.div>
             ))}
           </div>

@@ -26,30 +26,25 @@ export default function WorkWithUs() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-background via-secondary to-background overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
-        </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold mb-4 sm:mb-6">
+      <section className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Let's Talk</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               Work With Us
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
               When decisions matter, perspective matters. Start a strategic conversation.
             </p>
-          </motion.div>
+            <div className="section-divider mt-8" />
+          </div>
         </div>
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-14 md:py-20 lg:py-28 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
+      <section className="py-24 lg:py-32 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -57,14 +52,14 @@ export default function WorkWithUs() {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4">Start a Conversation</h3>
-              <p className="text-sm sm:text-base text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">Start a Conversation</h2>
+              <p className="text-sm text-muted-foreground mb-8 leading-relaxed">
                 Share your challenge with us. We'll respond within 24 hours to explore how we can help.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
+              <form onSubmit={handleSubmit} className="space-y-5">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1.5">
+                  <label htmlFor="name" className="block text-xs font-medium tracking-wide uppercase mb-2">
                     Name *
                   </label>
                   <input
@@ -74,13 +69,13 @@ export default function WorkWithUs() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 sm:py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
                     placeholder="Your full name"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1.5">
+                  <label htmlFor="email" className="block text-xs font-medium tracking-wide uppercase mb-2">
                     Email *
                   </label>
                   <input
@@ -90,14 +85,14 @@ export default function WorkWithUs() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2.5 sm:py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
                     placeholder="your.email@company.com"
                   />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
+                <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-medium mb-1.5">
+                    <label htmlFor="company" className="block text-xs font-medium tracking-wide uppercase mb-2">
                       Company
                     </label>
                     <input
@@ -106,13 +101,13 @@ export default function WorkWithUs() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 sm:py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-sm sm:text-base"
+                      className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
                       placeholder="Your organisation"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="role" className="block text-sm font-medium mb-1.5">
+                    <label htmlFor="role" className="block text-xs font-medium tracking-wide uppercase mb-2">
                       Role
                     </label>
                     <input
@@ -121,14 +116,14 @@ export default function WorkWithUs() {
                       name="role"
                       value={formData.role}
                       onChange={handleChange}
-                      className="w-full px-4 py-2.5 sm:py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all text-sm sm:text-base"
+                      className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
                       placeholder="Your role or title"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1.5">
+                  <label htmlFor="message" className="block text-xs font-medium tracking-wide uppercase mb-2">
                     Tell us about your challenge *
                   </label>
                   <textarea
@@ -138,17 +133,17 @@ export default function WorkWithUs() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-2.5 sm:py-3 bg-secondary border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all resize-none text-sm sm:text-base"
+                    className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors resize-none text-sm"
                     placeholder="What strategic challenge are you facing? What decision needs to be made?"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full px-6 py-3 sm:py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 flex items-center justify-center space-x-2 font-medium text-sm sm:text-base"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] transition-colors"
                 >
                   <span>Send Message</span>
-                  <Send className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <Send className="w-4 h-4" />
                 </button>
               </form>
             </motion.div>
@@ -159,56 +154,56 @@ export default function WorkWithUs() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6 sm:space-y-8"
+              className="space-y-8"
             >
               <div>
-                <h3 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4">
-                  Get in <span className="text-primary">Touch</span>
-                </h3>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+                <h2 className="text-2xl md:text-3xl font-bold mb-3">
+                  Get in <span className="text-primary-gradient">Touch</span>
+                </h2>
+                <p className="text-sm text-muted-foreground leading-relaxed">
                   Whether you're facing a specific strategic challenge or exploring how we can support your
                   organisation, we're here to help.
                 </p>
               </div>
 
               <div className="space-y-4">
-                <div className="flex items-start space-x-4 p-4 sm:p-6 bg-secondary border border-border rounded-lg">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                <div className="flex items-start gap-5 p-6 bg-background border border-border">
+                  <div className="w-10 h-10 bg-primary/5 border border-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-5 h-5 text-primary" />
                   </div>
                   <div className="min-w-0">
-                    <h4 className="font-semibold mb-1 text-sm sm:text-base">Email Us</h4>
+                    <h4 className="text-xs font-semibold tracking-wide uppercase mb-1">Email Us</h4>
                     <a
                       href="mailto:insights@eagleperspectives.in"
-                      className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors break-all"
                     >
                       insights@eagleperspectives.in
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 p-4 sm:p-6 bg-secondary border border-border rounded-lg">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                <div className="flex items-start gap-5 p-6 bg-background border border-border">
+                  <div className="w-10 h-10 bg-primary/5 border border-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1 text-sm sm:text-base">Call Us</h4>
+                    <h4 className="text-xs font-semibold tracking-wide uppercase mb-1">Call Us</h4>
                     <a
                       href="tel:+919892231033"
-                      className="text-xs sm:text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
                     >
                       +91 98922 31033
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start space-x-4 p-4 sm:p-6 bg-secondary border border-border rounded-lg">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
+                <div className="flex items-start gap-5 p-6 bg-background border border-border">
+                  <div className="w-10 h-10 bg-primary/5 border border-primary/10 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-1 text-sm sm:text-base">Our Office</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground">
+                    <h4 className="text-xs font-semibold tracking-wide uppercase mb-1">Our Office</h4>
+                    <p className="text-sm text-muted-foreground">
                       India
                       <br />
                       (Serving clients globally)
@@ -217,17 +212,17 @@ export default function WorkWithUs() {
                 </div>
               </div>
 
-              <div className="p-6 sm:p-8 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-xl">
-                <h4 className="font-semibold mb-3 text-sm sm:text-base">What happens next?</h4>
-                <ul className="space-y-3 text-muted-foreground">
+              <div className="border-l-2 border-primary/20 pl-6 py-2">
+                <h4 className="text-xs font-semibold tracking-wide uppercase mb-4">What happens next?</h4>
+                <ul className="space-y-3">
                   {[
                     "We review your inquiry within 24 hours",
                     "We schedule an initial conversation to understand your challenge",
                     "We propose an approach tailored to your needs",
                   ].map((step, i) => (
-                    <li key={i} className="flex items-start space-x-3">
-                      <span className="text-primary font-semibold flex-shrink-0 text-sm sm:text-base">{i + 1}.</span>
-                      <span className="text-xs sm:text-sm leading-relaxed">{step}</span>
+                    <li key={i} className="flex items-start gap-3">
+                      <span className="text-primary font-semibold flex-shrink-0 text-sm">{i + 1}.</span>
+                      <span className="text-sm text-muted-foreground leading-relaxed">{step}</span>
                     </li>
                   ))}
                 </ul>
