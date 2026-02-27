@@ -398,14 +398,6 @@ export default function Home() {
               <p>
                 Eagle Perspectives exists because the world's best organisations still struggle with the same problem: too much research, too little clarity. Multiple agencies. Competing dashboards. Teams interpreting the same signals differently. Strategy discussions that extend without alignment. We are built to solve that — not by adding another lens, but by converging the ones that matter into one answer which you can act on
               </p>
-              <div className="pt-4 space-y-3 border-l-2 border-primary/20 pl-6">
-                <p className="text-foreground font-semibold text-sm">We are not:</p>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li className="text-foreground font-medium text-sm">A data vendor — we don't sell volume; we sell clarity</li>
-                  <li className="text-foreground font-medium text-sm">A measurement factory — we don't optimise for more studies, more dashboards, more outputs</li>
-                  <li className="text-foreground font-medium text-sm">A boutique ideas shop — we have the depth of specialists and the scale of a pan-India network</li>
-                </ul>
-              </div>
             </div>
 
             <div className="space-y-6">
@@ -417,20 +409,31 @@ export default function Home() {
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary" />
               </div>
-              <div className="pt-2 space-y-3 border-l-2 border-primary/20 pl-6">
-                <p className="text-foreground font-semibold text-sm">We are:</p>
-                <ul className="list-disc pl-5 space-y-2">
-                  <li className="text-foreground font-medium text-sm">
-                    A research intelligence consortium — multiple specialist organisations, orchestrated as one, assembled per brief
-                  </li>
-                  <li className="text-foreground font-medium text-sm">
-                    A convergence firm — our job is not to produce more research but to make the research you have decisive
-                  </li>
-                  <li className="text-foreground font-medium text-sm">
-                    A system built to evolve — new capabilities added by design, not by accident; every specialist fills a structural gap
-                  </li>
-                </ul>
-              </div>
+            </div>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start mt-8">
+            <div className="space-y-3 border-l-2 border-primary/20 pl-6">
+              <p className="text-foreground font-semibold text-sm">We are not:</p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li className="text-foreground font-medium text-sm">A data vendor — we don't sell volume; we sell clarity</li>
+                <li className="text-foreground font-medium text-sm">A measurement factory — we don't optimise for more studies, more dashboards, more outputs</li>
+                <li className="text-foreground font-medium text-sm">A boutique ideas shop — we have the depth of specialists and the scale of a pan-India network</li>
+              </ul>
+            </div>
+            <div className="space-y-3 border-l-2 border-primary/20 pl-6">
+              <p className="text-foreground font-semibold text-sm">We are:</p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li className="text-foreground font-medium text-sm">
+                  A research intelligence consortium — multiple specialist organisations, orchestrated as one, assembled per brief
+                </li>
+                <li className="text-foreground font-medium text-sm">
+                  A convergence firm — our job is not to produce more research but to make the research you have decisive
+                </li>
+                <li className="text-foreground font-medium text-sm">
+                  A system built to evolve — new capabilities added by design, not by accident; every specialist fills a structural gap
+                </li>
+              </ul>
             </div>
           </div>
         </div>
