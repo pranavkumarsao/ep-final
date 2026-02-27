@@ -487,7 +487,7 @@ export default function Home() {
 
       {/* ── Five Dimensions Bento Grid ── */}
       <section className="py-6 md:py-8 lg:py-10">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-5 md:mb-6">
             <div className="max-w-2xl">
               <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
@@ -506,63 +506,153 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[1fr_1.15fr_1fr] gap-2 auto-rows-fr lg:min-h-[560px]">
-            <div className="hidden lg:block pointer-events-none absolute left-[26%] right-[26%] top-1/2 h-px -translate-y-1/2 bg-primary/20" />
-            <div className="hidden lg:block pointer-events-none absolute left-1/2 top-[18%] h-[64%] w-px -translate-x-1/2 bg-primary/20" />
-            {/* Center Card — largest */}
-            <div className="sm:col-span-2 lg:col-start-2 lg:col-span-2 lg:row-start-2 group relative overflow-hidden rounded-none bg-background border border-primary/25 hover:border-primary/45 active:border-primary/45 transition-colors cursor-default min-h-[170px] lg:min-h-[220px] h-full">
-              <div className="p-3 sm:p-4 h-full flex flex-col gap-3 transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
-                <div>
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 bg-primary/5 px-3 py-1 rounded-none">Ways of Knowing</span>
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-none bg-primary/10 text-primary">
-                      <Network className="h-4 w-4" />
-                    </span>
-                  </div>
-                  <h3 className="text-base sm:text-lg font-bold mb-2">The Governing Principle</h3>
-                </div>
-                <div>
+          {/* Desktop: cross/plus layout */}
+          <div className="hidden lg:grid grid-cols-3 grid-rows-3 gap-1.5 bg-primary/10 h-[600px]">
+            {/* Row 1: empty — Vantage — empty */}
+            <div className="bg-background" />
+            <div className="group relative overflow-hidden bg-secondary/20 cursor-default">
+              <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
+                <div className="flex items-start justify-between mb-2">
                   <div>
-                    <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
-                    <p className="text-xs sm:text-sm text-muted-foreground">Methods without hierarchy.</p>
+                    <span className="text-base font-bold text-primary/10 leading-none block">02</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">Vantage</span>
                   </div>
-                  <div className="mt-2">
-                    <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
-                    <p className="text-xs sm:text-sm text-foreground font-medium">Every question earns the method it truly demands.</p>
-                  </div>
+                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Compass className="h-3.5 w-3.5" /></span>
                 </div>
+                <h3 className="text-sm font-bold mb-2">The Perch</h3>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-muted-foreground leading-relaxed">Cross-sector vision.</p>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[11px] text-foreground font-medium">Multi-time horizons.</p>
+              </div>
+              <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
+                <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-primary-foreground/60 mb-2 block">Vantage · The Perch</span>
+                <p className="text-xs text-primary-foreground leading-relaxed font-medium">Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging.</p>
+              </div>
+            </div>
+            <div className="bg-background" />
+
+            {/* Row 2: Expertise — Ways of Knowing — Scale */}
+            <div className="group relative overflow-hidden bg-secondary/20 cursor-default">
+              <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <span className="text-base font-bold text-primary/10 leading-none block">04</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">Expertise</span>
+                  </div>
+                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Users2 className="h-3.5 w-3.5" /></span>
+                </div>
+                <h3 className="text-sm font-bold mb-2">The Team</h3>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-muted-foreground leading-relaxed">Disciplines in dialogue.</p>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[11px] text-foreground font-medium">Disciplines in dialogue.</p>
+              </div>
+              <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
+                <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-primary-foreground/60 mb-2 block">Expertise · The Team</span>
+                <p className="text-xs text-primary-foreground leading-relaxed font-medium">Multigenerational, multidisciplinary specialists with equity of voice as operating principle.</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden bg-background border border-primary/25 cursor-default">
+              <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <span className="text-base font-bold text-primary/20 leading-none block">01</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/70 mt-0.5 block">Ways of Knowing</span>
+                  </div>
+                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/15 text-primary shrink-0"><Network className="h-3.5 w-3.5" /></span>
+                </div>
+                <h3 className="text-sm font-bold mb-2">The Governing Principle</h3>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-muted-foreground leading-relaxed">Methods without hierarchy.</p>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[11px] text-foreground font-medium">Every question earns the method it truly demands.</p>
+              </div>
+              <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
+                <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-primary-foreground/60 mb-2 block">Ways of Knowing · The Governing Principle</span>
+                <p className="text-xs text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
+              </div>
+            </div>
+            <div className="group relative overflow-hidden bg-secondary/20 cursor-default">
+              <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <span className="text-base font-bold text-primary/10 leading-none block">03</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">Scale</span>
+                  </div>
+                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Expand className="h-3.5 w-3.5" /></span>
+                </div>
+                <h3 className="text-sm font-bold mb-2">The Zoom</h3>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-muted-foreground leading-relaxed">From horizon to shelf.</p>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[11px] text-foreground font-medium">From horizon to shelf.</p>
+              </div>
+              <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
+                <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-primary-foreground/60 mb-2 block">Scale · The Zoom</span>
+                <p className="text-xs text-primary-foreground leading-relaxed font-medium">Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage.</p>
+              </div>
+            </div>
+
+            {/* Row 3: empty — Stakeholder — empty */}
+            <div className="bg-background" />
+            <div className="group relative overflow-hidden bg-secondary/20 cursor-default">
+              <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
+                <div className="flex items-start justify-between mb-2">
+                  <div>
+                    <span className="text-base font-bold text-primary/10 leading-none block">05</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">Stakeholder</span>
+                  </div>
+                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Filter className="h-3.5 w-3.5" /></span>
+                </div>
+                <h3 className="text-sm font-bold mb-2">The Filter</h3>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-muted-foreground leading-relaxed">Commercial. Human. Systemic.</p>
+                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[11px] text-foreground font-medium">Commercial. Human. Systemic.</p>
+              </div>
+              <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
+                <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-primary-foreground/60 mb-2 block">Stakeholder · The Filter</span>
+                <p className="text-xs text-primary-foreground leading-relaxed font-medium">Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable.</p>
+              </div>
+            </div>
+            <div className="bg-background" />
+          </div>
+
+          {/* Mobile: simple stacked grid */}
+          <div className="lg:hidden grid sm:grid-cols-2 gap-2">
+            <div className="sm:col-span-2 group relative overflow-hidden rounded-none bg-background border border-primary/25 hover:border-primary/45 active:border-primary/45 transition-colors cursor-default min-h-[170px]">
+              <div className="p-3 sm:p-4 h-full flex flex-col gap-2 transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+                <div className="flex items-center justify-between mb-1">
+                  <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 bg-primary/5 px-3 py-1 rounded-none">Ways of Knowing</span>
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-none bg-primary/10 text-primary"><Network className="h-4 w-4" /></span>
+                </div>
+                <h3 className="text-base font-bold">The Governing Principle</h3>
+                <p className="text-xs text-muted-foreground">Methods without hierarchy.</p>
+                <p className="text-xs text-foreground font-medium">Every question earns the method it truly demands.</p>
               </div>
               <div className="absolute inset-0 p-3 sm:p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center overflow-y-auto opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                 <p className="text-xs sm:text-sm text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
               </div>
             </div>
-
             {[
-              { dim: "Vantage", metaphor: "The Perch", holds: "Cross-sector vision.", exp: "Multi-time horizons.", hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging.", layout: "lg:col-span-2 lg:row-start-1", icon: Compass },
-              { dim: "Scale", metaphor: "The Zoom", holds: "From horizon to shelf.", exp: "From horizon to shelf.", hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage.", layout: "lg:col-start-3 lg:col-span-2 lg:row-start-1", icon: Expand },
-              { dim: "Expertise", metaphor: "The Team", holds: "Disciplines in dialogue.", exp: "Disciplines in dialogue.", hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle.", layout: "lg:col-span-2 lg:row-start-3", icon: Users2 },
-              { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable.", layout: "lg:col-start-3 lg:col-span-2 lg:row-start-3", icon: Filter },
+              { dim: "Vantage", metaphor: "The Perch", holds: "Cross-sector vision.", exp: "Multi-time horizons.", hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging.", icon: Compass },
+              { dim: "Scale", metaphor: "The Zoom", holds: "From horizon to shelf.", exp: "From horizon to shelf.", hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage.", icon: Expand },
+              { dim: "Expertise", metaphor: "The Team", holds: "Disciplines in dialogue.", exp: "Disciplines in dialogue.", hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle.", icon: Users2 },
+              { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable.", icon: Filter },
             ].map((item, i) => (
-              <div key={i} className={`${item.layout} group relative overflow-hidden rounded-none bg-secondary/40 border border-primary/20 hover:border-primary/40 active:border-primary/40 transition-colors cursor-default min-h-[160px] lg:min-h-[180px] h-full`}>
+              <div key={i} className="group relative overflow-hidden rounded-none bg-secondary/40 border border-primary/20 hover:border-primary/40 active:border-primary/40 transition-colors cursor-default min-h-[160px]">
                 <div className="p-3 sm:p-4 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                   <div>
-                    <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center justify-between mb-2">
                       <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 bg-primary/5 px-3 py-1 rounded-none">{item.dim}</span>
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-none bg-primary/10 text-primary">
-                        <item.icon className="h-4 w-4" />
-                      </span>
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-none bg-primary/10 text-primary"><item.icon className="h-4 w-4" /></span>
                     </div>
-                    <h3 className="text-base sm:text-lg font-bold mb-2">{item.metaphor}</h3>
+                    <h3 className="text-sm font-bold mb-1">{item.metaphor}</h3>
                   </div>
                   <div>
-                    <div>
-                      <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
-                      <p className="text-xs sm:text-sm text-muted-foreground">{item.holds}</p>
-                    </div>
-                    <div className="mt-2">
-                      <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
-                      <p className="text-xs sm:text-sm text-foreground font-medium">{item.exp}</p>
-                    </div>
+                    <p className="text-[11px] text-muted-foreground">{item.holds}</p>
+                    <p className="text-[11px] text-foreground font-medium mt-1">{item.exp}</p>
                   </div>
                 </div>
                 <div className="absolute inset-0 p-3 sm:p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center overflow-y-auto opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
