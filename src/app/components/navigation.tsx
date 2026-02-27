@@ -30,6 +30,8 @@ export default function Navigation() {
   const navLinks = [
     { label: "About", path: "/about" },
     { label: "Philosophy", path: "/philosophy" },
+    { label: "What We Solve", path: "/what-we-solve" },
+    { label: "What We Bring", path: "/what-we-bring" },
     { label: "How We Work", path: "/how-we-work" },
     { label: "Leadership", path: "/leadership" },
   ];

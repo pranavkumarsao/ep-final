@@ -11,6 +11,8 @@ import IntegratedSolutions from "./pages/services/integrated-solutions";
 import HowWeWork from "./pages/how-we-work";
 import Leadership from "./pages/leadership";
 import WorkWithUs from "./pages/work-with-us";
+import WhatWeSolve from "./pages/what-we-solve";
+import WhatWeBring from "./pages/what-we-bring";
 import NotFound from "./pages/not-found";
 
 // App routes configuration
@@ -30,6 +32,8 @@ export const router = createBrowserRouter([
       { path: "how-we-work", Component: HowWeWork },
       { path: "leadership", Component: Leadership },
       { path: "work-with-us", Component: WorkWithUs },
+      { path: "what-we-solve", Component: WhatWeSolve },
+      { path: "what-we-bring", Component: WhatWeBring },
       { path: "*", Component: NotFound },
     ],
   },

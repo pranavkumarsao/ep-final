@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import { Link } from "react-router";
 import heroImage from "@/assets/hero-eagle.jpg";
-import teamImage from "@/assets/team-strategy.jpg";
 import convergenceImage from "@/assets/convergence.jpg";
 import nilakshiImage from "figma:asset/008ee0585922a486d8481eefd553bc58df96f193.png";
 import vivekImage from "figma:asset/e314a4604007185f64e5570d9eaf158f36bd7db1.png";
@@ -398,20 +398,24 @@ export default function Home() {
                 Eagle Perspectives exists because the world's best organisations still struggle with the same problem: too much research, too little clarity. Multiple agencies. Competing dashboards. Teams interpreting the same signals differently. Strategy discussions that extend without alignment. We are built to solve that — not by adding another lens, but by converging the ones that matter into one answer which you can act on
               </p>
               <div className="pt-4 space-y-2 border-l-2 border-primary/20 pl-6">
-                <p className="text-foreground font-medium text-sm">We are not a data vendor.</p>
-                <p className="text-foreground font-medium text-sm">We are not a research factory.</p>
-                <p className="text-foreground font-medium text-sm">We are not a dashboard provider.</p>
-                <p className="text-primary font-semibold text-sm mt-3">We are a strategic partner for leaders who value rigour, integration, and clarity.</p>
+                <p className="text-foreground font-semibold text-sm">We are not:</p>
+                <p className="text-foreground font-medium text-sm mt-2">A data vendor — we don't sell volume; we sell clarity</p>
+                <p className="text-foreground font-medium text-sm">A measurement factory — we don't optimise for more studies, more dashboards, more outputs</p>
+                <p className="text-primary font-semibold text-sm">A boutique ideas shop — we have the depth of specialists and the scale of a pan-India network</p>
               </div>
             </div>
 
-            <div className="relative">
-              <img
-                src={teamImage}
-                alt="Strategic boardroom discussion"
-                className="w-full aspect-[4/3] object-cover photo-filter"
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary" />
+            <div className="bg-secondary border border-border p-8 lg:p-10 space-y-3">
+              <p className="text-foreground font-semibold text-sm">We are:</p>
+              <p className="text-foreground font-medium text-sm pt-1">
+                A research intelligence consortium — multiple specialist organisations, orchestrated as one, assembled per brief
+              </p>
+              <p className="text-foreground font-medium text-sm">
+                A convergence firm — our job is not to produce more research but to make the research you have decisive
+              </p>
+              <p className="text-primary font-semibold text-sm">
+                A system built to evolve — new capabilities added by design, not by accident; every specialist fills a structural gap
+              </p>
             </div>
           </div>
         </div>
@@ -526,6 +530,104 @@ export default function Home() {
                   ))}
                 </ul>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Axis 1: What We Solve ── */}
+      <section id="what-we-solve" className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div className="max-w-2xl">
+              <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Axis 1</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                What Decisions <span className="text-primary-gradient">We Solve</span>
+              </h2>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Start here if you know the business question. We'll assemble the right team.
+              </p>
+              <div className="section-divider mt-6" />
+            </div>
+            <Link
+              to="/what-we-solve"
+              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 transition-colors shrink-0"
+            >
+              Explore All Five Decisions
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { num: "01", title: "Find the Space", question: "Where should we play next?" },
+              { num: "02", title: "Build the Brand", question: "What should we stand for?" },
+              { num: "03", title: "Launch & Grow", question: "Will this work in market?" },
+              { num: "04", title: "What's Emerging", question: "What should we prepare for?" },
+              { num: "05", title: "Measure What Matters", question: "Are we winning?" },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                to="/what-we-solve"
+                className="bg-background border border-border p-8 hover:border-primary/30 transition-colors group relative overflow-hidden block"
+              >
+                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                <span className="text-4xl font-bold text-primary/10 block mb-3 group-hover:text-primary/20 transition-colors">
+                  {item.num}
+                </span>
+                <h3 className="text-base font-semibold mb-1">{item.title}</h3>
+                <p className="text-xs text-primary font-medium italic">"{item.question}"</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Axis 2: What We Bring ── */}
+      <section id="what-we-bring" className="py-24 lg:py-32 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div className="max-w-2xl">
+              <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Axis 2</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                What Expertise <span className="text-primary-gradient">We Bring</span>
+              </h2>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Start here if you know the discipline. We'll connect it to the decision.
+              </p>
+              <div className="section-divider mt-6" />
+            </div>
+            <Link
+              to="/what-we-bring"
+              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 transition-colors shrink-0"
+            >
+              Explore All Eight Disciplines
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {[
+              { lens: "The depth lens", title: "Qualitative & Ethnographic Research" },
+              { lens: "The scale lens", title: "Quantitative Research & Analytics" },
+              { lens: "The unconscious lens", title: "Neuroscience & Behavioural Science" },
+              { lens: "The embodied lens", title: "Sensory Science" },
+              { lens: "The meaning lens", title: "Semiotics & Cultural Intelligence" },
+              { lens: "The specialist lens", title: "Healthcare Research" },
+              { lens: "The action lens", title: "Behaviour Design" },
+              { lens: "The equity lens", title: "Social Impact Research" },
+            ].map((item, i) => (
+              <Link
+                key={i}
+                to="/what-we-bring"
+                className="bg-background border border-border p-6 hover:border-primary/30 transition-colors group relative overflow-hidden block"
+              >
+                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                <span className="block text-xs font-medium tracking-wide uppercase text-primary/50 mb-3">
+                  {item.lens}
+                </span>
+                <h3 className="text-sm font-semibold leading-snug">{item.title}</h3>
+              </Link>
             ))}
           </div>
         </div>
