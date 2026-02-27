@@ -398,11 +398,13 @@ export default function Home() {
               <p>
                 Eagle Perspectives exists because the world's best organisations still struggle with the same problem: too much research, too little clarity. Multiple agencies. Competing dashboards. Teams interpreting the same signals differently. Strategy discussions that extend without alignment. We are built to solve that — not by adding another lens, but by converging the ones that matter into one answer which you can act on
               </p>
-              <div className="pt-4 space-y-2 border-l-2 border-primary/20 pl-6">
+              <div className="pt-4 space-y-3 border-l-2 border-primary/20 pl-6">
                 <p className="text-foreground font-semibold text-sm">We are not:</p>
-                <p className="text-foreground font-medium text-sm mt-2">A data vendor — we don't sell volume; we sell clarity</p>
-                <p className="text-foreground font-medium text-sm">A measurement factory — we don't optimise for more studies, more dashboards, more outputs</p>
-                <p className="text-primary font-semibold text-sm">A boutique ideas shop — we have the depth of specialists and the scale of a pan-India network</p>
+                <ul className="list-disc pl-5 space-y-2">
+                  <li className="text-foreground font-medium text-sm">A data vendor — we don't sell volume; we sell clarity</li>
+                  <li className="text-foreground font-medium text-sm">A measurement factory — we don't optimise for more studies, more dashboards, more outputs</li>
+                  <li className="text-foreground font-medium text-sm">A boutique ideas shop — we have the depth of specialists and the scale of a pan-India network</li>
+                </ul>
               </div>
             </div>
 
