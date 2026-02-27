@@ -211,11 +211,8 @@ export default function Leadership() {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Leadership</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Leadership & <span className="text-primary-gradient">Core Team</span>
+              Built by leaders who have <span className="text-primary-gradient">navigated complexity</span> before
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Built by leaders who have navigated complexity before
-            </p>
             <div className="section-divider-center mt-8" />
           </div>
         </div>
