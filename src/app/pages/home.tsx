@@ -14,6 +14,11 @@ import vigyanImage from "figma:asset/8f5998d4cf6e8a4d3768d818eebaac5ee71f11be.pn
 import ronitaImage from "figma:asset/c93f1b93c3de091194dbffdc6c47f527c3efc269.png";
 import bipradeepImage from "figma:asset/66f34e1ef888f51e4e93588ff206041ef921f6f8.png";
 import dipanyitaImage from "figma:asset/99398e657e579b93569ae21a3c80a85d0fa8bbcc.png";
+import miniPintoImage from "@/assets/mini-pinto.jpeg";
+import ruchikaImage from "@/assets/ruchika.jpeg";
+import swatiImage from "@/assets/swati-kulkarni.jpeg";
+import venkatnathImage from "@/assets/venkatnath.jpeg";
+import suparnaImage from "@/assets/suparna.jpeg";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -231,6 +236,7 @@ const leaders: Leader[] = [
       "Multi-market research coordination",
     ],
     linkedin: "https://www.linkedin.com/in/venkatnathkukillaya/",
+    image: venkatnathImage,
   },
   {
     name: "Bipradeep Chakraborty",
@@ -266,6 +272,7 @@ const leaders: Leader[] = [
       "Execution alignment across complex initiatives",
     ],
     linkedin: "https://www.linkedin.com/in/ruchikaaggarwal/",
+    image: ruchikaImage,
   },
   {
     name: "Mini Pinto Sinha",
@@ -277,6 +284,7 @@ const leaders: Leader[] = [
       "Cross-functional team alignment",
     ],
     linkedin: "https://www.linkedin.com/in/pintosinha/",
+    image: miniPintoImage,
   },
   {
     name: "Suparna M",
@@ -288,6 +296,7 @@ const leaders: Leader[] = [
       "Capability enablement",
     ],
     linkedin: "https://www.linkedin.com/in/suparna-m-24b32915/",
+    image: suparnaImage,
   },
   {
     name: "Swati Kulkarni",
@@ -299,6 +308,7 @@ const leaders: Leader[] = [
       "Beauty, personal care, OTC healthcare & CPG",
     ],
     linkedin: "https://www.linkedin.com/in/swati-kulkarni-bb07a020/",
+    image: swatiImage,
   },
 ];
 
@@ -886,23 +896,33 @@ export default function Home() {
             <div className="section-divider-center mt-6" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {leaders.map((leader, i) => (
-              <div
-                key={i}
-                onClick={() => setSelectedLeader(leader)}
-                className="bg-background p-5 sm:p-8 border border-border group hover:border-primary/20 active:border-primary/20 transition-colors cursor-pointer"
-              >
-                <div className="w-12 h-12 bg-primary/5 border border-primary/10 flex items-center justify-center mb-5">
-                  <span className="text-sm font-bold text-primary">
-                    {leader.name.split(" ").map((n) => n[0]).join("")}
-                  </span>
-                </div>
-                <h3 className="text-base font-semibold">{leader.name}</h3>
-                <p className="text-xs text-primary font-medium tracking-wide mb-3">{leader.role}</p>
-                <p className="text-xs text-muted-foreground leading-relaxed">{leader.bio}</p>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
+            {[
+              "Vivek Gupta", "Nilakshi Sengupta", "Sanjay Pal", "Sharmila Das", "Vikram Jain",
+              "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Vigyan Verma", "Ruchika Aggarwal",
+              "Venkatnath Kukillaya", "Mini Pinto Sinha", "Bipradeep Chakraborty", "Suparna M", "Swati Kulkarni",
+            ]
+              .map((name) => leaders.find((l) => l.name === name)!)
+              .map((leader, index) => (
+                <motion.button
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.04 }}
+                  onClick={() => setSelectedLeader(leader)}
+                  className="relative aspect-square overflow-hidden cursor-pointer group focus:outline-none"
+                >
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-full h-full object-cover photo-filter transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                    <span className="text-white text-xs font-medium tracking-wide leading-tight">{leader.name}</span>
+                  </div>
+                </motion.button>
+              ))}
           </div>
         </div>
       </section>

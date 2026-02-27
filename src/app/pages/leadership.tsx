@@ -256,38 +256,6 @@ export default function Leadership() {
         </div>
       </section>
 
-      {/* Leadership Team Grid */}
-      <section className="py-14 md:py-20 lg:py-28">
-        <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-10 md:mb-16">
-            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Team</p>
-            <div className="section-divider mt-6" />
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {leaders.map((leader, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.04 }}
-                onClick={() => setSelectedLeader(leader)}
-                className="bg-background border border-border p-5 sm:p-8 cursor-pointer hover:border-primary/20 active:border-primary/20 transition-colors group"
-              >
-                <div className="w-12 h-12 bg-primary/5 border border-primary/10 flex items-center justify-center mb-5">
-                  <span className="text-sm font-bold text-primary">
-                    {leader.name.split(" ").map((n) => n[0]).join("")}
-                  </span>
-                </div>
-                <h3 className="text-base font-semibold">{leader.name}</h3>
-                <p className="text-xs text-primary font-medium tracking-wide mt-1">{leader.role}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Photo Grid */}
       <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
