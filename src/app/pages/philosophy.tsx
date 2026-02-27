@@ -116,7 +116,7 @@ export default function Philosophy() {
 
       {/* Five Dimensions Bento Grid */}
       <section className="py-6 md:py-8 lg:py-10">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-5 md:mb-6">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
             <h2 className="text-2xl md:text-3xl font-bold mb-3">

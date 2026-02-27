@@ -353,18 +353,18 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
             <span className="text-primary-gradient">Plurality</span> in Perspectives.
             <br />
-            <span className="text-primary-gradient">Clarity</span> in Convergence.
+            <span className="text-primary-gradient">Singularity</span> in Strategy.
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 leading-relaxed">
             We help organisations convert complexity into clarity—and clarity into strategy.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="#contact"
+            <Link
+              to="/work-with-us#form"
               className="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
             >
               Start a Strategic Conversation
-            </a>
+            </Link>
             <a
               href="#philosophy"
               className="inline-flex items-center justify-center px-8 py-3.5 border border-border text-foreground text-sm font-medium tracking-wide hover:border-primary active:border-primary hover:text-primary active:text-primary transition-colors"
@@ -487,23 +487,20 @@ export default function Home() {
 
       {/* ── Five Dimensions Bento Grid ── */}
       <section className="py-6 md:py-8 lg:py-10">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-5 md:mb-6">
-            <div className="max-w-2xl">
-              <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
-              <h2 className="text-2xl md:text-3xl font-bold mb-3">
-                Five Dimensions of <span className="text-primary-gradient">Plurality</span>
-              </h2>
-              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">Hover over each card to reveal the deeper explanation.</p>
-              <div className="section-divider mt-4" />
-            </div>
+        <div className="max-w-3xl mx-auto px-6 lg:px-8">
+          <div className="mb-5 md:mb-6">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              Five Dimensions of <span className="text-primary-gradient">Plurality</span>
+            </h2>
             <Link
               to="/philosophy"
-              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 active:text-primary/70 transition-colors shrink-0"
+              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 active:text-primary/70 transition-colors"
             >
               Explore Our Philosophy
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
+            <div className="section-divider mt-4" />
           </div>
 
           {/* Desktop: cross/plus layout */}

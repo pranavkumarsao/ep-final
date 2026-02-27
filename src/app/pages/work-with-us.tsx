@@ -42,7 +42,7 @@ export default function WorkWithUs() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
+      <section id="form" className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
             {/* Contact Form */}
