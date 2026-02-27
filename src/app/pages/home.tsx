@@ -929,29 +929,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Contact ── */}
-      <section id="contact" className="py-14 md:py-20 lg:py-28 bg-foreground">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <p className="text-xs tracking-[0.3em] uppercase text-[hsl(235_65%_55%)] font-medium mb-4">
-            Let's Talk
-          </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-background">
-            See the bigger picture.
-            <br />
-            Decide with confidence.
-          </h2>
-          <p className="text-base text-background/60 max-w-xl mx-auto mb-10 leading-relaxed">
-            When decisions matter, perspective matters. Let's define the way forward—together.
-          </p>
-          <Link
-              to="/work-with-us#form"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
-          >
-            Start a Strategic Conversation
-          </Link>
-        </div>
-      </section>
-
       {/* ── Leader Modal ── */}
       {selectedLeader && (
         <div
