@@ -518,19 +518,19 @@ export default function Home() {
           <div className="hidden lg:grid grid-cols-3 grid-rows-3 gap-1.5 bg-primary/10 h-[600px]">
             {/* Row 1: empty — Vantage — empty */}
             <div className="bg-background" />
-            <div className="group relative overflow-hidden bg-primary/15 cursor-default">
+            <div className="group relative overflow-hidden bg-primary/8 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/10 leading-none block">02</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">Vantage</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">02</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">Vantage</span>
                   </div>
                   <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Compass className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">The Perch</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">Cross-sector vision.</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">Cross-sector vision.</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">Multi-time horizons.</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
@@ -541,19 +541,19 @@ export default function Home() {
             <div className="bg-background" />
 
             {/* Row 2: Expertise — Ways of Knowing — Scale */}
-            <div className="group relative overflow-hidden bg-primary/15 cursor-default">
+            <div className="group relative overflow-hidden bg-primary/8 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/10 leading-none block">04</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">Expertise</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">04</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">Expertise</span>
                   </div>
                   <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Users2 className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">The Team</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">Tension. Integration. Clarity.</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">Tension. Integration. Clarity.</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">Disciplines in dialogue.</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
@@ -565,15 +565,15 @@ export default function Home() {
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/20 leading-none block">01</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/70 mt-0.5 block">Ways of Knowing</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">01</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">Ways of Knowing</span>
                   </div>
-                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/15 text-primary shrink-0"><Network className="h-3.5 w-3.5" /></span>
+                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/8 text-primary shrink-0"><Network className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">The Governing Principle</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">Methods without hierarchy.</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">Methods without hierarchy.</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">Every question earns the method it truly demands.</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
@@ -581,19 +581,19 @@ export default function Home() {
                 <p className="text-xs text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
               </div>
             </div>
-            <div className="group relative overflow-hidden bg-primary/15 cursor-default">
+            <div className="group relative overflow-hidden bg-primary/8 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/10 leading-none block">03</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">Scale</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">03</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">Scale</span>
                   </div>
                   <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Expand className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">The Zoom</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">From horizon to shelf.</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">From horizon to shelf.</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">Altitude. Accuracy. Action. Agility.</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
@@ -604,19 +604,19 @@ export default function Home() {
 
             {/* Row 3: empty — Stakeholder — empty */}
             <div className="bg-background" />
-            <div className="group relative overflow-hidden bg-primary/15 cursor-default">
+            <div className="group relative overflow-hidden bg-primary/8 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/10 leading-none block">05</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">Stakeholder</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">05</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">Stakeholder</span>
                   </div>
                   <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Filter className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">The Filter</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">Commercial. Human. Systemic.</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">Commercial. Human. Systemic.</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">Built to last.</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">

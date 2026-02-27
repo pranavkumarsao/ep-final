@@ -132,19 +132,19 @@ export default function Philosophy() {
           <div className="hidden lg:grid grid-cols-3 grid-rows-3 gap-1.5 bg-primary/10 h-[600px]">
             {/* Row 1: empty — Vantage — empty */}
             <div className="bg-background" />
-            <motion.div initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="group relative overflow-hidden bg-primary/15 cursor-default">
+            <motion.div initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="group relative overflow-hidden bg-primary/8 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/10 leading-none block">02</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">{bentoDimensions[1].dim}</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">02</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">{bentoDimensions[1].dim}</span>
                   </div>
                   <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Compass className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">{bentoDimensions[1].metaphor}</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">{bentoDimensions[1].holds}</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">{bentoDimensions[1].holds}</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">{bentoDimensions[1].experience}</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
@@ -155,19 +155,19 @@ export default function Philosophy() {
             <div className="bg-background" />
 
             {/* Row 2: Expertise — Ways of Knowing — Scale */}
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="group relative overflow-hidden bg-primary/15 cursor-default">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="group relative overflow-hidden bg-primary/8 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/10 leading-none block">04</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">{bentoDimensions[3].dim}</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">04</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">{bentoDimensions[3].dim}</span>
                   </div>
                   <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Users2 className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">{bentoDimensions[3].metaphor}</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">{bentoDimensions[3].holds}</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">{bentoDimensions[3].holds}</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">{bentoDimensions[3].experience}</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
@@ -179,15 +179,15 @@ export default function Philosophy() {
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/20 leading-none block">01</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/70 mt-0.5 block">{bentoDimensions[0].dim}</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">01</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">{bentoDimensions[0].dim}</span>
                   </div>
-                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/15 text-primary shrink-0"><Network className="h-3.5 w-3.5" /></span>
+                  <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/8 text-primary shrink-0"><Network className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">{bentoDimensions[0].metaphor}</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">{bentoDimensions[0].holds}</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">{bentoDimensions[0].holds}</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">{bentoDimensions[0].experience}</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
@@ -195,19 +195,19 @@ export default function Philosophy() {
                 <p className="text-xs text-primary-foreground leading-relaxed font-medium">{bentoDimensions[0].hover}</p>
               </div>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="group relative overflow-hidden bg-primary/15 cursor-default">
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="group relative overflow-hidden bg-primary/8 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/10 leading-none block">03</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">{bentoDimensions[2].dim}</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">03</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">{bentoDimensions[2].dim}</span>
                   </div>
                   <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Expand className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">{bentoDimensions[2].metaphor}</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">{bentoDimensions[2].holds}</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">{bentoDimensions[2].holds}</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">{bentoDimensions[2].experience}</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
@@ -218,19 +218,19 @@ export default function Philosophy() {
 
             {/* Row 3: empty — Stakeholder — empty */}
             <div className="bg-background" />
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="group relative overflow-hidden bg-primary/15 cursor-default">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="group relative overflow-hidden bg-primary/8 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
-                    <span className="text-base font-bold text-primary/10 leading-none block">05</span>
-                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-primary/50 mt-0.5 block">{bentoDimensions[4].dim}</span>
+                    <span className="text-base font-bold text-foreground/20 leading-none block">05</span>
+                    <span className="text-[10px] font-medium tracking-[0.2em] uppercase text-foreground mt-0.5 block">{bentoDimensions[4].dim}</span>
                   </div>
                   <span className="inline-flex h-7 w-7 items-center justify-center bg-primary/10 text-primary shrink-0"><Filter className="h-3.5 w-3.5" /></span>
                 </div>
                 <h3 className="text-sm font-bold mb-2">{bentoDimensions[4].metaphor}</h3>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
-                <p className="text-[11px] text-muted-foreground leading-relaxed">{bentoDimensions[4].holds}</p>
-                <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
+                <p className="text-[11px] text-foreground leading-relaxed">{bentoDimensions[4].holds}</p>
+                <p className="text-[10px] text-foreground/50 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
                 <p className="text-[11px] text-foreground font-medium">{bentoDimensions[4].experience}</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
@@ -258,7 +258,7 @@ export default function Philosophy() {
               </div>
             </motion.div>
             {bentoDimensions.slice(1).map((item, index) => (
-              <motion.div key={index + 1} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: (index + 1) * 0.07 }} className="group relative overflow-hidden rounded-none bg-primary/15 border border-primary/20 hover:border-primary/40 active:border-primary/40 transition-colors cursor-default min-h-[160px]">
+              <motion.div key={index + 1} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: (index + 1) * 0.07 }} className="group relative overflow-hidden rounded-none bg-primary/8 border border-primary/20 hover:border-primary/40 active:border-primary/40 transition-colors cursor-default min-h-[160px]">
                 <div className="p-3 sm:p-4 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                   <div>
                     <div className="flex items-center justify-between mb-2">

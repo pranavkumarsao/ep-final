@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { Link } from "react-router";
 
 const process = [
   {
@@ -336,28 +335,6 @@ export default function HowWeWork() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── Dark CTA ── */}
-      <section className="py-14 md:py-20 lg:py-28 bg-foreground">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <p className="text-xs tracking-[0.3em] uppercase text-[hsl(235_65%_55%)] font-medium mb-4">
-            Let's Talk
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-background">
-            Discuss your challenge with us.
-          </h2>
-          <p className="text-base text-background/60 max-w-xl mx-auto mb-10 leading-relaxed">
-            When speed is critical and shortcuts are unacceptable, let us help you find the way
-            forward—with clarity and confidence.
-          </p>
-          <Link
-            to="/work-with-us#form"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
-          >
-            Start a Strategic Conversation
-          </Link>
         </div>
       </section>
 
