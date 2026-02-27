@@ -24,14 +24,14 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             to="/"
-            className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium"
+            className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 active:bg-primary/90 transition-all duration-300 font-medium"
           >
             <Home className="w-5 h-5" />
             <span>Go Home</span>
           </Link>
           <button
             onClick={() => window.history.back()}
-            className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-secondary border border-border text-foreground rounded-lg hover:bg-secondary/80 transition-all duration-300 font-medium"
+            className="inline-flex items-center justify-center space-x-2 px-8 py-4 bg-secondary border border-border text-foreground rounded-lg hover:bg-secondary/80 active:bg-secondary/80 transition-all duration-300 font-medium"
           >
             <ArrowLeft className="w-5 h-5" />
             <span>Go Back</span>

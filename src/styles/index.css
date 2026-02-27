@@ -16,6 +16,30 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a,
+button,
+[role="button"] {
+  -webkit-tap-highlight-color: rgba(45, 58, 189, 0.18);
+}
+
+/* Touch fallbacks: phones do not support persistent hover states. */
+@media (hover: none) {
+  a:active,
+  button:active,
+  [role="button"]:active {
+    transform: translateY(1px);
+  }
+
+  /* Keep "hover reveal" cards usable on touch by showing reveal content. */
+  .group > .group-hover\:opacity-0 {
+    opacity: 0;
+  }
+
+  .group > .opacity-0.group-hover\:opacity-100 {
+    opacity: 1;
+  }
+}
+
 /* Eagle design utilities */
 .text-primary-gradient {
   background-clip: text;

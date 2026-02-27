@@ -125,10 +125,10 @@ export default function Philosophy() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="lg:col-span-2 lg:row-span-1 group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]"
+              className="lg:col-span-2 lg:row-span-1 group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[220px]"
             >
               {/* Default content */}
-              <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+              <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div>
                   <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
                     Ways of Knowing
@@ -147,7 +147,7 @@ export default function Philosophy() {
                 </div>
               </div>
               {/* Hover overlay */}
-              <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                 <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
                 <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                 <p className="text-base text-primary-foreground leading-relaxed font-medium">{bentoDimensions[0].hover}</p>
@@ -164,10 +164,10 @@ export default function Philosophy() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: (index + 1) * 0.07 }}
-                  className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]"
+                  className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[220px]"
                 >
                   {/* Default content */}
-                  <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+                  <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                     <div>
                       <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
                         {dimensions[index]}
@@ -186,7 +186,7 @@ export default function Philosophy() {
                     </div>
                   </div>
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                     <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
                     <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                     <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
@@ -242,7 +242,7 @@ export default function Philosophy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-background p-5 sm:p-8 border border-border hover:border-primary/20 transition-colors"
+                className="bg-background p-5 sm:p-8 border border-border hover:border-primary/20 active:border-primary/20 transition-colors"
               >
                 <span className="text-4xl font-bold text-primary/10 block mb-4">{item.num}</span>
                 <h3 className="text-base font-semibold mb-3">{item.title}</h3>

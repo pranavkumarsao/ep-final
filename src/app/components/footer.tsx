@@ -14,7 +14,7 @@ export default function Footer() {
           </div>
           <Link
             to="/work-with-us"
-            className="shrink-0 px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] transition-colors"
+            className="shrink-0 px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
           >
             Contact Us
           </Link>
@@ -45,7 +45,7 @@ export default function Footer() {
                   { label: "Leadership", path: "/leadership" },
                 ].map((item) => (
                   <li key={item.path}>
-                    <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary transition-colors block">
+                    <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary active:text-primary transition-colors block">
                       {item.label}
                     </Link>
                   </li>
@@ -62,7 +62,7 @@ export default function Footer() {
                   { label: "What Expertise We Bring", path: "/what-we-bring" },
                 ].map((item) => (
                   <li key={item.path}>
-                    <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary transition-colors block">
+                    <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary active:text-primary transition-colors block">
                       {item.label}
                     </Link>
                   </li>
@@ -77,7 +77,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:insights@eagleperspectives.in"
-                  className="text-xs text-muted-foreground hover:text-primary transition-colors flex items-start gap-2"
+                  className="text-xs text-muted-foreground hover:text-primary active:text-primary transition-colors flex items-start gap-2"
                 >
                   <Mail className="w-3.5 h-3.5 flex-shrink-0 mt-0.5" />
                   <span className="break-all">insights@eagleperspectives.in</span>
@@ -89,7 +89,7 @@ export default function Footer() {
                     href="https://linkedin.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary active:text-primary transition-colors"
                     aria-label="LinkedIn"
                   >
                     <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -100,7 +100,7 @@ export default function Footer() {
                     href="https://twitter.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary active:text-primary transition-colors"
                     aria-label="Twitter"
                   >
                     <Twitter className="w-4 h-4" />
@@ -118,10 +118,10 @@ export default function Footer() {
               © {new Date().getFullYear()} Eagle Perspectives. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
-              <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-xs text-muted-foreground hover:text-primary active:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-xs text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-xs text-muted-foreground hover:text-primary active:text-primary transition-colors">
                 Data Integrity
               </a>
             </div>

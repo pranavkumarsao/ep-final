@@ -60,7 +60,7 @@ export default function Navigation() {
                 className={`text-xs font-medium tracking-widest uppercase transition-colors ${
                   location.pathname === link.path
                     ? "text-primary"
-                    : "text-muted-foreground hover:text-primary"
+                    : "text-muted-foreground hover:text-primary active:text-primary"
                 }`}
               >
                 {link.label}
@@ -68,7 +68,7 @@ export default function Navigation() {
             ))}
             <Link
               to="/work-with-us"
-              className="px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] transition-colors"
+              className="px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
             >
               Contact
             </Link>
@@ -104,7 +104,7 @@ export default function Navigation() {
                   className={`block py-3 text-xs font-medium tracking-widest uppercase transition-colors ${
                     location.pathname === link.path
                       ? "text-primary"
-                      : "text-muted-foreground hover:text-primary"
+                      : "text-muted-foreground hover:text-primary active:text-primary"
                   }`}
                 >
                   {link.label}
@@ -113,7 +113,7 @@ export default function Navigation() {
               <div className="pt-3 pb-1">
                 <Link
                   to="/work-with-us"
-                  className="block w-full text-center px-6 py-3 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] transition-colors"
+                  className="block w-full text-center px-6 py-3 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
                 >
                   Contact
                 </Link>

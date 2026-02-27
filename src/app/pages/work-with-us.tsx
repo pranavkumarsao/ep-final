@@ -140,7 +140,7 @@ export default function WorkWithUs() {
 
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
                 >
                   <span>Send Message</span>
                   <Send className="w-4 h-4" />
@@ -175,7 +175,7 @@ export default function WorkWithUs() {
                     <h4 className="text-xs font-semibold tracking-wide uppercase mb-1">Email Us</h4>
                     <a
                       href="mailto:insights@eagleperspectives.in"
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors break-all"
+                      className="text-sm text-muted-foreground hover:text-primary active:text-primary transition-colors break-all"
                     >
                       insights@eagleperspectives.in
                     </a>
@@ -190,7 +190,7 @@ export default function WorkWithUs() {
                     <h4 className="text-xs font-semibold tracking-wide uppercase mb-1">Call Us</h4>
                     <a
                       href="tel:+919892231033"
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-muted-foreground hover:text-primary active:text-primary transition-colors"
                     >
                       +91 98922 31033
                     </a>

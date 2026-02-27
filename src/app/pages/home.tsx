@@ -361,13 +361,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
             >
               Start a Strategic Conversation
             </a>
             <a
               href="#philosophy"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-border text-foreground text-sm font-medium tracking-wide hover:border-primary hover:text-primary transition-colors"
+              className="inline-flex items-center justify-center px-8 py-3.5 border border-border text-foreground text-sm font-medium tracking-wide hover:border-primary active:border-primary hover:text-primary active:text-primary transition-colors"
             >
               Explore Our Approach
             </a>
@@ -499,7 +499,7 @@ export default function Home() {
             </div>
             <Link
               to="/philosophy"
-              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 transition-colors shrink-0"
+              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 active:text-primary/70 transition-colors shrink-0"
             >
               Explore Our Philosophy
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -508,8 +508,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Card 1 — wide */}
-            <div className="lg:col-span-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]">
-              <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+            <div className="lg:col-span-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[220px]">
+              <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div>
                   <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">Ways of Knowing</span>
                   <h3 className="text-xl font-bold mb-3">The Governing Principle</h3>
@@ -525,7 +525,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                 <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                 <p className="text-base text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
               </div>
@@ -537,8 +537,8 @@ export default function Home() {
               { dim: "Expertise", metaphor: "The Team", holds: "Disciplines in dialogue.", exp: "Disciplines in dialogue.", hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle." },
               { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable." },
             ].map((item, i) => (
-              <div key={i} className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]">
-                <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+              <div key={i} className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[220px]">
+                <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                   <div>
                     <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">{item.dim}</span>
                     <h3 className="text-lg font-bold mb-3">{item.metaphor}</h3>
@@ -554,7 +554,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                   <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                   <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
                 </div>
@@ -579,9 +579,9 @@ export default function Home() {
             {differentiators.map((item, i) => (
               <div
                 key={i}
-                className="group relative p-5 sm:p-8 border border-border hover:border-primary/30 transition-colors"
+                className="group relative p-5 sm:p-8 border border-border hover:border-primary/30 active:border-primary/30 transition-colors"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
+                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 group-focus-within:scale-x-100 active:scale-x-100 transition-transform origin-left" />
                 <span className="text-5xl font-bold text-primary/10 mb-4 block">
                   {String(i + 1).padStart(2, "0")}
                 </span>
@@ -612,7 +612,7 @@ export default function Home() {
             {services.map((service, i) => (
               <div
                 key={i}
-                className={`bg-background p-5 sm:p-8 border border-border hover:shadow-lg transition-shadow ${
+                className={`bg-background p-5 sm:p-8 border border-border hover:shadow-lg active:shadow-lg transition-shadow ${
                   i === 4 ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
               >
@@ -648,7 +648,7 @@ export default function Home() {
             </div>
             <Link
               to="/what-we-solve"
-              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 transition-colors shrink-0"
+              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 active:text-primary/70 transition-colors shrink-0"
             >
               Explore All Five Decisions
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -666,10 +666,10 @@ export default function Home() {
               <Link
                 key={i}
                 to="/what-we-solve"
-                className="bg-background border border-border p-8 hover:border-primary/30 transition-colors group relative overflow-hidden block"
+                className="bg-background border border-border p-8 hover:border-primary/30 active:border-primary/30 transition-colors group relative overflow-hidden block"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-                <span className="text-4xl font-bold text-primary/10 block mb-3 group-hover:text-primary/20 transition-colors">
+                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 group-focus-within:scale-x-100 active:scale-x-100 transition-transform origin-left duration-300" />
+                <span className="text-4xl font-bold text-primary/10 block mb-3 group-hover:text-primary/20 group-active:text-primary/20 group-focus-within:text-primary/20 active:text-primary/20 transition-colors">
                   {item.num}
                 </span>
                 <h3 className="text-base font-semibold mb-1">{item.title}</h3>
@@ -696,7 +696,7 @@ export default function Home() {
             </div>
             <Link
               to="/what-we-bring"
-              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 transition-colors shrink-0"
+              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 active:text-primary/70 transition-colors shrink-0"
             >
               Explore All Eight Disciplines
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
@@ -717,9 +717,9 @@ export default function Home() {
               <Link
                 key={i}
                 to="/what-we-bring"
-                className="bg-background border border-border p-6 hover:border-primary/30 transition-colors group relative overflow-hidden block"
+                className="bg-background border border-border p-6 hover:border-primary/30 active:border-primary/30 transition-colors group relative overflow-hidden block"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 group-focus-within:scale-x-100 active:scale-x-100 transition-transform origin-left duration-300" />
                 <span className="block text-xs font-medium tracking-wide uppercase text-primary/50 mb-3">
                   {item.lens}
                 </span>
@@ -750,7 +750,7 @@ export default function Home() {
                 key={i}
                 className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-4 py-8 border-b border-border group"
               >
-                <span className="text-3xl md:text-4xl font-bold text-primary/15 group-hover:text-primary/40 transition-colors">
+                <span className="text-3xl md:text-4xl font-bold text-primary/15 group-hover:text-primary/40 group-active:text-primary/40 group-focus-within:text-primary/40 active:text-primary/40 transition-colors">
                   {step.num}
                 </span>
                 <div>
@@ -794,7 +794,7 @@ export default function Home() {
               <div
                 key={i}
                 onClick={() => setSelectedLeader(leader)}
-                className="bg-background p-5 sm:p-8 border border-border group hover:border-primary/20 transition-colors cursor-pointer"
+                className="bg-background p-5 sm:p-8 border border-border group hover:border-primary/20 active:border-primary/20 transition-colors cursor-pointer"
               >
                 <div className="w-12 h-12 bg-primary/5 border border-primary/10 flex items-center justify-center mb-5">
                   <span className="text-sm font-bold text-primary">
@@ -848,7 +848,7 @@ export default function Home() {
           </p>
           <a
             href="mailto:contact@eagleperspectives.com"
-            className="inline-flex items-center justify-center px-10 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_65%_55%)] transition-colors"
+            className="inline-flex items-center justify-center px-10 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_65%_55%)] active:bg-[hsl(235_65%_55%)] transition-colors"
           >
             Start a Strategic Conversation
           </a>
@@ -869,7 +869,7 @@ export default function Home() {
               <h3 className="text-xl font-semibold">{selectedLeader.name}</h3>
               <button
                 onClick={() => setSelectedLeader(null)}
-                className="p-1.5 hover:bg-secondary transition-colors"
+                className="p-1.5 hover:bg-secondary active:bg-secondary transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>
@@ -913,7 +913,7 @@ export default function Home() {
                   href={selectedLeader.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary hover:text-primary/70 transition-colors"
+                  className="inline-flex items-center text-primary hover:text-primary/70 active:text-primary/70 transition-colors"
                 >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>

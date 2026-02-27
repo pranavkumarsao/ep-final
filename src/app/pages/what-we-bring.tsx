@@ -109,9 +109,9 @@ export default function WhatWeBring() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.06 }}
-                className="bg-background border border-border p-5 sm:p-8 hover:border-primary/30 transition-colors group relative overflow-hidden"
+                className="bg-background border border-border p-5 sm:p-8 hover:border-primary/30 active:border-primary/30 transition-colors group relative overflow-hidden"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 group-focus-within:scale-x-100 active:scale-x-100 transition-transform origin-left duration-300" />
                 <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 px-3 py-1 mb-5">
                   {item.lens}
                 </span>
@@ -143,7 +143,7 @@ export default function WhatWeBring() {
             <div className="section-divider-center mb-10" />
             <Link
               to="/what-we-solve"
-              className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] transition-colors"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
             >
               Explore What Decisions We Solve
               <ArrowRight className="w-4 h-4" />
@@ -168,7 +168,7 @@ export default function WhatWeBring() {
           </p>
           <Link
             to="/work-with-us"
-            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_65%_55%)] transition-colors"
+            className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_65%_55%)] active:bg-[hsl(235_65%_55%)] transition-colors"
           >
             Start a Strategic Conversation
             <ArrowRight className="w-4 h-4" />

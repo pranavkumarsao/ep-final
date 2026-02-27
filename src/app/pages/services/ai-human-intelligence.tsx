@@ -181,7 +181,7 @@ export default function AIHumanIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-card border border-border rounded-xl p-6 hover:border-primary/30 transition-all duration-300"
+                className="bg-card border border-border rounded-xl p-6 hover:border-primary/30 active:border-primary/30 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                   <capability.icon className="w-6 h-6 text-primary" />
@@ -241,7 +241,7 @@ export default function AIHumanIntelligence() {
             </p>
             <Link
               to="/work-with-us"
-              className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium"
+              className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 active:bg-primary/90 transition-all duration-300 font-medium"
             >
               Start a Conversation
             </Link>

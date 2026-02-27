@@ -151,7 +151,7 @@ export default function HowWeWork() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="grid grid-cols-[60px_1fr] md:grid-cols-[80px_1fr] gap-4 py-8 border-b border-border group"
               >
-                <span className="text-3xl md:text-4xl font-bold text-primary/15 group-hover:text-primary/40 transition-colors">
+                <span className="text-3xl md:text-4xl font-bold text-primary/15 group-hover:text-primary/40 group-active:text-primary/40 group-focus-within:text-primary/40 active:text-primary/40 transition-colors">
                   {step.number}
                 </span>
                 <div>
@@ -271,7 +271,7 @@ export default function HowWeWork() {
           </p>
           <Link
             to="/work-with-us"
-            className="inline-flex items-center justify-center px-10 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_65%_55%)] transition-colors"
+            className="inline-flex items-center justify-center px-10 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_65%_55%)] active:bg-[hsl(235_65%_55%)] transition-colors"
           >
             Start a Conversation
           </Link>

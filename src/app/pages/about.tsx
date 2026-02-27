@@ -119,7 +119,7 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-secondary p-8 border border-border hover:border-primary/20 transition-colors"
+                className="bg-secondary p-8 border border-border hover:border-primary/20 active:border-primary/20 transition-colors"
               >
                 <h3 className="text-base font-semibold mb-3">{item.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
@@ -184,7 +184,7 @@ export default function About() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="flex items-center gap-3 p-5 border border-border hover:border-primary/30 transition-colors"
+                className="flex items-center gap-3 p-5 border border-border hover:border-primary/30 active:border-primary/30 transition-colors"
               >
                 <span className="w-1 h-1 bg-primary rounded-full flex-shrink-0" />
                 <span className="text-sm text-foreground/90">{category}</span>

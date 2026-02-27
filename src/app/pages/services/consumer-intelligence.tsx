@@ -117,7 +117,7 @@ export default function ConsumerIntelligence() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-secondary border border-border rounded-xl p-8 hover:border-primary/30 transition-all duration-300"
+                className="bg-secondary border border-border rounded-xl p-8 hover:border-primary/30 active:border-primary/30 transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                   <service.icon className="w-7 h-7 text-primary" />
@@ -148,7 +148,7 @@ export default function ConsumerIntelligence() {
             </p>
             <Link
               to="/work-with-us"
-              className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-medium"
+              className="inline-block px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 active:bg-primary/90 transition-all duration-300 font-medium"
             >
               Start a Conversation
             </Link>
