@@ -422,15 +422,15 @@ export default function Home() {
               </ul>
             </div>
             <div className="space-y-3 border-l-2 border-primary/20 pl-6">
-              <p className="text-foreground font-semibold text-sm">We are:</p>
+              <p className="text-primary font-bold text-sm">We are:</p>
               <ul className="list-disc pl-5 space-y-2">
-                <li className="text-foreground font-medium text-sm">
+                <li className="text-primary text-sm">
                   A research intelligence consortium — multiple specialist organisations, orchestrated as one, assembled per brief
                 </li>
-                <li className="text-foreground font-medium text-sm">
+                <li className="text-primary text-sm">
                   A convergence firm — our job is not to produce more research but to make the research you have decisive
                 </li>
-                <li className="text-foreground font-medium text-sm">
+                <li className="text-primary text-sm">
                   A system built to evolve — new capabilities added by design, not by accident; every specialist fills a structural gap
                 </li>
               </ul>

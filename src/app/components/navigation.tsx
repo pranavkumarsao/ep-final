@@ -45,10 +45,10 @@ export default function Navigation() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex items-center justify-between h-24 lg:h-28">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <img src={logo} alt="Eagle Perspectives" className="h-10 md:h-12 w-auto" />
+            <img src={logo} alt="Eagle Perspectives" className="h-20 md:h-24 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

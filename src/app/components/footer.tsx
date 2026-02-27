@@ -27,7 +27,7 @@ export default function Footer() {
             {/* Brand */}
             <div className="col-span-1 sm:col-span-2 md:col-span-1 space-y-4">
               <Link to="/" className="inline-block">
-                <img src={logo} alt="Eagle Perspectives" className="h-10 w-auto" />
+                <img src={logo} alt="Eagle Perspectives" className="h-20 w-auto" />
               </Link>
               <p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
                 Converting complexity into clarity—and clarity into strategy.
