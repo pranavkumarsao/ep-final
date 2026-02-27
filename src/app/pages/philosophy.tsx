@@ -132,7 +132,7 @@ export default function Philosophy() {
           <div className="hidden lg:grid grid-cols-3 grid-rows-3 gap-1.5 bg-primary/10 h-[600px]">
             {/* Row 1: empty — Vantage — empty */}
             <div className="bg-background" />
-            <motion.div initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="group relative overflow-hidden bg-secondary/20 cursor-default">
+            <motion.div initial={{ opacity: 0, y: -20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="group relative overflow-hidden bg-primary/15 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -155,7 +155,7 @@ export default function Philosophy() {
             <div className="bg-background" />
 
             {/* Row 2: Expertise — Ways of Knowing — Scale */}
-            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="group relative overflow-hidden bg-secondary/20 cursor-default">
+            <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="group relative overflow-hidden bg-primary/15 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -195,7 +195,7 @@ export default function Philosophy() {
                 <p className="text-xs text-primary-foreground leading-relaxed font-medium">{bentoDimensions[0].hover}</p>
               </div>
             </motion.div>
-            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="group relative overflow-hidden bg-secondary/20 cursor-default">
+            <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }} className="group relative overflow-hidden bg-primary/15 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -218,7 +218,7 @@ export default function Philosophy() {
 
             {/* Row 3: empty — Stakeholder — empty */}
             <div className="bg-background" />
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="group relative overflow-hidden bg-secondary/20 cursor-default">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }} className="group relative overflow-hidden bg-primary/15 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -258,7 +258,7 @@ export default function Philosophy() {
               </div>
             </motion.div>
             {bentoDimensions.slice(1).map((item, index) => (
-              <motion.div key={index + 1} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: (index + 1) * 0.07 }} className="group relative overflow-hidden rounded-none bg-secondary/40 border border-primary/20 hover:border-primary/40 active:border-primary/40 transition-colors cursor-default min-h-[160px]">
+              <motion.div key={index + 1} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: (index + 1) * 0.07 }} className="group relative overflow-hidden rounded-none bg-primary/15 border border-primary/20 hover:border-primary/40 active:border-primary/40 transition-colors cursor-default min-h-[160px]">
                 <div className="p-3 sm:p-4 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                   <div>
                     <div className="flex items-center justify-between mb-2">

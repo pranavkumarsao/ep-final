@@ -507,7 +507,7 @@ export default function Home() {
           <div className="hidden lg:grid grid-cols-3 grid-rows-3 gap-1.5 bg-primary/10 h-[600px]">
             {/* Row 1: empty — Vantage — empty */}
             <div className="bg-background" />
-            <div className="group relative overflow-hidden bg-secondary/20 cursor-default">
+            <div className="group relative overflow-hidden bg-primary/15 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -530,7 +530,7 @@ export default function Home() {
             <div className="bg-background" />
 
             {/* Row 2: Expertise — Ways of Knowing — Scale */}
-            <div className="group relative overflow-hidden bg-secondary/20 cursor-default">
+            <div className="group relative overflow-hidden bg-primary/15 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -570,7 +570,7 @@ export default function Home() {
                 <p className="text-xs text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
               </div>
             </div>
-            <div className="group relative overflow-hidden bg-secondary/20 cursor-default">
+            <div className="group relative overflow-hidden bg-primary/15 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
@@ -593,7 +593,7 @@ export default function Home() {
 
             {/* Row 3: empty — Stakeholder — empty */}
             <div className="bg-background" />
-            <div className="group relative overflow-hidden bg-secondary/20 cursor-default">
+            <div className="group relative overflow-hidden bg-primary/15 cursor-default">
               <div className="p-3 h-full flex flex-col transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0">
                 <div className="flex items-start justify-between mb-2">
                   <div>
