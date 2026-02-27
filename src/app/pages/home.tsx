@@ -376,9 +376,9 @@ export default function Home() {
       </section>
 
       {/* ── About ── */}
-      <section id="about" className="py-24 lg:py-32">
+      <section id="about" className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">About Us</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               Built for complexity.{" "}
@@ -387,7 +387,7 @@ export default function Home() {
             <div className="section-divider" />
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-start">
             <div className="space-y-6 text-base leading-relaxed text-muted-foreground">
               <p>
                 The structure of markets has fundamentally changed. Consumers today do not behave in linear or predictable ways. Their choices vary by context, occasion, channel, price sensitivity, and cultural environment.
@@ -412,7 +412,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start mt-8">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20 items-start mt-8">
             <div className="space-y-3 border-l-2 border-primary/20 pl-6">
               <p className="text-foreground font-semibold text-sm">We are not:</p>
               <ul className="list-disc pl-5 space-y-2">
@@ -440,9 +440,9 @@ export default function Home() {
       </section>
 
       {/* ── Philosophy ── */}
-      <section id="philosophy" className="py-24 lg:py-32 bg-secondary">
+      <section id="philosophy" className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Philosophy</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               The <span className="text-primary-gradient">Eagle</span> Perspective
@@ -453,7 +453,7 @@ export default function Home() {
             <div className="section-divider-center mt-6" />
           </div>
 
-          <div className="relative mb-16 max-w-4xl mx-auto">
+          <div className="relative mb-10 md:mb-16 max-w-4xl mx-auto">
             <img
               src={convergenceImage}
               alt="Convergence of multiple perspectives into one"
@@ -486,9 +486,9 @@ export default function Home() {
       </section>
 
       {/* ── Five Dimensions Bento Grid ── */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
             <div className="max-w-2xl">
               <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -509,7 +509,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {/* Card 1 — wide */}
             <div className="lg:col-span-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]">
-              <div className="p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+              <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
                 <div>
                   <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">Ways of Knowing</span>
                   <h3 className="text-xl font-bold mb-3">The Governing Principle</h3>
@@ -525,7 +525,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                 <p className="text-base text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
               </div>
@@ -538,7 +538,7 @@ export default function Home() {
               { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable." },
             ].map((item, i) => (
               <div key={i} className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]">
-                <div className="p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+                <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
                   <div>
                     <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">{item.dim}</span>
                     <h3 className="text-lg font-bold mb-3">{item.metaphor}</h3>
@@ -554,7 +554,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                   <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
                 </div>
@@ -565,9 +565,9 @@ export default function Home() {
       </section>
 
       {/* ── Differentiators ── */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">What Makes Us Different</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Designed to <span className="text-primary-gradient">converge</span>, not just inform
@@ -579,7 +579,7 @@ export default function Home() {
             {differentiators.map((item, i) => (
               <div
                 key={i}
-                className="group relative p-8 border border-border hover:border-primary/30 transition-colors"
+                className="group relative p-5 sm:p-8 border border-border hover:border-primary/30 transition-colors"
               >
                 <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left" />
                 <span className="text-5xl font-bold text-primary/10 mb-4 block">
@@ -594,9 +594,9 @@ export default function Home() {
       </section>
 
       {/* ── Services ── */}
-      <section id="services" className="py-24 lg:py-32 bg-secondary">
+      <section id="services" className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Services</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               One partner. Every insight.{" "}
@@ -612,7 +612,7 @@ export default function Home() {
             {services.map((service, i) => (
               <div
                 key={i}
-                className={`bg-background p-8 border border-border hover:shadow-lg transition-shadow ${
+                className={`bg-background p-5 sm:p-8 border border-border hover:shadow-lg transition-shadow ${
                   i === 4 ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
               >
@@ -633,9 +633,9 @@ export default function Home() {
       </section>
 
       {/* ── Axis 1: What We Solve ── */}
-      <section id="what-we-solve" className="py-24 lg:py-32">
+      <section id="what-we-solve" className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
             <div className="max-w-2xl">
               <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Axis 1</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -681,9 +681,9 @@ export default function Home() {
       </section>
 
       {/* ── Axis 2: What We Bring ── */}
-      <section id="what-we-bring" className="py-24 lg:py-32 bg-secondary">
+      <section id="what-we-bring" className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
             <div className="max-w-2xl">
               <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Axis 2</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -731,9 +731,9 @@ export default function Home() {
       </section>
 
       {/* ── How We Work ── */}
-      <section id="how-we-work" className="py-24 lg:py-32">
+      <section id="how-we-work" className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">How We Work</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our <span className="text-primary-gradient">Strategic Synthesis</span> Model
@@ -744,7 +744,7 @@ export default function Home() {
             <div className="section-divider mt-6" />
           </div>
 
-          <div className="space-y-0 mb-24">
+          <div className="space-y-0 mb-12 md:mb-20">
             {steps.map((step, i) => (
               <div
                 key={i}
@@ -778,9 +778,9 @@ export default function Home() {
       </section>
 
       {/* ── Leadership ── */}
-      <section id="leadership" className="py-24 lg:py-32 bg-secondary">
+      <section id="leadership" className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
+          <div className="max-w-3xl mx-auto text-center mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Leadership</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
               Built by leaders who have{" "}
@@ -794,7 +794,7 @@ export default function Home() {
               <div
                 key={i}
                 onClick={() => setSelectedLeader(leader)}
-                className="bg-background p-8 border border-border group hover:border-primary/20 transition-colors cursor-pointer"
+                className="bg-background p-5 sm:p-8 border border-border group hover:border-primary/20 transition-colors cursor-pointer"
               >
                 <div className="w-12 h-12 bg-primary/5 border border-primary/10 flex items-center justify-center mb-5">
                   <span className="text-sm font-bold text-primary">
@@ -811,9 +811,9 @@ export default function Home() {
       </section>
 
       {/* ── Values ── */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Culture & Values</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               What defines <span className="text-primary-gradient">how we work</span>
@@ -821,7 +821,7 @@ export default function Home() {
             <div className="section-divider" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {values.map((v, i) => (
               <div key={i} className="border-t-2 border-primary/15 pt-5">
                 <h3 className="text-sm font-semibold mb-2">{v.title}</h3>
@@ -833,7 +833,7 @@ export default function Home() {
       </section>
 
       {/* ── Contact ── */}
-      <section id="contact" className="py-24 lg:py-32 bg-foreground">
+      <section id="contact" className="py-14 md:py-20 lg:py-28 bg-foreground">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-[hsl(235_65%_55%)] font-medium mb-4">
             Let's Talk
@@ -865,7 +865,7 @@ export default function Home() {
             onClick={(e) => e.stopPropagation()}
             className="bg-background border border-border max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl"
           >
-            <div className="sticky top-0 bg-background border-b border-border px-8 py-5 flex items-center justify-between z-10">
+            <div className="sticky top-0 bg-background border-b border-border px-5 py-4 sm:px-8 sm:py-5 flex items-center justify-between z-10">
               <h3 className="text-xl font-semibold">{selectedLeader.name}</h3>
               <button
                 onClick={() => setSelectedLeader(null)}
@@ -875,8 +875,8 @@ export default function Home() {
               </button>
             </div>
 
-            <div className="p-8">
-              <div className="flex gap-6 mb-8">
+            <div className="p-5 sm:p-8">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6 sm:mb-8">
                 {selectedLeader.image ? (
                   <img
                     src={selectedLeader.image}

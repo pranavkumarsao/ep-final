@@ -23,9 +23,9 @@ export default function Footer() {
 
       <div className="py-12">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
             {/* Brand */}
-            <div className="col-span-2 md:col-span-1 space-y-4">
+            <div className="col-span-1 sm:col-span-2 md:col-span-1 space-y-4">
               <Link to="/" className="inline-block">
                 <img src={logo} alt="Eagle Perspectives" className="h-10 w-auto" />
               </Link>
@@ -131,6 +131,7 @@ export default function Footer() {
           </p>
         </div>
       </div>
+    </div>
     </footer>
   );
 }

@@ -26,7 +26,7 @@ export default function WorkWithUs() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Let's Talk</p>
@@ -42,9 +42,9 @@ export default function WorkWithUs() {
       </section>
 
       {/* Contact Form & Info */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20">
+          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

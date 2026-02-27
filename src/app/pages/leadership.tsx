@@ -206,7 +206,7 @@ export default function Leadership() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Leadership</p>
@@ -222,14 +222,14 @@ export default function Leadership() {
       </section>
 
       {/* Introduction */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid lg:grid-cols-2 gap-12 lg:gap-20"
+            className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20"
           >
             <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
               <p>
@@ -250,9 +250,9 @@ export default function Leadership() {
       </section>
 
       {/* Leadership Team Grid */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Team</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Built by leaders who have{" "}
@@ -270,7 +270,7 @@ export default function Leadership() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.04 }}
                 onClick={() => setSelectedLeader(leader)}
-                className="bg-background border border-border p-8 cursor-pointer hover:border-primary/20 transition-colors group"
+                className="bg-background border border-border p-5 sm:p-8 cursor-pointer hover:border-primary/20 transition-colors group"
               >
                 <div className="w-12 h-12 bg-primary/5 border border-primary/10 flex items-center justify-center mb-5">
                   <span className="text-sm font-bold text-primary">
@@ -299,7 +299,7 @@ export default function Leadership() {
             onClick={(e) => e.stopPropagation()}
             className="bg-background border border-border max-w-2xl w-full max-h-[92vh] overflow-y-auto shadow-2xl"
           >
-            <div className="sticky top-0 bg-background border-b border-border px-8 py-5 flex items-center justify-between z-10">
+            <div className="sticky top-0 bg-background border-b border-border px-5 py-4 sm:px-8 sm:py-5 flex items-center justify-between z-10">
               <h3 className="text-xl font-semibold">{selectedLeader.name}</h3>
               <button
                 onClick={() => setSelectedLeader(null)}
@@ -309,8 +309,8 @@ export default function Leadership() {
               </button>
             </div>
 
-            <div className="p-8">
-              <div className="flex gap-6 mb-8">
+            <div className="p-5 sm:p-8">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6 sm:mb-8">
                 {selectedLeader.image ? (
                   <img
                     src={selectedLeader.image}
@@ -360,9 +360,9 @@ export default function Leadership() {
       )}
 
       {/* Strategic Advisors / Values */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Culture & Values</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               What defines <span className="text-primary-gradient">how we work</span>
@@ -370,7 +370,7 @@ export default function Leadership() {
             <div className="section-divider mt-6" />
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
               {
                 title: "Strategy First",

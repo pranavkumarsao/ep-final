@@ -49,7 +49,7 @@ export default function WhatWeBring() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Axis 2</p>
@@ -65,14 +65,14 @@ export default function WhatWeBring() {
       </section>
 
       {/* Intro */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid lg:grid-cols-2 gap-12 lg:gap-20"
+            className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20"
           >
             <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
               <p>
@@ -91,9 +91,9 @@ export default function WhatWeBring() {
       </section>
 
       {/* Expertise Cards */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">The Eight Disciplines</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Eight lenses. <span className="text-primary-gradient">One clear view.</span>
@@ -109,7 +109,7 @@ export default function WhatWeBring() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.06 }}
-                className="bg-background border border-border p-8 hover:border-primary/30 transition-colors group relative overflow-hidden"
+                className="bg-background border border-border p-5 sm:p-8 hover:border-primary/30 transition-colors group relative overflow-hidden"
               >
                 <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
                 <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 px-3 py-1 mb-5">
@@ -124,7 +124,7 @@ export default function WhatWeBring() {
       </section>
 
       {/* The Intersection */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -153,7 +153,7 @@ export default function WhatWeBring() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-foreground">
+      <section className="py-14 md:py-20 lg:py-28 bg-foreground">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-[hsl(235_65%_55%)] font-medium mb-4">
             Let's Talk

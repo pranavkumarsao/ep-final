@@ -10,7 +10,7 @@ export default function About() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">About Us</p>
@@ -27,7 +27,7 @@ export default function About() {
       </section>
 
       {/* Market Reality */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial="initial"
@@ -42,7 +42,7 @@ export default function About() {
               The structure of markets has fundamentally changed
             </motion.h2>
 
-            <motion.div variants={fadeInUp} className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            <motion.div variants={fadeInUp} className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
               <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
                 <p>
                   Consumers today do not behave in linear or predictable ways. Their choices vary by
@@ -74,9 +74,9 @@ export default function About() {
       </section>
 
       {/* What We Do */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Role</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               We are a <span className="text-primary-gradient">one-stop insights</span> and strategic intelligence
@@ -130,7 +130,7 @@ export default function About() {
       </section>
 
       {/* Our Commitment */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -159,9 +159,9 @@ export default function About() {
       </section>
 
       {/* Who We Work With */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Clients</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Who we work with

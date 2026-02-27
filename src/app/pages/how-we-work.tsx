@@ -62,7 +62,7 @@ export default function HowWeWork() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">How We Work</p>
@@ -79,7 +79,7 @@ export default function HowWeWork() {
       </section>
 
       {/* Starting Point */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -95,7 +95,7 @@ export default function HowWeWork() {
               <div className="section-divider mt-6" />
             </div>
 
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
               <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
                 <p>
                   At Eagle Perspectives, every engagement begins with a simple but critical discipline:{" "}
@@ -128,9 +128,9 @@ export default function HowWeWork() {
       </section>
 
       {/* Our Process */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Process</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Five-stage synthesis model
@@ -165,9 +165,9 @@ export default function HowWeWork() {
       </section>
 
       {/* Engagement Types */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Engagement Types</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Engagement <span className="text-primary-gradient">Types</span>
@@ -200,9 +200,9 @@ export default function HowWeWork() {
       </section>
 
       {/* Quality & Governance */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Standards</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Quality, Governance & <span className="text-primary-gradient">Data Integrity</span>
@@ -240,7 +240,7 @@ export default function HowWeWork() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-secondary p-8 border border-border"
+                className="bg-secondary p-5 sm:p-8 border border-border"
               >
                 <h3 className="text-base font-semibold mb-6">{section.title}</h3>
                 <ul className="space-y-3">
@@ -258,7 +258,7 @@ export default function HowWeWork() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-foreground">
+      <section className="py-14 md:py-20 lg:py-28 bg-foreground">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-[hsl(235_65%_55%)] font-medium mb-4">
             Let's Talk

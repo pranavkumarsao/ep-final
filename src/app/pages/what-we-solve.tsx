@@ -39,7 +39,7 @@ export default function WhatWeSolve() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Axis 1</p>
@@ -55,14 +55,14 @@ export default function WhatWeSolve() {
       </section>
 
       {/* Intro */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid lg:grid-cols-2 gap-12 lg:gap-20"
+            className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20"
           >
             <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
               <p>
@@ -81,9 +81,9 @@ export default function WhatWeSolve() {
       </section>
 
       {/* Decision Cards */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">The Five Decisions</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Recognise your <span className="text-primary-gradient">question</span>
@@ -99,7 +99,7 @@ export default function WhatWeSolve() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className={`bg-background border border-border p-8 hover:border-primary/30 transition-colors group relative overflow-hidden ${
+                className={`bg-background border border-border p-5 sm:p-8 hover:border-primary/30 transition-colors group relative overflow-hidden ${
                   index === 4 ? "md:col-span-2 lg:col-span-1" : ""
                 }`}
               >
@@ -117,7 +117,7 @@ export default function WhatWeSolve() {
       </section>
 
       {/* The Intersection */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -146,7 +146,7 @@ export default function WhatWeSolve() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 lg:py-32 bg-foreground">
+      <section className="py-14 md:py-20 lg:py-28 bg-foreground">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-[hsl(235_65%_55%)] font-medium mb-4">
             Let's Talk

@@ -43,7 +43,7 @@ export default function Philosophy() {
   return (
     <div className="pt-20">
       {/* Hero */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Philosophy</p>
@@ -61,14 +61,14 @@ export default function Philosophy() {
       </section>
 
       {/* Eagle Metaphor */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="grid lg:grid-cols-2 gap-12 lg:gap-20"
+            className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-20"
           >
             <div className="space-y-5 text-base text-muted-foreground leading-relaxed">
               <p className="text-xl text-foreground font-semibold">
@@ -104,9 +104,9 @@ export default function Philosophy() {
       </section>
 
       {/* Five Dimensions Bento Grid */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Five Dimensions of <span className="text-primary-gradient">Plurality</span>
@@ -128,7 +128,7 @@ export default function Philosophy() {
               className="lg:col-span-2 lg:row-span-1 group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]"
             >
               {/* Default content */}
-              <div className="p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+              <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
                 <div>
                   <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
                     Ways of Knowing
@@ -147,7 +147,7 @@ export default function Philosophy() {
                 </div>
               </div>
               {/* Hover overlay */}
-              <div className="absolute inset-0 p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
                 <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                 <p className="text-base text-primary-foreground leading-relaxed font-medium">{bentoDimensions[0].hover}</p>
@@ -167,7 +167,7 @@ export default function Philosophy() {
                   className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]"
                 >
                   {/* Default content */}
-                  <div className="p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+                  <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
                     <div>
                       <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
                         {dimensions[index]}
@@ -186,7 +186,7 @@ export default function Philosophy() {
                     </div>
                   </div>
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
                     <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                     <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
@@ -199,9 +199,9 @@ export default function Philosophy() {
       </section>
 
       {/* Core Principles */}
-      <section className="py-24 lg:py-32 bg-secondary">
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Guiding Principles</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Our <span className="text-primary-gradient">guiding principles</span>
@@ -242,7 +242,7 @@ export default function Philosophy() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-background p-8 border border-border hover:border-primary/20 transition-colors"
+                className="bg-background p-5 sm:p-8 border border-border hover:border-primary/20 transition-colors"
               >
                 <span className="text-4xl font-bold text-primary/10 block mb-4">{item.num}</span>
                 <h3 className="text-base font-semibold mb-3">{item.title}</h3>
@@ -254,9 +254,9 @@ export default function Philosophy() {
       </section>
 
       {/* What Makes Us Different */}
-      <section className="py-24 lg:py-32">
+      <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-16">
+          <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">What Makes Us Different</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Designed to <span className="text-primary-gradient">converge</span>, not just inform
@@ -311,7 +311,7 @@ export default function Philosophy() {
       </section>
 
       {/* Closing Statement */}
-      <section className="py-24 lg:py-32 bg-foreground">
+      <section className="py-14 md:py-20 lg:py-28 bg-foreground">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <p className="text-xs tracking-[0.3em] uppercase text-[hsl(235_65%_55%)] font-medium mb-6">
             Our Commitment
