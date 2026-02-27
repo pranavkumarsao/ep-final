@@ -11,6 +11,10 @@ import vigyanImage from "figma:asset/8f5998d4cf6e8a4d3768d818eebaac5ee71f11be.pn
 import ronitaImage from "figma:asset/c93f1b93c3de091194dbffdc6c47f527c3efc269.png";
 import bipradeepImage from "figma:asset/66f34e1ef888f51e4e93588ff206041ef921f6f8.png";
 import dipanyitaImage from "figma:asset/99398e657e579b93569ae21a3c80a85d0fa8bbcc.png";
+import miniPintoImage from "@/assets/mini-pinto.jpeg";
+import ruchikaImage from "@/assets/ruchika.jpeg";
+import swatiImage from "@/assets/swati-kulkarni.jpeg";
+import venkatnathImage from "@/assets/venkatnath.jpeg";
 
 interface Leader {
   name: string;
@@ -132,6 +136,7 @@ export default function Leadership() {
         "Multi-market research coordination",
       ],
       linkedin: "https://www.linkedin.com/in/venkatnathkukillaya/",
+      image: venkatnathImage,
     },
     {
       name: "Bipradeep Chakraborty",
@@ -167,6 +172,7 @@ export default function Leadership() {
         "Execution alignment across complex initiatives",
       ],
       linkedin: "https://www.linkedin.com/in/ruchikaaggarwal/",
+      image: ruchikaImage,
     },
     {
       name: "Mini Pinto Sinha",
@@ -178,6 +184,7 @@ export default function Leadership() {
         "Cross-functional team alignment",
       ],
       linkedin: "https://www.linkedin.com/in/pintosinha/",
+      image: miniPintoImage,
     },
     {
       name: "Suparna M",
@@ -200,6 +207,7 @@ export default function Leadership() {
         "Beauty, personal care, OTC healthcare & CPG",
       ],
       linkedin: "https://www.linkedin.com/in/swati-kulkarni-bb07a020/",
+      image: swatiImage,
     },
   ];
 
@@ -278,6 +286,33 @@ export default function Leadership() {
                 <p className="text-xs text-primary font-medium tracking-wide mt-1">{leader.role}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Grid */}
+      <section className="py-14 md:py-20 lg:py-28 bg-secondary">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+            {leaders
+              .filter((leader) => leader.image)
+              .map((leader, index) => (
+                <motion.button
+                  key={index}
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: index * 0.04 }}
+                  onClick={() => setSelectedLeader(leader)}
+                  className="relative aspect-square overflow-hidden cursor-pointer group focus:outline-none"
+                >
+                  <img
+                    src={leader.image}
+                    alt={leader.name}
+                    className="w-full h-full object-cover photo-filter transition-transform duration-500 group-hover:scale-105"
+                  />
+                </motion.button>
+              ))}
           </div>
         </div>
       </section>
