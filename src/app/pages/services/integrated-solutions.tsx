@@ -4,13 +4,13 @@ import { Layers, Link as LinkIcon, Target, TrendingUp } from "lucide-react";
 
 export default function IntegratedSolutions() {
   return (
-    <div className="pt-20">
+    <div className="pt-24 lg:pt-28">
       {/* Hero */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-secondary to-background overflow-hidden">
+      <section className="relative py-14 md:py-20 lg:py-28 bg-gradient-to-br from-background via-secondary to-background overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
         </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -20,7 +20,7 @@ export default function IntegratedSolutions() {
               Services
             </div>
             <h1
-              className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6"
             >
               Integrated
               <br />
@@ -34,8 +34,8 @@ export default function IntegratedSolutions() {
       </section>
 
       {/* The Challenge */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -60,10 +60,10 @@ export default function IntegratedSolutions() {
       </section>
 
       {/* What We Integrate */}
-      <section className="py-20 md:py-32 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28 bg-card">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2
-            className="text-3xl md:text-4xl font-semibold mb-16"
+            className="text-3xl md:text-4xl font-semibold mb-10 md:mb-16"
           >
             What we <span className="text-primary">integrate</span>
           </h2>
@@ -101,7 +101,7 @@ export default function IntegratedSolutions() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-secondary border border-border rounded-xl p-8 hover:border-primary/30 active:border-primary/30 transition-all duration-300"
+                className="bg-secondary border border-border rounded-xl p-6 sm:p-8 hover:border-primary/30 active:border-primary/30 transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                   <item.icon className="w-7 h-7 text-primary" />
@@ -115,8 +115,8 @@ export default function IntegratedSolutions() {
       </section>
 
       {/* Types of Integrated Programmes */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2
             className="text-3xl md:text-4xl font-semibold mb-12"
           >
@@ -168,8 +168,8 @@ export default function IntegratedSolutions() {
       </section>
 
       {/* The Outcome */}
-      <section className="py-20 md:py-32 bg-card">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28 bg-card">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -184,29 +184,29 @@ export default function IntegratedSolutions() {
             </h2>
             <div className="max-w-3xl mx-auto">
               <div className="space-y-6 text-lg">
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <span className="text-2xl text-primary font-semibold">1</span>
                   </div>
-                  <p className="text-left text-muted-foreground flex-1">
+                  <p className="text-left text-muted-foreground sm:flex-1">
                     <span className="font-semibold text-foreground">Alignment:</span> Leadership teams share
                     a common understanding and speak the same language
                   </p>
                 </div>
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <span className="text-2xl text-primary font-semibold">2</span>
                   </div>
-                  <p className="text-left text-muted-foreground flex-1">
+                  <p className="text-left text-muted-foreground sm:flex-1">
                     <span className="font-semibold text-foreground">Confidence:</span> Decisions are made
                     with clarity about trade-offs and implications
                   </p>
                 </div>
-                <div className="flex items-center justify-center space-x-4">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                     <span className="text-2xl text-primary font-semibold">3</span>
                   </div>
-                  <p className="text-left text-muted-foreground flex-1">
+                  <p className="text-left text-muted-foreground sm:flex-1">
                     <span className="font-semibold text-foreground">Momentum:</span> Organisations move
                     forward rather than remaining stuck in analysis
                   </p>
@@ -218,14 +218,14 @@ export default function IntegratedSolutions() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-12 md:p-16 text-center"
+            className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-8 sm:p-10 md:p-14 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-semibold mb-6">
               From complexity to clarity

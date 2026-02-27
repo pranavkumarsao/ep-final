@@ -73,7 +73,7 @@ const operatingPrinciples = [
 
 export default function HowWeWork() {
   return (
-    <div className="pt-20">
+    <div className="pt-24 lg:pt-28">
 
       {/* ── Hero ── */}
       <section className="py-14 md:py-20 lg:py-28">
@@ -81,7 +81,7 @@ export default function HowWeWork() {
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">How We Work</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Our <span className="text-primary-gradient">Strategic Synthesis</span> Model
+              <span className="text-primary-gradient">Strategic Synthesis</span> Model
             </h1>
             <p className="text-lg text-muted-foreground leading-relaxed">
               <span className="text-primary font-medium">Decision-led by design.</span>{" "}

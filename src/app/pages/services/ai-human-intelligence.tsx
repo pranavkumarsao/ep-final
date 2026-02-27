@@ -4,14 +4,14 @@ import { Link } from "react-router";
 
 export default function AIHumanIntelligence() {
   return (
-    <div className="pt-20">
+    <div className="pt-24 lg:pt-28">
       {/* Hero */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-secondary to-background overflow-hidden">
+      <section className="relative py-14 md:py-20 lg:py-28 bg-gradient-to-br from-background via-secondary to-background overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ export default function AIHumanIntelligence() {
               Services
             </div>
             <h1
-              className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6"
             >
               AI + Human
               <br />
@@ -35,8 +35,8 @@ export default function AIHumanIntelligence() {
       </section>
 
       {/* Philosophy */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,10 +61,10 @@ export default function AIHumanIntelligence() {
       </section>
 
       {/* The Balance */}
-      <section className="py-20 md:py-32 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28 bg-card">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2
-            className="text-3xl md:text-4xl font-semibold mb-16 text-center"
+            className="text-3xl md:text-4xl font-semibold mb-10 md:mb-16 text-center"
           >
             The <span className="text-primary">balanced approach</span>
           </h2>
@@ -84,19 +84,19 @@ export default function AIHumanIntelligence() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">What AI Enables</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center space-x-2">
+                    <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                       <span>Analyse large and complex datasets</span>
                     </li>
-                    <li className="flex items-center space-x-2">
+                    <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                       <span>Integrate structured and unstructured inputs</span>
                     </li>
-                    <li className="flex items-center space-x-2">
+                    <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                       <span>Detect early signals and emerging patterns</span>
                     </li>
-                    <li className="flex items-center space-x-2">
+                    <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                       <span>Process information at unprecedented speed</span>
                     </li>
@@ -119,19 +119,19 @@ export default function AIHumanIntelligence() {
                 <div>
                   <h3 className="text-xl font-semibold mb-2">What Human Expertise Ensures</h3>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center space-x-2">
+                    <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                       <span>Contextual interpretation and nuance</span>
                     </li>
-                    <li className="flex items-center space-x-2">
+                    <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                       <span>Strategic prioritisation and judgment</span>
                     </li>
-                    <li className="flex items-center space-x-2">
+                    <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                       <span>Alignment with commercial reality</span>
                     </li>
-                    <li className="flex items-center space-x-2">
+                    <li className="flex items-start gap-2">
                       <span className="w-1.5 h-1.5 bg-primary rounded-full"></span>
                       <span>Ethical considerations and responsibility</span>
                     </li>
@@ -144,10 +144,10 @@ export default function AIHumanIntelligence() {
       </section>
 
       {/* Key Capabilities */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2
-            className="text-3xl md:text-4xl font-semibold mb-16"
+            className="text-3xl md:text-4xl font-semibold mb-10 md:mb-16"
           >
             Our <span className="text-primary">capabilities</span>
           </h2>
@@ -195,8 +195,8 @@ export default function AIHumanIntelligence() {
       </section>
 
       {/* The Commitment */}
-      <section className="py-20 md:py-32 bg-card">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28 bg-card">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -224,14 +224,14 @@ export default function AIHumanIntelligence() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-12 md:p-16 text-center"
+            className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-8 sm:p-10 md:p-14 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-semibold mb-6">
               Harness intelligence at scale

@@ -8,13 +8,13 @@ export default function Footer() {
       {/* Contact CTA strip */}
       <div className="bg-primary/5 border-b border-primary/10 py-8">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div>
+          <div className="text-center sm:text-left">
             <p className="text-sm font-semibold text-foreground">Ready to start a strategic conversation?</p>
             <p className="text-xs text-muted-foreground mt-0.5">When decisions matter, perspective matters.</p>
           </div>
           <Link
             to="/work-with-us"
-            className="shrink-0 px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
+            className="shrink-0 w-full sm:w-auto text-center px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
           >
             Contact Us
           </Link>
@@ -117,7 +117,7 @@ export default function Footer() {
             <p className="text-xs text-muted-foreground">
               © {new Date().getFullYear()} Eagle Perspectives. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 sm:gap-6">
               <a href="#" className="text-xs text-muted-foreground hover:text-primary active:text-primary transition-colors">
                 Privacy Policy
               </a>

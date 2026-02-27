@@ -10,10 +10,36 @@ export default function WorkWithUs() {
     role: "",
     message: "",
   });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    setStatus("loading");
+    try {
+      const res = await fetch("https://formsubmit.co/ajax/vivek@eagleperspectives.in", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          Name: formData.name,
+          Email: formData.email,
+          Company: formData.company || "—",
+          Role: formData.role || "—",
+          Message: formData.message,
+        }),
+      });
+      const data = await res.json();
+      if (data.success === "true" || data.success === true) {
+        setStatus("success");
+        setFormData({ name: "", email: "", company: "", role: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -24,7 +50,7 @@ export default function WorkWithUs() {
   };
 
   return (
-    <div className="pt-20">
+    <div className="pt-24 lg:pt-28">
       {/* Hero */}
       <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -57,95 +83,117 @@ export default function WorkWithUs() {
                 Share your challenge with us. We'll respond within 24 hours to explore how we can help.
               </p>
 
-              <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-xs font-medium tracking-wide uppercase mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
-                    placeholder="Your full name"
-                  />
+              {status === "success" ? (
+                <div className="border border-primary/30 bg-primary/5 px-6 py-8 text-center space-y-2">
+                  <p className="text-sm font-semibold tracking-wide uppercase text-primary">Message Sent</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Thank you for reaching out. We'll get back to you within 24 hours.
+                  </p>
+                  <button
+                    onClick={() => setStatus("idle")}
+                    className="mt-4 text-xs underline underline-offset-4 text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    Send another message
+                  </button>
                 </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-xs font-medium tracking-wide uppercase mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
-                    placeholder="your.email@company.com"
-                  />
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-5">
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div>
-                    <label htmlFor="company" className="block text-xs font-medium tracking-wide uppercase mb-2">
-                      Company
+                    <label htmlFor="name" className="block text-xs font-medium tracking-wide uppercase mb-2">
+                      Name *
                     </label>
                     <input
                       type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
+                      id="name"
+                      name="name"
+                      required
+                      value={formData.name}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
-                      placeholder="Your organisation"
+                      placeholder="Your full name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="role" className="block text-xs font-medium tracking-wide uppercase mb-2">
-                      Role
+                    <label htmlFor="email" className="block text-xs font-medium tracking-wide uppercase mb-2">
+                      Email *
                     </label>
                     <input
-                      type="text"
-                      id="role"
-                      name="role"
-                      value={formData.role}
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
-                      placeholder="Your role or title"
+                      placeholder="your.email@company.com"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label htmlFor="message" className="block text-xs font-medium tracking-wide uppercase mb-2">
-                    Tell us about your challenge *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    required
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors resize-none text-sm"
-                    placeholder="What strategic challenge are you facing? What decision needs to be made?"
-                  />
-                </div>
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="company" className="block text-xs font-medium tracking-wide uppercase mb-2">
+                        Company
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
+                        placeholder="Your organisation"
+                      />
+                    </div>
 
-                <button
-                  type="submit"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
-                >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4" />
-                </button>
-              </form>
+                    <div>
+                      <label htmlFor="role" className="block text-xs font-medium tracking-wide uppercase mb-2">
+                        Role
+                      </label>
+                      <input
+                        type="text"
+                        id="role"
+                        name="role"
+                        value={formData.role}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors text-sm"
+                        placeholder="Your role or title"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="message" className="block text-xs font-medium tracking-wide uppercase mb-2">
+                      Tell us about your challenge *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      value={formData.message}
+                      onChange={handleChange}
+                      rows={5}
+                      className="w-full px-4 py-3 bg-background border border-border focus:outline-none focus:border-primary transition-colors resize-none text-sm"
+                      placeholder="What strategic challenge are you facing? What decision needs to be made?"
+                    />
+                  </div>
+
+                  {status === "error" && (
+                    <p className="text-sm text-red-500">
+                      Something went wrong. Please try again or email us directly.
+                    </p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    <span>{status === "loading" ? "Sending…" : "Send Message"}</span>
+                    <Send className="w-4 h-4" />
+                  </button>
+                </form>
+              )}
             </motion.div>
 
             {/* Contact Info */}

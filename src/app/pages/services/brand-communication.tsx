@@ -31,13 +31,13 @@ export default function BrandCommunication() {
   ];
 
   return (
-    <div className="pt-20">
+    <div className="pt-24 lg:pt-28">
       {/* Hero */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-background via-secondary to-background overflow-hidden">
+      <section className="relative py-14 md:py-20 lg:py-28 bg-gradient-to-br from-background via-secondary to-background overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-1/4 left-1/3 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
         </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -47,7 +47,7 @@ export default function BrandCommunication() {
               Services
             </div>
             <h1
-              className="text-5xl md:text-6xl lg:text-7xl font-semibold mb-6"
+              className="text-4xl md:text-5xl lg:text-6xl font-semibold mb-6"
             >
               Brand & Communication
               <br />
@@ -61,8 +61,8 @@ export default function BrandCommunication() {
       </section>
 
       {/* Overview */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -87,10 +87,10 @@ export default function BrandCommunication() {
       </section>
 
       {/* Services */}
-      <section className="py-20 md:py-32 bg-card">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28 bg-card">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <h2
-            className="text-3xl md:text-4xl font-semibold mb-16"
+            className="text-3xl md:text-4xl font-semibold mb-10 md:mb-16"
           >
             Our <span className="text-primary">approach</span>
           </h2>
@@ -103,7 +103,7 @@ export default function BrandCommunication() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-secondary border border-border rounded-xl p-8 hover:border-primary/30 active:border-primary/30 transition-all duration-300"
+                className="bg-secondary border border-border rounded-xl p-6 sm:p-8 hover:border-primary/30 active:border-primary/30 transition-all duration-300"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
                   <service.icon className="w-7 h-7 text-primary" />
@@ -117,8 +117,8 @@ export default function BrandCommunication() {
       </section>
 
       {/* Key Focus Areas */}
-      <section className="py-20 md:py-32">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <h2
             className="text-3xl md:text-4xl font-semibold mb-12"
           >
@@ -165,14 +165,14 @@ export default function BrandCommunication() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 md:py-32 bg-card">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-14 md:py-20 lg:py-28 bg-card">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-12 md:p-16 text-center"
+            className="bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20 rounded-2xl p-8 sm:p-10 md:p-14 text-center"
           >
             <h2 className="text-3xl md:text-4xl font-semibold mb-6">
               Build a brand that endures

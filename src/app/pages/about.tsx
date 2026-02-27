@@ -3,7 +3,7 @@ import { Link } from "react-router";
 
 export default function About() {
   return (
-    <div className="pt-20">
+    <div className="pt-24 lg:pt-28">
 
       {/* ── Hero ── */}
       <section className="py-14 md:py-20 lg:py-28">

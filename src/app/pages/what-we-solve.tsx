@@ -37,7 +37,7 @@ const decisions = [
 
 export default function WhatWeSolve() {
   return (
-    <div className="pt-20">
+    <div className="pt-24 lg:pt-28">
       {/* Hero */}
       <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
