@@ -23,9 +23,9 @@ export default function Footer() {
 
       <div className="py-12">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8 lg:gap-12">
             {/* Brand */}
-            <div className="col-span-1 sm:col-span-2 md:col-span-1 space-y-4">
+            <div className="col-span-1 sm:col-span-2 md:col-span-2 space-y-4">
               <Link to="/" className="inline-block">
                 <img src={logo} alt="Eagle Perspectives" className="h-[3.375rem] w-auto" />
               </Link>
@@ -53,13 +53,16 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* What We Do */}
+            {/* Services */}
             <div>
-              <h3 className="text-xs font-semibold tracking-widest uppercase text-foreground mb-4">What We Do</h3>
+              <h3 className="text-xs font-semibold tracking-widest uppercase text-foreground mb-4">Services</h3>
               <ul className="space-y-2.5">
                 {[
-                  { label: "What Decisions We Solve", path: "/what-we-solve" },
-                  { label: "What Expertise We Bring", path: "/what-we-bring" },
+                  { label: "Consumer & Market Intelligence", path: "/services/consumer-intelligence" },
+                  { label: "Brand, Communication & Media", path: "/services/brand-communication" },
+                  { label: "Product, Innovation & Experience", path: "/services/product-innovation" },
+                  { label: "AI + Human Intelligence", path: "/services/ai-human-intelligence" },
+                  { label: "Integrated Solutions", path: "/services/integrated-solutions" },
                 ].map((item) => (
                   <li key={item.path}>
                     <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary active:text-primary transition-colors block">
