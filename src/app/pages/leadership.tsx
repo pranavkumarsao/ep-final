@@ -261,10 +261,6 @@ export default function Leadership() {
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-10 md:mb-16">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Team</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Built by leaders who have{" "}
-              <span className="text-primary-gradient">navigated complexity</span> before
-            </h2>
             <div className="section-divider mt-6" />
           </div>
 
