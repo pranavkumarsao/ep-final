@@ -395,7 +395,7 @@ export default function Home() {
                 Despite this complexity, one requirement remains unchanged: <strong className="text-foreground">organisations still need singular strategies.</strong> They need clarity on where to play and where not to. They need prioritisation when resources are constrained. They need alignment across leadership teams.
               </p>
               <p>
-                Eagle Perspectives was founded to bridge the widening gap between complexity and decisiveness. We are a one-stop insights and strategic intelligence partner designed to integrate diverse perspectives without passing complexity on to our clients.
+                Eagle Perspectives exists because the world's best organisations still struggle with the same problem: too much research, too little clarity. Multiple agencies. Competing dashboards. Teams interpreting the same signals differently. Strategy discussions that extend without alignment. We are built to solve that — not by adding another lens, but by converging the ones that matter into one answer which you can act on
               </p>
               <div className="pt-4 space-y-2 border-l-2 border-primary/20 pl-6">
                 <p className="text-foreground font-medium text-sm">We are not a data vendor.</p>
@@ -426,7 +426,7 @@ export default function Home() {
               The <span className="text-primary-gradient">Eagle</span> Perspective
             </h2>
             <p className="text-lg text-muted-foreground">
-              Plurality is the input. Singularity is the output. Strategy is the destination.
+              Clarity is the outcome. Action is the destination.
             </p>
             <div className="section-divider-center mt-6" />
           </div>
