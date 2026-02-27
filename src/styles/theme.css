@@ -1,6 +1,7 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-size: 16px;
 
   /* ── Core surfaces ── */
@@ -159,61 +160,16 @@
     @apply border-border outline-ring/50;
   }
 
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  /**
-  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
-  * These are in @layer base, so Tailwind utility classes automatically override them.
-  */
-
   html {
+    scroll-behavior: smooth;
     font-size: var(--font-size);
   }
 
-  h1 {
-    font-size: var(--text-2xl);
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: -0.03em;
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
   }
 
-  h2 {
-    font-size: var(--text-xl);
-    font-weight: 600;
-    line-height: 1.4;
-    letter-spacing: -0.025em;
-  }
-
-  h3 {
-    font-size: var(--text-lg);
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: -0.02em;
-  }
-
-  h4 {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
-
-  label {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
-
-  button {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-medium);
-    line-height: 1.5;
-  }
-
-  input {
-    font-size: var(--text-base);
-    font-weight: var(--font-weight-normal);
-    line-height: 1.5;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold tracking-tight text-foreground;
   }
 }
