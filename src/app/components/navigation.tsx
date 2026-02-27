@@ -44,20 +44,20 @@ export default function Navigation() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-24 lg:h-28">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <img src={logo} alt="Eagle Perspectives" className="h-20 md:h-24 w-auto" />
+            <img src={logo} alt="Eagle Perspectives" className="h-[3.75rem] md:h-[4.5rem] w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-xs font-medium tracking-widest uppercase transition-colors ${
+                className={`text-xs font-medium tracking-widest uppercase whitespace-nowrap transition-colors ${
                   location.pathname === link.path
                     ? "text-primary"
                     : "text-muted-foreground hover:text-primary active:text-primary"
@@ -68,7 +68,7 @@ export default function Navigation() {
             ))}
             <Link
               to="/work-with-us"
-              className="px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
+              className="px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase whitespace-nowrap hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
             >
               Contact
             </Link>

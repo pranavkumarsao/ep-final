@@ -350,7 +350,7 @@ export default function Home() {
           <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-8">
             Strategic Intelligence & Insight
           </p>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] mb-6">
             <span className="text-primary-gradient">Plurality</span> in Perspectives.
             <br />
             <span className="text-primary-gradient">Clarity</span> in Convergence.
@@ -486,9 +486,9 @@ export default function Home() {
       </section>
 
       {/* ── Five Dimensions Bento Grid ── */}
-      <section className="py-14 md:py-20 lg:py-28">
+      <section className="py-10 md:py-12 lg:py-14">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8 md:mb-10">
             <div className="max-w-2xl">
               <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -506,39 +506,38 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Card 1 — wide */}
-            <div className="lg:col-span-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[220px]">
-              <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_minmax(0,1.1fr)_minmax(0,1fr)] gap-3 auto-rows-fr">
+            {/* Center Card — largest */}
+            <div className="sm:col-span-2 lg:col-span-4 lg:row-start-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[180px] lg:min-h-0">
+              <div className="p-4 sm:p-6 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div>
                   <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">Ways of Knowing</span>
                   <h3 className="text-xl font-bold mb-3">The Governing Principle</h3>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex items-start gap-3">
-                    <span className="text-xs text-primary/40 font-medium tracking-wide uppercase w-28 shrink-0 pt-0.5">What It Holds</span>
+                  <div>
+                    <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
                     <p className="text-sm text-muted-foreground">Methods without hierarchy.</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-xs text-primary/40 font-medium tracking-wide uppercase w-28 shrink-0 pt-0.5">Client Experience</span>
+                  <div>
+                    <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
                     <p className="text-sm text-foreground font-medium">Every question earns the method it truly demands.</p>
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
-                <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
+              <div className="absolute inset-0 p-4 sm:p-6 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                 <p className="text-base text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
               </div>
             </div>
 
             {[
-              { dim: "Vantage", metaphor: "The Perch", holds: "Cross-sector vision.", exp: "Multi-time horizons.", hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging." },
-              { dim: "Scale", metaphor: "The Zoom", holds: "From horizon to shelf.", exp: "From horizon to shelf.", hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage." },
-              { dim: "Expertise", metaphor: "The Team", holds: "Disciplines in dialogue.", exp: "Disciplines in dialogue.", hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle." },
-              { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable." },
+              { dim: "Vantage", metaphor: "The Perch", holds: "Cross-sector vision.", exp: "Multi-time horizons.", hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging.", layout: "lg:col-span-2 lg:row-start-1" },
+              { dim: "Scale", metaphor: "The Zoom", holds: "From horizon to shelf.", exp: "From horizon to shelf.", hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage.", layout: "lg:col-start-3 lg:col-span-2 lg:row-start-1" },
+              { dim: "Expertise", metaphor: "The Team", holds: "Disciplines in dialogue.", exp: "Disciplines in dialogue.", hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle.", layout: "lg:col-span-2 lg:row-start-3" },
+              { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable.", layout: "lg:col-start-3 lg:col-span-2 lg:row-start-3" },
             ].map((item, i) => (
-              <div key={i} className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[220px]">
-                <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+              <div key={i} className={`${item.layout} group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[170px] lg:min-h-0`}>
+                <div className="p-4 sm:p-6 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                   <div>
                     <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">{item.dim}</span>
                     <h3 className="text-lg font-bold mb-3">{item.metaphor}</h3>
@@ -554,8 +553,7 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
-                  <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
+                <div className="absolute inset-0 p-4 sm:p-6 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                   <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
                 </div>
               </div>

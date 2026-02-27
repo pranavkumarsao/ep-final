@@ -104,9 +104,9 @@ export default function Philosophy() {
       </section>
 
       {/* Five Dimensions Bento Grid */}
-      <section className="py-14 md:py-20 lg:py-28">
+      <section className="py-10 md:py-12 lg:py-14">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-10 md:mb-16">
+          <div className="max-w-3xl mb-8 md:mb-10">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Five Dimensions of <span className="text-primary-gradient">Plurality</span>
@@ -118,17 +118,17 @@ export default function Philosophy() {
           </div>
 
           {/* Bento Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
-            {/* Card 1 — large, spans 2 cols on lg */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_minmax(0,1.1fr)_minmax(0,1fr)] gap-3 auto-rows-fr">
+            {/* Center Card — largest */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="lg:col-span-2 lg:row-span-1 group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[220px]"
+              className="sm:col-span-2 lg:col-span-4 lg:row-start-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[180px] lg:min-h-0"
             >
               {/* Default content */}
-              <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+              <div className="p-4 sm:p-6 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div>
                   <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
                     Ways of Knowing
@@ -136,20 +136,19 @@ export default function Philosophy() {
                   <h3 className="text-xl font-bold mb-3">{bentoDimensions[0].metaphor}</h3>
                 </div>
                 <div className="space-y-2">
-                  <div className="flex items-start gap-3">
-                    <span className="text-xs text-primary/40 font-medium tracking-wide uppercase w-28 shrink-0 pt-0.5">What It Holds</span>
+                  <div>
+                    <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
                     <p className="text-sm text-muted-foreground leading-relaxed">{bentoDimensions[0].holds}</p>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <span className="text-xs text-primary/40 font-medium tracking-wide uppercase w-28 shrink-0 pt-0.5">Client Experience</span>
+                  <div>
+                    <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
                     <p className="text-sm text-foreground font-medium leading-relaxed">{bentoDimensions[0].experience}</p>
                   </div>
                 </div>
               </div>
               {/* Hover overlay */}
-              <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 p-4 sm:p-6 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                 <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
-                <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                 <p className="text-base text-primary-foreground leading-relaxed font-medium">{bentoDimensions[0].hover}</p>
               </div>
             </motion.div>
@@ -157,6 +156,12 @@ export default function Philosophy() {
             {/* Cards 2–5 */}
             {bentoDimensions.slice(1).map((item, index) => {
               const dimensions = ["Vantage", "Scale", "Expertise", "Stakeholder"];
+              const layouts = [
+                "lg:col-span-2 lg:row-start-1",
+                "lg:col-start-3 lg:col-span-2 lg:row-start-1",
+                "lg:col-span-2 lg:row-start-3",
+                "lg:col-start-3 lg:col-span-2 lg:row-start-3",
+              ];
               return (
                 <motion.div
                   key={index + 1}
@@ -164,10 +169,10 @@ export default function Philosophy() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: (index + 1) * 0.07 }}
-                  className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[220px]"
+                  className={`${layouts[index]} group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[170px] lg:min-h-0`}
                 >
                   {/* Default content */}
-                  <div className="p-5 sm:p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+                  <div className="p-4 sm:p-6 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                     <div>
                       <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
                         {dimensions[index]}
@@ -186,9 +191,8 @@ export default function Philosophy() {
                     </div>
                   </div>
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 p-5 sm:p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 p-4 sm:p-6 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                     <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
-                    <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
                     <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
                   </div>
                 </motion.div>
