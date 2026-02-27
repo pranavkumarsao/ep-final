@@ -6,7 +6,7 @@ import teamImage from "@/assets/team-strategy.jpg";
 import convergenceImage from "@/assets/convergence.jpg";
 import nilakshiImage from "figma:asset/008ee0585922a486d8481eefd553bc58df96f193.png";
 import vivekImage from "figma:asset/e314a4604007185f64e5570d9eaf158f36bd7db1.png";
-import sharmilaImage from "figma:asset/d7b390df77c236edd7af98cfcfc0de6cbeaf3126.png";
+import sharmilaImage from "@/assets/sharmila-das.png";
 import sanjayImage from "figma:asset/99f74438f5e6de35e1279b2e820e51e4ff2e8d2f.png";
 import vikramImage from "figma:asset/ec0fdb2fa4f0f9f7ceb77f0bce5ef89e466acb0c.png";
 import vinayImage from "figma:asset/c58f54935fbc19bb013e0870062b46e2555d68ae.png";
