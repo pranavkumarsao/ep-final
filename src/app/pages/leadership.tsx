@@ -309,6 +309,9 @@ export default function Leadership() {
                     alt={leader.name}
                     className="w-full h-full object-cover photo-filter transition-transform duration-500 group-hover:scale-105"
                   />
+                  <div className="absolute inset-0 bg-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">
+                    <span className="text-white text-xs font-medium tracking-wide leading-tight">{leader.name}</span>
+                  </div>
                 </motion.button>
               ))}
           </div>
