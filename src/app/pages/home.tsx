@@ -485,6 +485,85 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Five Dimensions Bento Grid ── */}
+      <section className="py-24 lg:py-32">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+            <div className="max-w-2xl">
+              <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Five Dimensions of <span className="text-primary-gradient">Plurality</span>
+              </h2>
+              <p className="text-sm text-muted-foreground leading-relaxed">Hover over each card to reveal the deeper explanation.</p>
+              <div className="section-divider mt-6" />
+            </div>
+            <Link
+              to="/philosophy"
+              className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 transition-colors shrink-0"
+            >
+              Explore Our Philosophy
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {/* Card 1 — wide */}
+            <div className="lg:col-span-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]">
+              <div className="p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+                <div>
+                  <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">Ways of Knowing</span>
+                  <h3 className="text-xl font-bold mb-3">The Governing Principle</h3>
+                </div>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-3">
+                    <span className="text-xs text-primary/40 font-medium tracking-wide uppercase w-28 shrink-0 pt-0.5">What It Holds</span>
+                    <p className="text-sm text-muted-foreground">Methods without hierarchy.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xs text-primary/40 font-medium tracking-wide uppercase w-28 shrink-0 pt-0.5">Client Experience</span>
+                    <p className="text-sm text-foreground font-medium">Every question earns the method it truly demands.</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute inset-0 p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
+                <p className="text-base text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
+              </div>
+            </div>
+
+            {[
+              { dim: "Vantage", metaphor: "The Perch", holds: "Cross-sector vision.", exp: "Multi-time horizons.", hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging." },
+              { dim: "Scale", metaphor: "The Zoom", holds: "From horizon to shelf.", exp: "From horizon to shelf.", hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage." },
+              { dim: "Expertise", metaphor: "The Team", holds: "Disciplines in dialogue.", exp: "Disciplines in dialogue.", hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle." },
+              { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable." },
+            ].map((item, i) => (
+              <div key={i} className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]">
+                <div className="p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+                  <div>
+                    <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">{item.dim}</span>
+                    <h3 className="text-lg font-bold mb-3">{item.metaphor}</h3>
+                  </div>
+                  <div className="space-y-2">
+                    <div>
+                      <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
+                      <p className="text-sm text-muted-foreground">{item.holds}</p>
+                    </div>
+                    <div>
+                      <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
+                      <p className="text-sm text-foreground font-medium">{item.exp}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="absolute inset-0 p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
+                  <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Differentiators ── */}
       <section className="py-24 lg:py-32">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
