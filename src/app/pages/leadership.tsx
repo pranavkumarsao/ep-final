@@ -293,7 +293,7 @@ export default function Leadership() {
       {/* Photo Grid */}
       <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
             {leaders
               .filter((leader) => leader.image)
               .map((leader, index) => (
