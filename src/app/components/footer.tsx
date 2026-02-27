@@ -4,40 +4,74 @@ import logo from "figma:asset/1c87df128a6d245a47d853c159c41e6e6df2811a.png";
 
 export default function Footer() {
   return (
-    <footer className="py-12 border-t border-border">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12">
-          {/* Brand */}
-          <div className="col-span-2 md:col-span-1 space-y-4">
-            <Link to="/" className="inline-block">
-              <img src={logo} alt="Eagle Perspectives" className="h-10 w-auto" />
-            </Link>
-            <p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
-              Converting complexity into clarity—and clarity into strategy.
-            </p>
-          </div>
-
-          {/* Company */}
+    <footer className="border-t border-border">
+      {/* Contact CTA strip */}
+      <div className="bg-primary/5 border-b border-primary/10 py-8">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
-            <h3 className="text-xs font-semibold tracking-widest uppercase text-foreground mb-4">Company</h3>
-            <ul className="space-y-2.5">
-              {[
-                { label: "About Us", path: "/about" },
-                { label: "Our Philosophy", path: "/philosophy" },
-                { label: "How We Work", path: "/how-we-work" },
-                { label: "Leadership", path: "/leadership" },
-              ].map((item) => (
-                <li key={item.path}>
-                  <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary transition-colors block">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <p className="text-sm font-semibold text-foreground">Ready to start a strategic conversation?</p>
+            <p className="text-xs text-muted-foreground mt-0.5">When decisions matter, perspective matters.</p>
           </div>
+          <Link
+            to="/work-with-us"
+            className="shrink-0 px-6 py-2.5 bg-primary text-primary-foreground text-xs font-medium tracking-widest uppercase hover:bg-[hsl(235_70%_35%)] transition-colors"
+          >
+            Contact Us
+          </Link>
+        </div>
+      </div>
 
-          {/* Connect */}
-          <div>
+      <div className="py-12">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+            {/* Brand */}
+            <div className="col-span-2 md:col-span-1 space-y-4">
+              <Link to="/" className="inline-block">
+                <img src={logo} alt="Eagle Perspectives" className="h-10 w-auto" />
+              </Link>
+              <p className="text-xs text-muted-foreground leading-relaxed max-w-xs">
+                Converting complexity into clarity—and clarity into strategy.
+              </p>
+            </div>
+
+            {/* Company */}
+            <div>
+              <h3 className="text-xs font-semibold tracking-widest uppercase text-foreground mb-4">Company</h3>
+              <ul className="space-y-2.5">
+                {[
+                  { label: "About Us", path: "/about" },
+                  { label: "Our Philosophy", path: "/philosophy" },
+                  { label: "How We Work", path: "/how-we-work" },
+                  { label: "Leadership", path: "/leadership" },
+                ].map((item) => (
+                  <li key={item.path}>
+                    <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary transition-colors block">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* What We Do */}
+            <div>
+              <h3 className="text-xs font-semibold tracking-widest uppercase text-foreground mb-4">What We Do</h3>
+              <ul className="space-y-2.5">
+                {[
+                  { label: "What Decisions We Solve", path: "/what-we-solve" },
+                  { label: "What Expertise We Bring", path: "/what-we-bring" },
+                ].map((item) => (
+                  <li key={item.path}>
+                    <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary transition-colors block">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Connect */}
+            <div>
             <h3 className="text-xs font-semibold tracking-widest uppercase text-foreground mb-4">Connect</h3>
             <ul className="space-y-3">
               <li>
