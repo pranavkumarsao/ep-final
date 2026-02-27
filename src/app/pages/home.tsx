@@ -943,12 +943,12 @@ export default function Home() {
           <p className="text-base text-background/60 max-w-xl mx-auto mb-10 leading-relaxed">
             When decisions matter, perspective matters. Let's define the way forward—together.
           </p>
-          <a
-            href="mailto:contact@eagleperspectives.com"
-            className="inline-flex items-center justify-center px-10 py-4 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_65%_55%)] active:bg-[hsl(235_65%_55%)] transition-colors"
+          <Link
+              to="/work-with-us#form"
+              className="inline-flex items-center justify-center px-8 py-3.5 bg-primary text-primary-foreground text-sm font-medium tracking-wide hover:bg-[hsl(235_70%_35%)] active:bg-[hsl(235_70%_35%)] transition-colors"
           >
             Start a Strategic Conversation
-          </a>
+          </Link>
         </div>
       </section>
 
