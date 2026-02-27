@@ -181,9 +181,9 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
-                  className="bg-background border border-border p-4 hover:border-primary/20 transition-colors"
+                  className="bg-background border border-border p-4 hover:border-primary/20 transition-colors flex items-center gap-3"
                 >
-                  <span className="w-1 h-1 bg-primary rounded-full block mb-2" />
+                  <span className="w-1 h-1 bg-primary rounded-full flex-shrink-0" />
                   <span className="text-xs text-foreground/80 leading-snug">{category}</span>
                 </motion.div>
               ))}
