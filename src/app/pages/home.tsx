@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "motion/react";
 import { Compass, Expand, Filter, Network, Users2, X } from "lucide-react";
 import { Link } from "react-router";
 import heroImage from "@/assets/hero-eagle.jpg";
