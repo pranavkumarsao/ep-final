@@ -33,8 +33,8 @@ const bentoDimensions = [
   {
     dim: "Expertise",
     metaphor: "The Team",
-    holds: "Disciplines in dialogue.",
-    experience: "Tension. Integration. Clarity.",
+    holds: "Tension. Integration. Clarity.",
+    experience: "Disciplines in dialogue.",
     hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle.",
     icon: Users2,
     large: false,
