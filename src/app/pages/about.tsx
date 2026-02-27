@@ -51,7 +51,7 @@ export default function About() {
               </p>
             </div>
             <div className="space-y-6">
-              <p className="text-foreground font-semibold text-lg leading-relaxed">
+              <p className="text-primary font-semibold text-lg leading-relaxed">
                 Despite this complexity, one requirement remains unchanged: organisations still need
                 singular strategies.
               </p>
