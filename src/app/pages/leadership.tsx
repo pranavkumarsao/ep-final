@@ -15,6 +15,7 @@ import miniPintoImage from "@/assets/mini-pinto.jpeg";
 import ruchikaImage from "@/assets/ruchika.jpeg";
 import swatiImage from "@/assets/swati-kulkarni.jpeg";
 import venkatnathImage from "@/assets/venkatnath.jpeg";
+import suparnaImage from "@/assets/suparna.jpeg";
 
 interface Leader {
   name: string;
@@ -196,6 +197,7 @@ export default function Leadership() {
         "Capability enablement",
       ],
       linkedin: "https://www.linkedin.com/in/suparna-m-24b32915/",
+      image: suparnaImage,
     },
     {
       name: "Swati Kulkarni",
