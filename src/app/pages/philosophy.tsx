@@ -1,40 +1,51 @@
 import { motion } from "motion/react";
+import { Compass, Expand, Filter, Network, Users2 } from "lucide-react";
 import { Link } from "react-router";
 
 const bentoDimensions = [
   {
+    dim: "Ways of Knowing",
     metaphor: "The Governing Principle",
     holds: "Methods without hierarchy.",
     experience: "Every question earns the method it truly demands.",
     hover: "Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.",
+    icon: Network,
     large: true,
   },
   {
+    dim: "Vantage",
     metaphor: "The Perch",
     holds: "Cross-sector vision.",
     experience: "Multi-time horizons.",
     hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging.",
+    icon: Compass,
     large: false,
   },
   {
+    dim: "Scale",
     metaphor: "The Zoom",
     holds: "From horizon to shelf.",
     experience: "From horizon to shelf.",
     hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage.",
+    icon: Expand,
     large: false,
   },
   {
+    dim: "Expertise",
     metaphor: "The Team",
     holds: "Disciplines in dialogue.",
     experience: "Disciplines in dialogue.",
     hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle.",
+    icon: Users2,
     large: false,
   },
   {
+    dim: "Stakeholder",
     metaphor: "The Filter",
     holds: "Commercial. Human. Systemic.",
     experience: "Commercial. Human. Systemic.",
     hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable.",
+    icon: Filter,
     large: false,
   },
 ];
@@ -104,58 +115,64 @@ export default function Philosophy() {
       </section>
 
       {/* Five Dimensions Bento Grid */}
-      <section className="py-10 md:py-12 lg:py-14">
+      <section className="py-6 md:py-8 lg:py-10">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl mb-8 md:mb-10">
+          <div className="max-w-3xl mb-5 md:mb-6">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
               Five Dimensions of <span className="text-primary-gradient">Plurality</span>
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Hover over each card to reveal the deeper explanation.
             </p>
-            <div className="section-divider mt-6" />
+            <div className="section-divider mt-4" />
           </div>
 
           {/* Bento Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_minmax(0,1.1fr)_minmax(0,1fr)] gap-3 auto-rows-fr">
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[1fr_1.15fr_1fr] gap-2 auto-rows-fr lg:min-h-[560px]">
+            <div className="hidden lg:block pointer-events-none absolute left-[26%] right-[26%] top-1/2 h-px -translate-y-1/2 bg-primary/20" />
+            <div className="hidden lg:block pointer-events-none absolute left-1/2 top-[18%] h-[64%] w-px -translate-x-1/2 bg-primary/20" />
             {/* Center Card — largest */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="sm:col-span-2 lg:col-span-4 lg:row-start-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[180px] lg:min-h-0"
+              className="sm:col-span-2 lg:col-start-2 lg:col-span-2 lg:row-start-2 group relative overflow-hidden rounded-none bg-background border border-primary/25 hover:border-primary/45 active:border-primary/45 transition-colors cursor-default min-h-[170px] lg:min-h-[220px] h-full"
             >
               {/* Default content */}
-              <div className="p-4 sm:p-6 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+              <div className="p-3 sm:p-4 h-full flex flex-col gap-3 transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div>
-                  <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
-                    Ways of Knowing
-                  </span>
-                  <h3 className="text-xl font-bold mb-3">{bentoDimensions[0].metaphor}</h3>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 bg-primary/5 px-3 py-1 rounded-none">
+                      {bentoDimensions[0].dim}
+                    </span>
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-none bg-primary/10 text-primary">
+                      <Network className="h-4 w-4" />
+                    </span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold mb-2">{bentoDimensions[0].metaphor}</h3>
                 </div>
-                <div className="space-y-2">
+                <div>
                   <div>
                     <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{bentoDimensions[0].holds}</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{bentoDimensions[0].holds}</p>
                   </div>
-                  <div>
+                  <div className="mt-2">
                     <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
-                    <p className="text-sm text-foreground font-medium leading-relaxed">{bentoDimensions[0].experience}</p>
+                    <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">{bentoDimensions[0].experience}</p>
                   </div>
                 </div>
               </div>
               {/* Hover overlay */}
-              <div className="absolute inset-0 p-4 sm:p-6 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
+              <div className="absolute inset-0 p-3 sm:p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center overflow-y-auto opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                 <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
-                <p className="text-base text-primary-foreground leading-relaxed font-medium">{bentoDimensions[0].hover}</p>
+                <p className="text-xs sm:text-sm text-primary-foreground leading-relaxed font-medium">{bentoDimensions[0].hover}</p>
               </div>
             </motion.div>
 
             {/* Cards 2–5 */}
             {bentoDimensions.slice(1).map((item, index) => {
-              const dimensions = ["Vantage", "Scale", "Expertise", "Stakeholder"];
               const layouts = [
                 "lg:col-span-2 lg:row-start-1",
                 "lg:col-start-3 lg:col-span-2 lg:row-start-1",
@@ -169,31 +186,36 @@ export default function Philosophy() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: (index + 1) * 0.07 }}
-                  className={`${layouts[index]} group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[170px] lg:min-h-0`}
+                  className={`${layouts[index]} group relative overflow-hidden rounded-none bg-secondary/40 border border-primary/20 hover:border-primary/40 active:border-primary/40 transition-colors cursor-default min-h-[160px] lg:min-h-[180px] h-full`}
                 >
                   {/* Default content */}
-                  <div className="p-4 sm:p-6 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+                  <div className="p-3 sm:p-4 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                     <div>
-                      <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
-                        {dimensions[index]}
-                      </span>
-                      <h3 className="text-lg font-bold mb-3">{item.metaphor}</h3>
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 bg-primary/5 px-3 py-1 rounded-none">
+                          {item.dim}
+                        </span>
+                        <span className="inline-flex h-8 w-8 items-center justify-center rounded-none bg-primary/10 text-primary">
+                          <item.icon className="h-4 w-4" />
+                        </span>
+                      </div>
+                      <h3 className="text-base sm:text-lg font-bold mb-2">{item.metaphor}</h3>
                     </div>
-                    <div className="space-y-2">
+                    <div>
                       <div>
                         <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{item.holds}</p>
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">{item.holds}</p>
                       </div>
-                      <div>
+                      <div className="mt-2">
                         <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
-                        <p className="text-sm text-foreground font-medium leading-relaxed">{item.experience}</p>
+                        <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">{item.experience}</p>
                       </div>
                     </div>
                   </div>
                   {/* Hover overlay */}
-                  <div className="absolute inset-0 p-4 sm:p-6 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 p-3 sm:p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center overflow-y-auto opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
                     <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
-                    <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
+                    <p className="text-xs sm:text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
                   </div>
                 </motion.div>
               );

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { Compass, Expand, Filter, Network, Users2, X } from "lucide-react";
 import { Link } from "react-router";
 import heroImage from "@/assets/hero-eagle.jpg";
 import teamImage from "@/assets/team-strategy.jpg";
@@ -486,16 +486,16 @@ export default function Home() {
       </section>
 
       {/* ── Five Dimensions Bento Grid ── */}
-      <section className="py-10 md:py-12 lg:py-14">
+      <section className="py-6 md:py-8 lg:py-10">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-8 md:mb-10">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-3 mb-5 md:mb-6">
             <div className="max-w-2xl">
               <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Dimensions of Plurality</p>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">
                 Five Dimensions of <span className="text-primary-gradient">Plurality</span>
               </h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">Hover over each card to reveal the deeper explanation.</p>
-              <div className="section-divider mt-6" />
+              <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">Hover over each card to reveal the deeper explanation.</p>
+              <div className="section-divider mt-4" />
             </div>
             <Link
               to="/philosophy"
@@ -506,55 +506,67 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[minmax(0,1fr)_minmax(0,1.1fr)_minmax(0,1fr)] gap-3 auto-rows-fr">
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[1fr_1.15fr_1fr] gap-2 auto-rows-fr lg:min-h-[560px]">
+            <div className="hidden lg:block pointer-events-none absolute left-[26%] right-[26%] top-1/2 h-px -translate-y-1/2 bg-primary/20" />
+            <div className="hidden lg:block pointer-events-none absolute left-1/2 top-[18%] h-[64%] w-px -translate-x-1/2 bg-primary/20" />
             {/* Center Card — largest */}
-            <div className="sm:col-span-2 lg:col-span-4 lg:row-start-2 group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[180px] lg:min-h-0">
-              <div className="p-4 sm:p-6 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+            <div className="sm:col-span-2 lg:col-start-2 lg:col-span-2 lg:row-start-2 group relative overflow-hidden rounded-none bg-background border border-primary/25 hover:border-primary/45 active:border-primary/45 transition-colors cursor-default min-h-[170px] lg:min-h-[220px] h-full">
+              <div className="p-3 sm:p-4 h-full flex flex-col gap-3 transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                 <div>
-                  <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">Ways of Knowing</span>
-                  <h3 className="text-xl font-bold mb-3">The Governing Principle</h3>
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 bg-primary/5 px-3 py-1 rounded-none">Ways of Knowing</span>
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-none bg-primary/10 text-primary">
+                      <Network className="h-4 w-4" />
+                    </span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold mb-2">The Governing Principle</h3>
                 </div>
-                <div className="space-y-2">
+                <div>
                   <div>
                     <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
-                    <p className="text-sm text-muted-foreground">Methods without hierarchy.</p>
+                    <p className="text-xs sm:text-sm text-muted-foreground">Methods without hierarchy.</p>
                   </div>
-                  <div>
+                  <div className="mt-2">
                     <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
-                    <p className="text-sm text-foreground font-medium">Every question earns the method it truly demands.</p>
+                    <p className="text-xs sm:text-sm text-foreground font-medium">Every question earns the method it truly demands.</p>
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-0 p-4 sm:p-6 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
-                <p className="text-base text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
+              <div className="absolute inset-0 p-3 sm:p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center overflow-y-auto opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
+                <p className="text-xs sm:text-sm text-primary-foreground leading-relaxed font-medium">Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.</p>
               </div>
             </div>
 
             {[
-              { dim: "Vantage", metaphor: "The Perch", holds: "Cross-sector vision.", exp: "Multi-time horizons.", hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging.", layout: "lg:col-span-2 lg:row-start-1" },
-              { dim: "Scale", metaphor: "The Zoom", holds: "From horizon to shelf.", exp: "From horizon to shelf.", hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage.", layout: "lg:col-start-3 lg:col-span-2 lg:row-start-1" },
-              { dim: "Expertise", metaphor: "The Team", holds: "Disciplines in dialogue.", exp: "Disciplines in dialogue.", hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle.", layout: "lg:col-span-2 lg:row-start-3" },
-              { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable.", layout: "lg:col-start-3 lg:col-span-2 lg:row-start-3" },
+              { dim: "Vantage", metaphor: "The Perch", holds: "Cross-sector vision.", exp: "Multi-time horizons.", hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging.", layout: "lg:col-span-2 lg:row-start-1", icon: Compass },
+              { dim: "Scale", metaphor: "The Zoom", holds: "From horizon to shelf.", exp: "From horizon to shelf.", hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage.", layout: "lg:col-start-3 lg:col-span-2 lg:row-start-1", icon: Expand },
+              { dim: "Expertise", metaphor: "The Team", holds: "Disciplines in dialogue.", exp: "Disciplines in dialogue.", hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle.", layout: "lg:col-span-2 lg:row-start-3", icon: Users2 },
+              { dim: "Stakeholder", metaphor: "The Filter", holds: "Commercial. Human. Systemic.", exp: "Commercial. Human. Systemic.", hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable.", layout: "lg:col-start-3 lg:col-span-2 lg:row-start-3", icon: Filter },
             ].map((item, i) => (
-              <div key={i} className={`${item.layout} group relative overflow-hidden bg-background border border-border hover:border-primary/30 active:border-primary/30 transition-colors cursor-default min-h-[170px] lg:min-h-0`}>
-                <div className="p-4 sm:p-6 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
+              <div key={i} className={`${item.layout} group relative overflow-hidden rounded-none bg-secondary/40 border border-primary/20 hover:border-primary/40 active:border-primary/40 transition-colors cursor-default min-h-[160px] lg:min-h-[180px] h-full`}>
+                <div className="p-3 sm:p-4 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0 group-active:opacity-0 group-focus-within:opacity-0 active:opacity-0">
                   <div>
-                    <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">{item.dim}</span>
-                    <h3 className="text-lg font-bold mb-3">{item.metaphor}</h3>
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/60 border border-primary/20 bg-primary/5 px-3 py-1 rounded-none">{item.dim}</span>
+                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-none bg-primary/10 text-primary">
+                        <item.icon className="h-4 w-4" />
+                      </span>
+                    </div>
+                    <h3 className="text-base sm:text-lg font-bold mb-2">{item.metaphor}</h3>
                   </div>
-                  <div className="space-y-2">
+                  <div>
                     <div>
                       <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
-                      <p className="text-sm text-muted-foreground">{item.holds}</p>
+                      <p className="text-xs sm:text-sm text-muted-foreground">{item.holds}</p>
                     </div>
-                    <div>
+                    <div className="mt-2">
                       <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
-                      <p className="text-sm text-foreground font-medium">{item.exp}</p>
+                      <p className="text-xs sm:text-sm text-foreground font-medium">{item.exp}</p>
                     </div>
                   </div>
                 </div>
-                <div className="absolute inset-0 p-4 sm:p-6 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
-                  <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
+                <div className="absolute inset-0 p-3 sm:p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center overflow-y-auto opacity-0 group-hover:opacity-100 group-active:opacity-100 group-focus-within:opacity-100 active:opacity-100 transition-opacity duration-300">
+                  <p className="text-xs sm:text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
                 </div>
               </div>
             ))}
