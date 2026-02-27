@@ -1,36 +1,45 @@
-import { useState } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+
+const bentoDimensions = [
+  {
+    metaphor: "The Governing Principle",
+    holds: "Methods without hierarchy.",
+    experience: "Every question earns the method it truly demands.",
+    hover: "Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research — every question earns the method it truly demands.",
+    large: true,
+  },
+  {
+    metaphor: "The Perch",
+    holds: "Cross-sector vision.",
+    experience: "Multi-time horizons.",
+    hover: "Cross-sector pattern recognition across three time horizons — what happened, what's happening, what's emerging.",
+    large: false,
+  },
+  {
+    metaphor: "The Zoom",
+    holds: "From horizon to shelf.",
+    experience: "From horizon to shelf.",
+    hover: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage.",
+    large: false,
+  },
+  {
+    metaphor: "The Team",
+    holds: "Disciplines in dialogue.",
+    experience: "Disciplines in dialogue.",
+    hover: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle.",
+    large: false,
+  },
+  {
+    metaphor: "The Filter",
+    holds: "Commercial. Human. Systemic.",
+    experience: "Commercial. Human. Systemic.",
+    hover: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable.",
+    large: false,
+  },
+];
 
 export default function Philosophy() {
-  const [hoveredPoint, setHoveredPoint] = useState<number | null>(null);
-
-  const pentagonPoints = [
-    {
-      title: "The Governing Principle",
-      description: "Qual, Quant, Semiotics, Sensory, Neuro, Cultural Analysis, Design Research",
-    },
-    {
-      title: "The Perch",
-      description: "Cross-sector pattern recognition + three time horizons (what happened, what's happening, what's emerging)",
-    },
-    {
-      title: "The Zoom",
-      description: "Boardroom strategy to shelf-level detail; Tier 1–3 geographic coverage",
-    },
-    {
-      title: "The Team Architecture",
-      description: "Multigenerational, multidisciplinary specialists with equity of voice as operating principle",
-    },
-    {
-      title: "The Durability Filter",
-      description: "Every recommendation stress-tested: commercially viable + consumer-real + category-sustainable",
-    },
-  ];
-
   return (
     <div className="pt-20">
       {/* Hero */}
@@ -94,7 +103,7 @@ export default function Philosophy() {
         </div>
       </section>
 
-      {/* Five Dimensions Carousel */}
+      {/* Five Dimensions Bento Grid */}
       <section className="py-24 lg:py-32">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mb-16">
@@ -102,56 +111,89 @@ export default function Philosophy() {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Five Dimensions of <span className="text-primary-gradient">Plurality</span>
             </h2>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Hover over each card to reveal the deeper explanation.
+            </p>
             <div className="section-divider mt-6" />
           </div>
 
-          <div className="dimensions-carousel -mx-4 sm:-mx-6 lg:-mx-8">
-            <style>{`
-              .dimensions-carousel .slick-slider { margin: 0 auto; }
-              .dimensions-carousel .slick-list { overflow: visible; padding: 20px 0 60px 0; }
-              .dimensions-carousel .slick-track { display: flex !important; align-items: stretch; }
-              .dimensions-carousel .slick-slide { height: auto; display: flex; }
-              .dimensions-carousel .slick-slide > div { width: 100%; display: flex; }
-              .dimensions-carousel .slick-dots { bottom: 0; position: relative; margin-top: 24px; }
-              .dimensions-carousel .slick-dots li button:before { font-size: 10px; color: hsl(235 65% 45%); opacity: 0.3; }
-              .dimensions-carousel .slick-dots li.slick-active button:before { color: hsl(235 65% 45%); opacity: 1; }
-            `}</style>
-            <Slider
-              dots={true}
-              infinite={true}
-              speed={600}
-              slidesToShow={3}
-              slidesToScroll={1}
-              autoplay={true}
-              autoplaySpeed={4000}
-              arrows={false}
-              centerMode={false}
-              responsive={[
-                { breakpoint: 1024, settings: { slidesToShow: 2 } },
-                { breakpoint: 640, settings: { slidesToShow: 1 } },
-              ]}
+          {/* Bento Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-fr">
+            {/* Card 1 — large, spans 2 cols on lg */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="lg:col-span-2 lg:row-span-1 group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]"
             >
-              {pentagonPoints.map((point, index) => (
-                <div key={index} className="px-3 sm:px-4">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6 }}
-                    onMouseEnter={() => setHoveredPoint(index)}
-                    onMouseLeave={() => setHoveredPoint(null)}
-                    className="bg-background border border-border p-8 min-h-[240px] flex flex-col justify-center items-center text-center hover:border-primary/30 transition-colors h-full"
-                  >
-                    <h3 className="text-base font-semibold mb-3 text-foreground">
-                      {point.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {point.description}
-                    </p>
-                  </motion.div>
+              {/* Default content */}
+              <div className="p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+                <div>
+                  <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
+                    Ways of Knowing
+                  </span>
+                  <h3 className="text-xl font-bold mb-3">{bentoDimensions[0].metaphor}</h3>
                 </div>
-              ))}
-            </Slider>
+                <div className="space-y-2">
+                  <div className="flex items-start gap-3">
+                    <span className="text-xs text-primary/40 font-medium tracking-wide uppercase w-28 shrink-0 pt-0.5">What It Holds</span>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{bentoDimensions[0].holds}</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-xs text-primary/40 font-medium tracking-wide uppercase w-28 shrink-0 pt-0.5">Client Experience</span>
+                    <p className="text-sm text-foreground font-medium leading-relaxed">{bentoDimensions[0].experience}</p>
+                  </div>
+                </div>
+              </div>
+              {/* Hover overlay */}
+              <div className="absolute inset-0 p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
+                <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
+                <p className="text-base text-primary-foreground leading-relaxed font-medium">{bentoDimensions[0].hover}</p>
+              </div>
+            </motion.div>
+
+            {/* Cards 2–5 */}
+            {bentoDimensions.slice(1).map((item, index) => {
+              const dimensions = ["Vantage", "Scale", "Expertise", "Stakeholder"];
+              return (
+                <motion.div
+                  key={index + 1}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: (index + 1) * 0.07 }}
+                  className="group relative overflow-hidden bg-background border border-border hover:border-primary/30 transition-colors cursor-default min-h-[220px]"
+                >
+                  {/* Default content */}
+                  <div className="p-8 h-full flex flex-col justify-between transition-opacity duration-300 group-hover:opacity-0">
+                    <div>
+                      <span className="inline-block text-xs font-medium tracking-widest uppercase text-primary/50 border border-primary/15 px-3 py-1 mb-5">
+                        {dimensions[index]}
+                      </span>
+                      <h3 className="text-lg font-bold mb-3">{item.metaphor}</h3>
+                    </div>
+                    <div className="space-y-2">
+                      <div>
+                        <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">What It Holds</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{item.holds}</p>
+                      </div>
+                      <div>
+                        <p className="text-xs text-primary/40 font-medium tracking-wide uppercase mb-1">Client Experience</p>
+                        <p className="text-sm text-foreground font-medium leading-relaxed">{item.experience}</p>
+                      </div>
+                    </div>
+                  </div>
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 p-8 bg-primary flex flex-col justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="absolute top-0 left-0 w-full h-px bg-primary-foreground/20" />
+                    <p className="text-xs font-medium tracking-widest uppercase text-primary-foreground/60 mb-4">Hover Explanation</p>
+                    <p className="text-sm text-primary-foreground leading-relaxed font-medium">{item.hover}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
