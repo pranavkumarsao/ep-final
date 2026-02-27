@@ -2,7 +2,6 @@ import { useState } from "react";
 import { X } from "lucide-react";
 import { Link } from "react-router";
 import heroImage from "@/assets/hero-eagle.jpg";
-import teamImage from "@/assets/team-strategy.jpg";
 import convergenceImage from "@/assets/convergence.jpg";
 import nilakshiImage from "figma:asset/008ee0585922a486d8481eefd553bc58df96f193.png";
 import vivekImage from "figma:asset/e314a4604007185f64e5570d9eaf158f36bd7db1.png";
@@ -408,13 +407,19 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative">
-              <img
-                src={teamImage}
-                alt="Strategic boardroom discussion"
-                className="w-full aspect-[4/3] object-cover photo-filter"
-              />
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-primary" />
+            <div className="pt-4 space-y-3 border-l-2 border-primary/20 pl-6">
+              <p className="text-foreground font-semibold text-sm">We are:</p>
+              <ul className="list-disc pl-5 space-y-2">
+                <li className="text-foreground font-medium text-sm">
+                  A research intelligence consortium — multiple specialist organisations, orchestrated as one, assembled per brief
+                </li>
+                <li className="text-foreground font-medium text-sm">
+                  A convergence firm — our job is not to produce more research but to make the research you have decisive
+                </li>
+                <li className="text-foreground font-medium text-sm">
+                  A system built to evolve — new capabilities added by design, not by accident; every specialist fills a structural gap
+                </li>
+              </ul>
             </div>
           </div>
         </div>
