@@ -292,8 +292,15 @@ export default function Leadership() {
       <section className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
-            {leaders
-              .filter((leader) => leader.image)
+            {[
+              // Row 1 — M, F, M, F, M
+              "Vivek Gupta", "Nilakshi Sengupta", "Sanjay Pal", "Sharmila Das", "Vikram Jain",
+              // Row 2 — F, M, F, M, F
+              "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Vigyan Verma", "Ruchika Aggarwal",
+              // Row 3 — M, F, M, F, F
+              "Venkatnath Kukillaya", "Mini Pinto Sinha", "Bipradeep Chakraborty", "Suparna M", "Swati Kulkarni",
+            ]
+              .map((name) => leaders.find((l) => l.name === name)!)
               .map((leader, index) => (
                 <motion.button
                   key={index}
