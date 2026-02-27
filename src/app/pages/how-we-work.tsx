@@ -79,16 +79,16 @@ export default function HowWeWork() {
       {/* ── Hero ── */}
       <section className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mx-auto text-center">
             <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">How We Work</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Our <span className="text-primary-gradient">Strategic Synthesis</span> Model
             </h1>
-            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               <span className="text-primary font-medium">Decision-led by design.</span>{" "}
               Every engagement begins not with methodology—but with the decision that needs to be made.
             </p>
-            <div className="section-divider mt-8" />
+            <div className="section-divider-center mt-8" />
           </div>
         </div>
       </section>
