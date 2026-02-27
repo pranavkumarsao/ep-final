@@ -543,7 +543,7 @@ export default function Home() {
                 <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
                 <p className="text-[11px] text-muted-foreground leading-relaxed">Disciplines in dialogue.</p>
                 <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
-                <p className="text-[11px] text-foreground font-medium">Disciplines in dialogue.</p>
+                <p className="text-[11px] text-foreground font-medium">Tension. Integration. Clarity..</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
                 <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-primary-foreground/60 mb-2 block">Expertise · The Team</span>
@@ -583,7 +583,7 @@ export default function Home() {
                 <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
                 <p className="text-[11px] text-muted-foreground leading-relaxed">From horizon to shelf.</p>
                 <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
-                <p className="text-[11px] text-foreground font-medium">From horizon to shelf.</p>
+                <p className="text-[11px] text-foreground font-medium">Altitude. Accuracy. Action. Agility.</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
                 <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-primary-foreground/60 mb-2 block">Scale · The Zoom</span>
@@ -606,7 +606,7 @@ export default function Home() {
                 <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mb-0.5">What It Holds</p>
                 <p className="text-[11px] text-muted-foreground leading-relaxed">Commercial. Human. Systemic.</p>
                 <p className="text-[10px] text-primary/40 font-medium tracking-[0.15em] uppercase mt-2 mb-0.5">Client Experience</p>
-                <p className="text-[11px] text-foreground font-medium">Commercial. Human. Systemic.</p>
+                <p className="text-[11px] text-foreground font-medium">Built to last.</p>
               </div>
               <div className="absolute inset-0 p-4 bg-gradient-to-br from-primary to-[hsl(235_70%_35%)] flex flex-col justify-center opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity duration-300">
                 <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-primary-foreground/60 mb-2 block">Stakeholder · The Filter</span>
