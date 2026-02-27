@@ -255,6 +255,50 @@ const leaders: Leader[] = [
     linkedin: "https://www.linkedin.com/in/dipanyitaray/",
     image: dipanyitaImage,
   },
+  {
+    name: "Ruchika Aggarwal",
+    role: "Partner – Strategic Consulting & Enablement",
+    bio: "Brings strong consulting and programme leadership experience, aligning strategic intent with execution across complex initiatives.",
+    expertise: [
+      "Strategic consulting",
+      "Programme enablement",
+      "Execution alignment across complex initiatives",
+    ],
+    linkedin: "https://www.linkedin.com/in/ruchikaaggarwal/",
+  },
+  {
+    name: "Mini Pinto Sinha",
+    role: "Partner – US Geography Head & Strategic Business Leadership",
+    bio: "Brings extensive experience in commercial leadership and strategic market development, with a strong track record in driving business growth and cross-functional team alignment in highly competitive markets.",
+    expertise: [
+      "Business management & market leadership",
+      "Strategic execution",
+      "Cross-functional team alignment",
+    ],
+    linkedin: "https://www.linkedin.com/in/pintosinha/",
+  },
+  {
+    name: "Suparna M",
+    role: "Partner – Strategy, Operations & Capability Enablement",
+    bio: "Brings strong leadership in strategic planning, cross-functional execution, and organisational capability development across complex business environments. Focuses on aligning operational excellence with strategic outcomes.",
+    expertise: [
+      "Strategic planning",
+      "Operational excellence",
+      "Capability enablement",
+    ],
+    linkedin: "https://www.linkedin.com/in/suparna-m-24b32915/",
+  },
+  {
+    name: "Swati Kulkarni",
+    role: "Partner – Beauty, Personal Care, OTC Healthcare & CPG",
+    bio: "Brings extensive experience as a research user as well as insights practitioner, with multi-decade experience. Has been a trusted advisor to CEOs and business heads, guiding them with strategic inputs for brand launch strategies and continued brand growth.",
+    expertise: [
+      "Strategy & brand management",
+      "Business outcomes",
+      "Beauty, personal care, OTC healthcare & CPG",
+    ],
+    linkedin: "https://www.linkedin.com/in/swati-kulkarni-bb07a020/",
+  },
 ];
 
 const values = [
