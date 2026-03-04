@@ -11,7 +11,7 @@ import sharmilaImage from "@/assets/sharmila-das.png";
 import sanjayImage from "figma:asset/99f74438f5e6de35e1279b2e820e51e4ff2e8d2f.png";
 import vikramImage from "figma:asset/ec0fdb2fa4f0f9f7ceb77f0bce5ef89e466acb0c.png";
 import vinayImage from "figma:asset/c58f54935fbc19bb013e0870062b46e2555d68ae.png";
-import vigyanImage from "figma:asset/8f5998d4cf6e8a4d3768d818eebaac5ee71f11be.png";
+import pankajImage from "@/assets/pankaj-jha.jpeg";
 import ronitaImage from "figma:asset/c93f1b93c3de091194dbffdc6c47f527c3efc269.png";
 import bipradeepImage from "figma:asset/66f34e1ef888f51e4e93588ff206041ef921f6f8.png";
 import dipanyitaImage from "figma:asset/99398e657e579b93569ae21a3c80a85d0fa8bbcc.png";
@@ -145,10 +145,10 @@ const leaders: Leader[] = [
   },
   {
     name: "Nilakshi Sengupta",
-    role: "Partner – Consumer & Cultural Insights",
-    bio: "Nilakshi brings deep expertise in qualitative research, cultural analysis, and behavioural understanding. Her work focuses on uncovering the underlying motivations, tensions, and contextual drivers that shape consumer behaviour.",
+    role: "Partner – Consumer Insights & Strategy",
+    bio: "Nilakshi brings deep expertise in quantitative research, cultural analysis, and market understanding. Her work focuses on uncovering the market opportunities, underlying motivation and contextual drivers that shape consumer behaviour.",
     expertise: [
-      "Deep qualitative and ethnographic programmes",
+      "Quantitative market sizing",
       "Cultural and semiotic interpretation",
       "Consumer immersion and narrative synthesis",
     ],
@@ -204,16 +204,16 @@ const leaders: Leader[] = [
     image: vinayImage,
   },
   {
-    name: "Vigyan Verma",
-    role: "Partner – Brand, Marketing & Strategic Intelligence",
-    bio: "Vigyan brings more than two decades of leadership experience in brand strategy, marketing, and communications across global and Indian contexts. He has served in senior roles at major advertising and marketing organisations, where he led brand transformation, strategic positioning, and growth initiatives.",
+    name: "Pankaj Jha",
+    role: "Partner – Consumer Insights & Strategy",
+    bio: "Pankaj brings a wealth of experience in high-impact consumer research, market entry strategy, and evidence-based advisory. His work centers on translating complex data into actionable business intelligence, specifically focusing on how shifting consumer health trends and functional preferences drive market evolution.",
     expertise: [
-      "Brand strategy and positioning frameworks",
-      "Marketing and communication strategy integration",
-      "Strategic interpretation of consumer insight",
+      "Strategic Market Entry & Sizing: Developing data-led roadmaps for global and domestic brands entering the Indian landscape",
+      "Consumer Trend Analysis: Leading large-scale surveys to decode evolving behaviors in retail, institutional, and functional food sectors",
+      "Advisory & Policy Synthesis: Bridging the gap between grassroots consumer insights and high-level corporate and regulatory strategy",
     ],
-    linkedin: "https://www.linkedin.com/in/vigyanverma/",
-    image: vigyanImage,
+    linkedin: "https://www.linkedin.com/in/pankajjhaeval360r/",
+    image: pankajImage,
   },
   {
     name: "Ronita Mitra",
@@ -900,7 +900,7 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
             {[
               "Vivek Gupta", "Nilakshi Sengupta", "Sanjay Pal", "Sharmila Das", "Vikram Jain",
-              "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Vigyan Verma", "Ruchika Aggarwal",
+              "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Pankaj Jha", "Ruchika Aggarwal",
               "Venkatnath Kukillaya", "Mini Pinto Sinha", "Bipradeep Chakraborty", "Suparna M", "Swati Kulkarni",
             ]
               .map((name) => leaders.find((l) => l.name === name)!)
