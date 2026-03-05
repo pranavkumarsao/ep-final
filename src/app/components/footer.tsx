@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import { Mail, Twitter } from "lucide-react";
-import logo from "figma:asset/1c87df128a6d245a47d853c159c41e6e6df2811a.png";
+import logo from "@/assets/ep-logo-tp.png";
 
 export default function Footer() {
   return (

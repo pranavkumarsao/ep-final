@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { AnimatePresence, motion } from "motion/react";
-import logo from "figma:asset/1c87df128a6d245a47d853c159c41e6e6df2811a.png";
+import logo from "@/assets/ep-logo-tp.png";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
