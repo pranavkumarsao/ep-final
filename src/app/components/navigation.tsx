@@ -48,7 +48,7 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-24 lg:h-28">
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <img src={logo} alt="Eagle Perspectives" className="h-[3.75rem] md:h-[4.5rem] w-auto" />
+            <img src={logo} alt="Eagle Perspectives" className="h-[3rem] md:h-[3.5rem] w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
