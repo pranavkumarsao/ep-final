@@ -19,8 +19,8 @@ const partners = [
     url: "https://eval360r.com/",
   },
   {
-    name: "Capsule",
-    logo: "/partners/capsule.png",
+    name: "The Alchemic",
+    logo: "/partners/capsule.webp",
     url: "https://thealchemic.com/",
   },
 ];

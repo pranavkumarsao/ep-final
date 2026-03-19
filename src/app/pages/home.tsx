@@ -844,7 +844,7 @@ export default function Home() {
               { name: "Decrypt", logo: "/partners/decrypt.png", url: "https://decryptint.com/" },
               { name: "Purple Audacity", logo: "/partners/purple-audacity.png", url: "https://www.purpleaudacity.com/" },
               { name: "Eval360", logo: "/partners/eval360.png", url: "https://eval360r.com/" },
-              { name: "Capsule", logo: "/partners/capsule.png", url: "https://thealchemic.com/" },
+              { name: "The Alchemic", logo: "/partners/capsule.webp", url: "https://thealchemic.com/" },
             ].map((partner, i) => (
               <a
                 key={i}
