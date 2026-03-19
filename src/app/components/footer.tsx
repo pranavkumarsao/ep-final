@@ -59,7 +59,7 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {[
                   { label: "What Decisions We Solve", path: "/what-we-solve" },
-                  { label: "What Expertise We Bring", path: "/what-we-bring" },
+                  { label: "Partners", path: "/partners" },
                 ].map((item) => (
                   <li key={item.path}>
                     <Link to={item.path} className="text-xs text-muted-foreground hover:text-primary active:text-primary transition-colors block">

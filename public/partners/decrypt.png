@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Decryptint</title>
+  <meta name="title" content="Decryptint">
+  <meta name="description" content="A non-obvious understanding of consumers to delve into their minds mutually benefits consumers and brands. We combine state-of-the-art technology and avant-garde research tools to distil consumer insights and amplify the future of your brand.">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://decryptint.com/">
+  <meta property="og:title" content="Decryptint">
+  <meta property="og:description" content="A non-obvious understanding of consumers to delve into their minds mutually benefits consumers and brands. We combine state-of-the-art technology and avant-garde research tools to distil consumer insights and amplify the future of your brand.">
+  <meta property="og:image" content="https://decryptint.com/assets/img/og_image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://decryptint.com/">
+  <meta property="twitter:title" content="Decryptint">
+  <meta property="twitter:description" content="A non-obvious understanding of consumers to delve into their minds mutually benefits consumers and brands. We combine state-of-the-art technology and avant-garde research tools to distil consumer insights and amplify the future of your brand.">
+  <meta property="twitter:image" content="https://decryptint.com/assets/img/og_image.jpg">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" media="all" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" media="all" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" media="all" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/owl.carousel/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/vendor/owl.carousel/assets/owl.theme.default.min.css">
+  <link href="assets/vendor/aos/aos.css" media="all" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" media="all" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp - v2.2.0
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HTF2045C2Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HTF2045C2Q');
+</script>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html"><img src="assets/img/log_.png" class="img-fluid" alt=""></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="#hero">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Solutions</a></li>
+          <li><a href="#clients">Our Clients</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="our_partners.html">Our Partners</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+        <div id="video-viewport">
+ <video id="mainVdo" class="des-video" src="assets/img/video.mp4" muted autoplay playsinline>
+    </video>
+     <video id="mainVdoMobile" class="mobile-video" src="assets/img/video-mobile.mp4" muted autoplay playsinline>
+    </video>
+  </div>
+     <div class="overlay">
+    </div>
+      <!--<div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Powerful Digital Solutions With Decryptint</h1>
+          <h2>We are team of talanted digital marketers</h2>
+        </div>
+      </div>
+-->
+      
+    </div>
+  </section><!-- End Hero -->
+  
+  <!-- Fix for autoplay video in Safari -->
+  <script>
+      document.getElementById('mainVdo').play();
+      document.getElementById('mainVdoMobile').play();
+    </script>
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row">
+        
+          <div class="col-lg-12 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+          
+            <p>
+              A non-obvious understanding of consumers to delve into their minds mutually benefits consumers and brands. We combine state-of-the-art technology and avant-garde research tools to distil consumer insights and amplify the future of your brand.
+            </p>
+            <a class="btn-style" href="inner-page.html">Generate Consumer Snapshot</a>
+            <ul>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+  
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <p>About us</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12 d-flex align-items-stretch">
+            <p>With over 100 man-years of experience and in-depth knowledge of consumers, we ensure absolute end-to-end management of our clients by a team of the industry’s leading experts in the fields of System 1 and System 2 researches across both FMCG and non FMCG industries.</p>
+          </div>
+        </div>
+        <div class="row mem-slider owl-carousel owl-theme">
+          <!-- Team Member -->
+          <div class="item">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a target="_blank" href="https://twitter.com/libdiblama"><i class="icofont-twitter"></i></a>
+                  <a target="_blank" href="https://linkedin.com/in/sanjay-pal26"><i class="icofont-linkedin"></i></a>
+                  <a target="_blank" href="mailto:sanjay.pal@decryptint.com"><i class="icofont-mail"></i></a>
+                </div>
+              </div>
+              <a href="sanjay.html">
+                <div class="member-info">
+                  <h4>Sanjay Pal</h4>
+                  <span>Founder</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="item">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a target="_blank" href="https://twitter.com/SayanChattopa16"><i class="icofont-twitter"></i></a>
+                  <a target="_blank" href="https://linkedin.com/in/sayan-chattopadhyay/"><i class="icofont-linkedin"></i></a>
+                  <a target="_blank" href="mailto:sayan.chattopadhyay@decryptint.com"><i class="icofont-mail"></i></a>
+                </div>
+              </div>
+              <a href="sayan.html">
+                <div class="member-info">
+                  <h4>Sayan Chattopadhyay</h4>
+                  <span>Vice President</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="item">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a target="_blank" href="https://twitter.com/PandeyManisha_"><i class="icofont-twitter"></i></a>
+                  <a target="_blank" href="https://linkedin.com/in/manisha-pandey-9a717714/"><i class="icofont-linkedin"></i></a>
+                  <a target="_blank" href="mailto:manisha.pandey@decryptint.com"><i class="icofont-mail"></i></a>
+                </div>
+              </div>
+              <a href="manisha.html">
+                <div class="member-info">
+                  <h4>Manisha Pandey</h4>
+                  <span>Principal</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="item">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a target="_blank" href="https://twitter.com/01Ranabose"><i class="icofont-twitter"></i></a>
+                  <a target="_blank" href="https://linkedin.com/in/ranabose01"><i class="icofont-linkedin"></i></a>
+                  <a target="_blank" href="mailto:rana.bose@decryptint.com"><i class="icofont-mail"></i></a>
+                </div>
+              </div>
+              <a href="rana.html">
+                <div class="member-info">
+                  <h4>Rana Bose</h4>
+                  <span>Vice President</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="item">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/team/team-7.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a target="_blank" href="http://twitter.com/decryptint"><i class="icofont-twitter"></i></a>
+                  <a target="_blank" href="https://www.linkedin.com/in/achala-srivatsa"><i class="icofont-linkedin"></i></a>
+                  <a target="_blank" href="mailto:achala.srivatsa@decryptint.com"><i class="icofont-mail"></i></a>
+                </div>
+              </div>
+              <a href="achala.html">
+                <div class="member-info">
+                  <h4>Achala Srivatsa</h4>
+                  <span>Qualitative Research Expert</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="item">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/team/team-8.jpeg" class="img-fluid" alt="">
+                <div class="social">
+                  <a target="_blank" href="http://twitter.com/decryptint"><i class="icofont-twitter"></i></a>
+                  <a target="_blank" href="https://in.linkedin.com/in/venkatnathkukillaya"><i class="icofont-linkedin"></i></a>
+                  <a target="_blank" href="mailto:venkatnath.kukillaya@decryptint.com"><i class="icofont-mail"></i></a>
+                </div>
+              </div>
+              <a href="venkatnath.html">
+                <div class="member-info">
+                  <h4>Venkatnath Kukillaya</h4>
+                  <span>Vice President</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="item">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/team/team-9.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a target="_blank" href="http://twitter.com/decryptint"><i class="icofont-twitter"></i></a>
+                  <a target="_blank" href="https://in.linkedin.com/company/decrypt-int"><i class="icofont-linkedin"></i></a>
+                  <a target="_blank" href="mailto:prajika.fernando@decryptint.com"><i class="icofont-mail"></i></a>
+                </div>
+              </div>
+              <a href="prajika.html">
+                <div class="member-info">
+                  <h4>Prajika Fernando</h4>
+                  <span>Country Head - Sri Lanka</span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!-- Team Member -->
+          <div class="item">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-img">
+                <img src="assets/img/team/team-10.jpg" class="img-fluid" alt="">
+                <div class="social">
+                  <a target="_blank" href="http://twitter.com/decryptint"><i class="icofont-twitter"></i></a>
+                  <a target="_blank" href="https://linkedin.com/in/tora-ganguli"><i class="icofont-linkedin"></i></a>
+                  <a target="_blank" href="mailto:tora.mitra@gmail.com"><i class="icofont-mail"></i></a>
+                </div>
+              </div>
+              <a href="tora.html">
+                <div class="member-info">
+                  <h4>Tora Mitra Ganguli</h4>
+                  <span>Advisor - Neuroscience</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Team Section -->
+
+    
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          
+<!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Our solutions</p>
+        </div>
+         <div class="row">
+          <div class="col-lg-12 col-md-12 d-flex align-items-stretch">
+            <p>In today’s hypercompetitive market landscape, understanding consumers and their decision making is paramount. Propelled by quantitative and qualitative expertise, our tailor-made solutions reward you with incisive and actionable insights spanning a 360-degree view of customer needs, the selling environment, the brand world, buyer personas, and sales efficiencies.</p>
+          </div>
+        </div>
+
+        <div class="row service-box">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch service-item" data-aos="zoom-in" data-aos-delay="100">
+            <a href="know-your-consumer.html" class="service-item-cta"></a>
+            <div class="icon-box">
+              <img src="assets/img/1.png" alt="">
+              <h4><a href="know-your-consumer.html">Know your consumer</a></h4>
+              <p>Partner with you to help you know your market and consumer better for both FMCG and non FMCG industries.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0 service-item" data-aos="zoom-in" data-aos-delay="200">
+            <a href="create-your-best-offer.html" class="service-item-cta"></a>
+            <div class="icon-box">
+              <img src="assets/img/2.png" alt="">
+              <h4><a href="create-your-best-offer.html">Create your best offer</a></h4>
+              <p>Utilise a mix of System 1 and System 2 decision making to help you create the best offering—from ideation to final offer.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0 service-item" data-aos="zoom-in" data-aos-delay="300">
+            <a href="know-your-shopper.html" class="service-item-cta"></a>
+            <div class="icon-box">
+            <img src="assets/img/3.png" alt="">
+              <h4><a href="know-your-shopper.html">Know your shopper</a></h4>
+              <p>Partner you to understand the shopping process through stated response and observed behaviour.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 service-item" data-aos="zoom-in" data-aos-delay="100">
+            <a href="retain-your-customer.html" class="service-item-cta"></a>
+            <div class="icon-box">
+              <img src="assets/img/4.png" alt="">
+              <h4><a href="retain-your-customer.html">Retain your customer</a></h4>
+              <p>Using trade-offs that consumers make in real life to evaluate satisfaction with different touch points through best-in-class platforms, expertise, and tools.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 service-item" data-aos="zoom-in" data-aos-delay="200">
+            <a href="optimise-your-inputs.html" class="service-item-cta"></a>
+            <div class="icon-box">
+              <img src="assets/img/5.png" alt="">
+              <h4><a href="optimise-your-inputs.html">Optimise your inputs</a></h4>
+              <p>Using ML to predict how marketing inputs can be optimised for better ROI</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 service-item" data-aos="zoom-in" data-aos-delay="300">
+            <a href="build-your-brand.html" class="service-item-cta"></a>
+            <div class="icon-box">
+              <img src="assets/img/6.png" alt="">
+              <h4><a href="build-your-brand.html">Build your brand</a></h4>
+              <p>Partner with you to grow your brand.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    
+   
+    <!-- Our Clients Section -->
+    <section id="clients" class="our-clients">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title"><p>Our Clients</p></div>
+
+        <div class="row our-clients-slider owl-carousel owl-theme mb-5">
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/ABP.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/aditya-birla-capital-logo.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/aditya-birla-fashion-retail-logo.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/axis-bank-logo.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/dominos-pizza.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/ceat.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/emami.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/mondelez-international.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/banglalink-logo.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/birla-estates.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/bkash.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/centrum.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/group-m.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/jti.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/keva.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/malayala-manorama.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="row our-clients-slider-rtl owl-carousel owl-theme">          
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/tata-motors.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/unilever.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/paytm.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/nestle.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/reliance-retail.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/philip-morris-international.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/wipro.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/rp-sanjiv-goenka-group.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/yes-bank.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/sun-pharma.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/tata-play.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/tvs.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/slice.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/nuvama.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/zydus-wellness.jpg" alt="">
+          </div>
+          <!-- Slide Item -->
+          <div class="client-slide">
+            <img src="assets/img/clients/new/navi.jpg" alt="">
+          </div>          
+        </div>
+      </div>
+    </section>
+    <!-- End Our Clients Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+        
+          <p>Contact Us</p>
+        </div>
+
+        <!-- End<div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        </div>
+        -->
+        <div class="row">
+
+          <div class="col">
+
+           <div class="panel-body">
+              <form id="reused_form">
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label >Name</label>
+                      <input type="text" name="name" required class="form-control" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label >Email</label>
+                        <input type="email" name="email" required class="form-control" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                      <label >Mobile number</label>
+                      <input type="mobile" name="mobile"  class="form-control" placeholder="Enter Mobile number">
+                    </div>
+                    <div class="form-group">
+                      <label >Your organization</label>
+                      <input type="text" name="Your organization" required class="form-control" placeholder="Enter Organization">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label >Your current designation</label>
+                      <input type="text" name="Your current designation" required class="form-control" placeholder="Enter Designation">
+                    </div>
+                    <div class="form-group">
+                      <label >Message</label>
+                      <textarea rows="5" name="message" class="form-control" placeholder="Type Your Message"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <button class="btn-style btn-raised btn-lg btn-warning" type="submit">Send</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <div id="error_message" style="width:100%; height:100%; display:none; ">
+                  <h4>
+                      Error
+                  </h4>
+                  Sorry there was an error sending your form. 
+              </div>
+              <div id="success_message" style="width:100%; height:100%; display:none; ">
+                <h2>Success! Your Message was Sent Successfully.</h2>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+    <!-- Our Footprints Section -->
+    <section id="footprints" class="footprints">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <p>Our Footprints</p>
+        </div>
+
+        <div class="row footprint-wrap">
+          <div class="col-md-4 col-lg-3 col-xl-2 footprint-item">
+            <div class="footprint-image">
+              <img src="assets/img/footprints/kolkata.png" alt="">
+            </div>
+            <div class="footprint-content">
+              <h5>KOLKATA</h5>
+              <p>Sayan Chattopadhyay</p>
+              <a href="mailto:sayan.chattopadhyay@decryptint.com"><i class="icofont-envelope"></i></a>
+              <a href="tel:+919831735903"><i class="icofont-ui-call"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-2 footprint-item">
+            <div class="footprint-image">
+              <img src="assets/img/footprints/mumbai.png" alt="">
+            </div>
+            <div class="footprint-content">
+              <h5>MUMBAI</h5>
+              <p>Manisha Pandey</p>
+              <a href="mailto:manisha.pandey@decryptint.com"><i class="icofont-envelope"></i></a>
+              <a href="tel:+919022047456"><i class="icofont-ui-call"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-2 footprint-item">
+            <div class="footprint-image">
+              <img src="assets/img/footprints/bangalore.png" alt="">
+            </div>
+            <div class="footprint-content">
+              <h5>BANGALORE</h5>
+              <p>Rana Bose</p>
+              <a href="mailto:rana.bose@decryptint.com"><i class="icofont-envelope"></i></a>
+              <a href="tel:+919880220018"><i class="icofont-ui-call"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-2 footprint-item">
+            <div class="footprint-image">
+              <img src="assets/img/footprints/delhi.png" alt="">
+            </div>
+            <div class="footprint-content">
+              <h5>DELHI</h5>
+              <p>Sanjay Pal</p>
+              <a href="mailto:sanjay.pal@decryptint.com"><i class="icofont-envelope"></i></a>
+              <a href="tel:+919967058857"><i class="icofont-ui-call"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-2 footprint-item">
+            <div class="footprint-image">
+              <img src="assets/img/footprints/dhaka.png" alt="">
+            </div>
+            <div class="footprint-content">
+              <h5>DHAKA</h5>
+              <p>Sayan Chattopadhyay</p>
+              <a href="mailto:sayan.chattopadhyay@decryptint.com"><i class="icofont-envelope"></i></a>
+              <a href="tel:+919831735903"><i class="icofont-ui-call"></i></a>
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-2 footprint-item">
+            <div class="footprint-image">
+              <img src="assets/img/footprints/colombo.png" alt="">
+            </div>
+            <div class="footprint-content">
+              <h5>COLOMBO</h5>
+              <p>Prajika Fernando</p>
+              <a href="mailto:prajika.fernando@decryptint.com"><i class="icofont-envelope"></i></a>
+              <a href="tel:+94722250822"><i class="icofont-ui-call"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- Our Footprints Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Decryptint</span></strong>. All Rights Reserved.
+      </div>
+      <div class="credits">
+     
+      
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="form.css" >
+  <script src="form.js"></script>
+
+</body>
+
+</html>

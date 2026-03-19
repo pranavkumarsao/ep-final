@@ -31,7 +31,7 @@ export default function Navigation() {
     { label: "About", path: "/about" },
     { label: "Philosophy", path: "/philosophy" },
     { label: "What We Solve", path: "/what-we-solve" },
-    { label: "What We Bring", path: "/what-we-bring" },
+    { label: "Partners", path: "/partners" },
     { label: "How We Work", path: "/how-we-work" },
     { label: "Leadership", path: "/leadership" },
   ];

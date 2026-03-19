@@ -12,7 +12,7 @@ import HowWeWork from "./pages/how-we-work";
 import Leadership from "./pages/leadership";
 import WorkWithUs from "./pages/work-with-us";
 import WhatWeSolve from "./pages/what-we-solve";
-import WhatWeBring from "./pages/what-we-bring";
+import Partners from "./pages/partners";
 import NotFound from "./pages/not-found";
 
 // App routes configuration
@@ -33,7 +33,7 @@ export const router = createBrowserRouter([
       { path: "leadership", Component: Leadership },
       { path: "work-with-us", Component: WorkWithUs },
       { path: "what-we-solve", Component: WhatWeSolve },
-      { path: "what-we-bring", Component: WhatWeBring },
+      { path: "partners", Component: Partners },
       { path: "*", Component: NotFound },
     ],
   },

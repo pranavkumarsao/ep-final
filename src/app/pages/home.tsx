@@ -740,12 +740,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Axis 1: What We Solve ── */}
+      {/* ── What We Solve ── */}
       <section id="what-we-solve" className="py-14 md:py-20 lg:py-28">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
             <div className="max-w-2xl">
-              <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Axis 1</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
                 What Decisions <span className="text-primary-gradient">We Solve</span>
               </h2>
@@ -758,7 +757,7 @@ export default function Home() {
               to="/what-we-solve"
               className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 active:text-primary/70 transition-colors shrink-0"
             >
-              Explore All Five Decisions
+              Explore All Decisions & Disciplines
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
@@ -785,54 +784,87 @@ export default function Home() {
               </Link>
             ))}
           </div>
+
+          {/* Expertise disciplines */}
+          <div className="mt-10 md:mt-16">
+            <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-6">The Eight Disciplines</p>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                { lens: "The depth lens", title: "Qualitative & Ethnographic Research" },
+                { lens: "The scale lens", title: "Quantitative Research & Analytics" },
+                { lens: "The unconscious lens", title: "Neuroscience & Behavioural Science" },
+                { lens: "The embodied lens", title: "Sensory Science" },
+                { lens: "The meaning lens", title: "Semiotics & Cultural Intelligence" },
+                { lens: "The specialist lens", title: "Healthcare Research" },
+                { lens: "The action lens", title: "Behaviour Design" },
+                { lens: "The equity lens", title: "Social Impact Research" },
+              ].map((item, i) => (
+                <Link
+                  key={i}
+                  to="/what-we-solve"
+                  className="bg-background border border-border p-6 hover:border-primary/30 active:border-primary/30 transition-colors group relative overflow-hidden block"
+                >
+                  <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 group-focus-within:scale-x-100 active:scale-x-100 transition-transform origin-left duration-300" />
+                  <span className="block text-xs font-medium tracking-wide uppercase text-primary/50 mb-3">
+                    {item.lens}
+                  </span>
+                  <h3 className="text-sm font-semibold leading-snug">{item.title}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ── Axis 2: What We Bring ── */}
-      <section id="what-we-bring" className="py-14 md:py-20 lg:py-28 bg-secondary">
+      {/* ── Partners ── */}
+      <section id="partners" className="py-14 md:py-20 lg:py-28 bg-secondary">
         <div className="max-w-6xl mx-auto px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10 md:mb-16">
             <div className="max-w-2xl">
-              <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Axis 2</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-primary font-medium mb-4">Our Partners</p>
               <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                What Expertise <span className="text-primary-gradient">We Bring</span>
+                The Constellation Behind <span className="text-primary-gradient">Every Engagement</span>
               </h2>
               <p className="text-muted-foreground text-sm leading-relaxed">
-                Start here if you know the discipline. We'll connect it to the decision.
+                A fluid network of specialist organisations and senior practitioners, assembled around the question that needs answering.
               </p>
               <div className="section-divider mt-6" />
             </div>
             <Link
-              to="/what-we-bring"
+              to="/partners"
               className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-primary hover:text-primary/70 active:text-primary/70 transition-colors shrink-0"
             >
-              Explore All Eight Disciplines
+              Meet Our Partners
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { lens: "The depth lens", title: "Qualitative & Ethnographic Research" },
-              { lens: "The scale lens", title: "Quantitative Research & Analytics" },
-              { lens: "The unconscious lens", title: "Neuroscience & Behavioural Science" },
-              { lens: "The embodied lens", title: "Sensory Science" },
-              { lens: "The meaning lens", title: "Semiotics & Cultural Intelligence" },
-              { lens: "The specialist lens", title: "Healthcare Research" },
-              { lens: "The action lens", title: "Behaviour Design" },
-              { lens: "The equity lens", title: "Social Impact Research" },
-            ].map((item, i) => (
-              <Link
+              { name: "Decrypt", logo: "/partners/decrypt.png", url: "https://decryptint.com/" },
+              { name: "Purple Audacity", logo: "/partners/purple-audacity.png", url: "https://www.purpleaudacity.com/" },
+              { name: "Eval360", logo: "/partners/eval360.png", url: "https://eval360r.com/" },
+              { name: "Capsule", logo: "/partners/capsule.png", url: "https://thealchemic.com/" },
+            ].map((partner, i) => (
+              <a
                 key={i}
-                to="/what-we-bring"
-                className="bg-background border border-border p-6 hover:border-primary/30 active:border-primary/30 transition-colors group relative overflow-hidden block"
+                href={partner.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-background border border-border p-6 flex flex-col items-center justify-center gap-3 hover:border-primary/30 active:border-primary/30 transition-all hover:shadow-lg group relative overflow-hidden block"
               >
-                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 group-active:scale-x-100 group-focus-within:scale-x-100 active:scale-x-100 transition-transform origin-left duration-300" />
-                <span className="block text-xs font-medium tracking-wide uppercase text-primary/50 mb-3">
-                  {item.lens}
+                <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                <div className="h-12 flex items-center justify-center">
+                  <img
+                    src={partner.logo}
+                    alt={partner.name}
+                    className="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+                <span className="text-[10px] font-medium tracking-wider uppercase text-muted-foreground group-hover:text-primary transition-colors text-center">
+                  {partner.name}
                 </span>
-                <h3 className="text-sm font-semibold leading-snug">{item.title}</h3>
-              </Link>
+              </a>
             ))}
           </div>
         </div>
