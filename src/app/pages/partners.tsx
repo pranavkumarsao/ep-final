@@ -7,21 +7,25 @@ const partners = [
     name: "Decrypt",
     logo: "/partners/decrypt.png",
     url: "https://decryptint.com/",
+    logoClass: "max-h-20",
   },
   {
     name: "Purple Audacity",
     logo: "/partners/purple-audacity.png",
     url: "https://www.purpleaudacity.com/",
+    logoClass: "max-h-16",
   },
   {
     name: "Eval360",
     logo: "/partners/eval360.png",
     url: "https://eval360r.com/",
+    logoClass: "max-h-16",
   },
   {
     name: "The Alchemic",
     logo: "/partners/capsule.webp",
     url: "https://thealchemic.com/",
+    logoClass: "max-h-10",
   },
 ];
 
@@ -148,7 +152,7 @@ export default function Partners() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-16 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className={`${partner.logoClass} max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300`}
                   />
                 </div>
                 <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground group-hover:text-primary transition-colors text-center">

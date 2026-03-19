@@ -841,10 +841,10 @@ export default function Home() {
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { name: "Decrypt", logo: "/partners/decrypt.png", url: "https://decryptint.com/" },
-              { name: "Purple Audacity", logo: "/partners/purple-audacity.png", url: "https://www.purpleaudacity.com/" },
-              { name: "Eval360", logo: "/partners/eval360.png", url: "https://eval360r.com/" },
-              { name: "The Alchemic", logo: "/partners/capsule.webp", url: "https://thealchemic.com/" },
+              { name: "Decrypt", logo: "/partners/decrypt.png", url: "https://decryptint.com/", logoClass: "max-h-16" },
+              { name: "Purple Audacity", logo: "/partners/purple-audacity.png", url: "https://www.purpleaudacity.com/", logoClass: "max-h-12" },
+              { name: "Eval360", logo: "/partners/eval360.png", url: "https://eval360r.com/", logoClass: "max-h-12" },
+              { name: "The Alchemic", logo: "/partners/capsule.webp", url: "https://thealchemic.com/", logoClass: "max-h-8" },
             ].map((partner, i) => (
               <a
                 key={i}
@@ -858,7 +858,7 @@ export default function Home() {
                   <img
                     src={partner.logo}
                     alt={partner.name}
-                    className="max-h-12 max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className={`${partner.logoClass} max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300`}
                   />
                 </div>
                 <span className="text-[10px] font-medium tracking-wider uppercase text-muted-foreground group-hover:text-primary transition-colors text-center">
