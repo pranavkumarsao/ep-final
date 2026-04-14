@@ -936,8 +936,8 @@ export default function Home() {
               { name: "Purple Audacity", logo: "/partners/purple-audacity.png", url: "https://www.purpleaudacity.com/", logoClass: "max-h-16" },
               { name: "Eval360", logo: "/partners/eval360.png", url: "https://eval360r.com/", logoClass: "max-h-16" },
               { name: "The Alchemic", logo: "/partners/capsule.webp", url: "https://thealchemic.com/", logoClass: "max-h-7" },
-              { name: "Aisles & Shelves", logo: "/partners/aisles-shelves.jpeg", url: "", logoClass: "max-h-12" },
-              { name: "Crisp", logo: "/partners/crisp.png", url: "", logoClass: "max-h-12" },
+              { name: "Aisles & Shelves", logo: "/partners/aisles-shelves.jpeg", url: "https://aisles-shelves.com/", logoClass: "max-h-12" },
+              { name: "Crisp", logo: "/partners/crisp.png", url: "https://crispinsights.io/", logoClass: "max-h-12" },
             ].map((partner, i) => (
               <a
                 key={i}

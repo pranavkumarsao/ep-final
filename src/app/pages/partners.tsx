@@ -30,13 +30,13 @@ const partners = [
   {
     name: "Aisles & Shelves",
     logo: "/partners/aisles-shelves.jpeg",
-    url: "",
+    url: "https://aisles-shelves.com/",
     logoClass: "max-h-14",
   },
   {
     name: "Crisp",
     logo: "/partners/crisp.png",
-    url: "",
+    url: "https://crispinsights.io/",
     logoClass: "max-h-14",
   },
 ];
