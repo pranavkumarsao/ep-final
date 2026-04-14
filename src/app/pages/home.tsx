@@ -20,6 +20,13 @@ import ruchikaImage from "@/assets/ruchika.jpeg";
 import swatiImage from "@/assets/swati-kulkarni.jpeg";
 import venkatnathImage from "@/assets/venkatnath.jpeg";
 import suparnaImage from "@/assets/suparna.jpeg";
+import abhishekRaneImage from "@/assets/abhishek-rane.jpeg";
+import riteshGhosalImage from "@/assets/ritesh-ghosal.jpeg";
+import karthikImage from "@/assets/karthik-kankanhalli.jpeg";
+import arnabImage from "@/assets/arnab-bhattacharya.jpeg";
+import jananiImage from "@/assets/janani-kandaswamy.jpeg";
+import sushmitaImage from "@/assets/sushmita-balasubramaniam.jpeg";
+import krishnaraoImage from "@/assets/krishnarao-buddha.png";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -310,6 +317,90 @@ const leaders: Leader[] = [
     ],
     linkedin: "https://www.linkedin.com/in/swati-kulkarni-bb07a020/",
     image: swatiImage,
+  },
+  {
+    name: "Abhishek Rane",
+    role: "Partner – Financial Services & Market Execution",
+    bio: "Brings experience in banking and financial services, with a focus on operational execution and customer-led delivery in regulated environments.",
+    expertise: [
+      "Financial services",
+      "Execution management",
+      "Process alignment",
+    ],
+    linkedin: "https://www.linkedin.com/in/abhishek-rane-6b007a1/",
+    image: abhishekRaneImage,
+  },
+  {
+    name: "Ritesh Ghosal",
+    role: "Partner – Brand Transformation & Market Leadership",
+    bio: "Brings over two decades of leadership across FMCG, telecom, and retail, building iconic brands and driving large-scale demand generation and customer strategy.",
+    expertise: [
+      "Brand transformation",
+      "Consumer strategy",
+      "Market leadership",
+    ],
+    linkedin: "https://www.linkedin.com/in/ritesh-ghosal/",
+    image: riteshGhosalImage,
+  },
+  {
+    name: "Karthik Kankanhalli",
+    role: "Partner – Technology Strategy & Digital Transformation",
+    bio: "Focuses on aligning technology, platforms, and data ecosystems with business strategy to enable scalable and future-ready transformation.",
+    expertise: [
+      "Digital strategy",
+      "Platform integration",
+      "Technology-led growth",
+    ],
+    linkedin: "https://www.linkedin.com/in/k%C4%81rthik/",
+    image: karthikImage,
+  },
+  {
+    name: "Arnab Bhattacharya",
+    role: "Partner – Analytics, Insights & Business Strategy",
+    bio: "Brings strong expertise in leveraging analytics and structured insight to inform strategic decisions across complex business environments.",
+    expertise: [
+      "Advanced analytics",
+      "Insight synthesis",
+      "Strategy alignment",
+    ],
+    linkedin: "https://www.linkedin.com/in/arnab-bhattacharya-18a6747/",
+    image: arnabImage,
+  },
+  {
+    name: "Janani Kandaswamy",
+    role: "Partner – Consumer Insight & Experience Strategy",
+    bio: "Deep experience in understanding consumer journeys and translating behavioural insight into actionable experience and growth strategies.",
+    expertise: [
+      "Consumer journeys",
+      "Experience design",
+      "Insight-led strategy",
+    ],
+    linkedin: "https://www.linkedin.com/in/jananikandaswamy/",
+    image: jananiImage,
+  },
+  {
+    name: "Sushmita Balasubramaniam",
+    role: "Partner – Brand Strategy & Communication",
+    bio: "Brings expertise in shaping brand narratives and communication strategies that connect with consumers and drive differentiation.",
+    expertise: [
+      "Brand strategy",
+      "Communication planning",
+      "Positioning",
+    ],
+    linkedin: "https://www.linkedin.com/in/sushmita-balasubramaniam-b419243/",
+    image: sushmitaImage,
+  },
+  {
+    name: "Krishnarao Buddha",
+    role: "Partner – Business Strategy & Commercial Excellence",
+    bio: "Extensive experience in business leadership and commercial strategy, driving growth, scale, and organisational performance.",
+    expertise: [
+      "Business strategy",
+      "Commercial excellence",
+      "Growth delivery",
+    ],
+    linkedin: "https://www.linkedin.com/in/bkrishnarao/",
+    image: krishnaraoImage,
   },
 ];
 
@@ -839,12 +930,14 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {[
               { name: "Decrypt", logo: "/partners/decrypt.png", url: "https://decryptint.com/", logoClass: "max-h-16" },
-              { name: "Purple Audacity", logo: "/partners/purple-audacity.png", url: "https://www.purpleaudacity.com/", logoClass: "max-h-12" },
-              { name: "Eval360", logo: "/partners/eval360.png", url: "https://eval360r.com/", logoClass: "max-h-12" },
-              { name: "The Alchemic", logo: "/partners/capsule.webp", url: "https://thealchemic.com/", logoClass: "max-h-8" },
+              { name: "Purple Audacity", logo: "/partners/purple-audacity.png", url: "https://www.purpleaudacity.com/", logoClass: "max-h-16" },
+              { name: "Eval360", logo: "/partners/eval360.png", url: "https://eval360r.com/", logoClass: "max-h-16" },
+              { name: "The Alchemic", logo: "/partners/capsule.webp", url: "https://thealchemic.com/", logoClass: "max-h-7" },
+              { name: "Aisles & Shelves", logo: "/partners/aisles-shelves.jpeg", url: "", logoClass: "max-h-12" },
+              { name: "Crisp", logo: "/partners/crisp.png", url: "", logoClass: "max-h-12" },
             ].map((partner, i) => (
               <a
                 key={i}
@@ -854,16 +947,13 @@ export default function Home() {
                 className="bg-background border border-border p-6 flex flex-col items-center justify-center gap-3 hover:border-primary/30 active:border-primary/30 transition-all hover:shadow-lg group relative overflow-hidden block"
               >
                 <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-                <div className="h-12 flex items-center justify-center">
+                <div className="h-16 flex items-center justify-center">
                   <img
                     src={partner.logo}
                     alt={partner.name}
                     className={`${partner.logoClass} max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300`}
                   />
                 </div>
-                <span className="text-[10px] font-medium tracking-wider uppercase text-muted-foreground group-hover:text-primary transition-colors text-center">
-                  {partner.name}
-                </span>
               </a>
             ))}
           </div>
@@ -934,6 +1024,8 @@ export default function Home() {
               "Vivek Gupta", "Nilakshi Sengupta", "Sanjay Pal", "Sharmila Das", "Vikram Jain",
               "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Pankaj Jha", "Ruchika Aggarwal",
               "Venkatnath Kukillaya", "Mini Pinto Sinha", "Bipradeep Chakraborty", "Suparna M", "Swati Kulkarni",
+              "Abhishek Rane", "Ritesh Ghosal", "Karthik Kankanhalli", "Arnab Bhattacharya", "Janani Kandaswamy",
+              "Sushmita Balasubramaniam", "Krishnarao Buddha",
             ]
               .map((name) => leaders.find((l) => l.name === name)!)
               .map((leader, index) => (

@@ -16,6 +16,13 @@ import ruchikaImage from "@/assets/ruchika.jpeg";
 import swatiImage from "@/assets/swati-kulkarni.jpeg";
 import venkatnathImage from "@/assets/venkatnath.jpeg";
 import suparnaImage from "@/assets/suparna.jpeg";
+import abhishekRaneImage from "@/assets/abhishek-rane.jpeg";
+import riteshGhosalImage from "@/assets/ritesh-ghosal.jpeg";
+import karthikImage from "@/assets/karthik-kankanhalli.jpeg";
+import arnabImage from "@/assets/arnab-bhattacharya.jpeg";
+import jananiImage from "@/assets/janani-kandaswamy.jpeg";
+import sushmitaImage from "@/assets/sushmita-balasubramaniam.jpeg";
+import krishnaraoImage from "@/assets/krishnarao-buddha.png";
 
 interface Leader {
   name: string;
@@ -211,6 +218,90 @@ export default function Leadership() {
       linkedin: "https://www.linkedin.com/in/swati-kulkarni-bb07a020/",
       image: swatiImage,
     },
+    {
+      name: "Abhishek Rane",
+      role: "Partner – Financial Services & Market Execution",
+      bio: "Brings experience in banking and financial services, with a focus on operational execution and customer-led delivery in regulated environments.",
+      expertise: [
+        "Financial services",
+        "Execution management",
+        "Process alignment",
+      ],
+      linkedin: "https://www.linkedin.com/in/abhishek-rane-6b007a1/",
+      image: abhishekRaneImage,
+    },
+    {
+      name: "Ritesh Ghosal",
+      role: "Partner – Brand Transformation & Market Leadership",
+      bio: "Brings over two decades of leadership across FMCG, telecom, and retail, building iconic brands and driving large-scale demand generation and customer strategy.",
+      expertise: [
+        "Brand transformation",
+        "Consumer strategy",
+        "Market leadership",
+      ],
+      linkedin: "https://www.linkedin.com/in/ritesh-ghosal/",
+      image: riteshGhosalImage,
+    },
+    {
+      name: "Karthik Kankanhalli",
+      role: "Partner – Technology Strategy & Digital Transformation",
+      bio: "Focuses on aligning technology, platforms, and data ecosystems with business strategy to enable scalable and future-ready transformation.",
+      expertise: [
+        "Digital strategy",
+        "Platform integration",
+        "Technology-led growth",
+      ],
+      linkedin: "https://www.linkedin.com/in/k%C4%81rthik/",
+      image: karthikImage,
+    },
+    {
+      name: "Arnab Bhattacharya",
+      role: "Partner – Analytics, Insights & Business Strategy",
+      bio: "Brings strong expertise in leveraging analytics and structured insight to inform strategic decisions across complex business environments.",
+      expertise: [
+        "Advanced analytics",
+        "Insight synthesis",
+        "Strategy alignment",
+      ],
+      linkedin: "https://www.linkedin.com/in/arnab-bhattacharya-18a6747/",
+      image: arnabImage,
+    },
+    {
+      name: "Janani Kandaswamy",
+      role: "Partner – Consumer Insight & Experience Strategy",
+      bio: "Deep experience in understanding consumer journeys and translating behavioural insight into actionable experience and growth strategies.",
+      expertise: [
+        "Consumer journeys",
+        "Experience design",
+        "Insight-led strategy",
+      ],
+      linkedin: "https://www.linkedin.com/in/jananikandaswamy/",
+      image: jananiImage,
+    },
+    {
+      name: "Sushmita Balasubramaniam",
+      role: "Partner – Brand Strategy & Communication",
+      bio: "Brings expertise in shaping brand narratives and communication strategies that connect with consumers and drive differentiation.",
+      expertise: [
+        "Brand strategy",
+        "Communication planning",
+        "Positioning",
+      ],
+      linkedin: "https://www.linkedin.com/in/sushmita-balasubramaniam-b419243/",
+      image: sushmitaImage,
+    },
+    {
+      name: "Krishnarao Buddha",
+      role: "Partner – Business Strategy & Commercial Excellence",
+      bio: "Extensive experience in business leadership and commercial strategy, driving growth, scale, and organisational performance.",
+      expertise: [
+        "Business strategy",
+        "Commercial excellence",
+        "Growth delivery",
+      ],
+      linkedin: "https://www.linkedin.com/in/bkrishnarao/",
+      image: krishnaraoImage,
+    },
   ];
 
   return (
@@ -267,6 +358,10 @@ export default function Leadership() {
               "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Pankaj Jha", "Ruchika Aggarwal",
               // Row 3 — M, F, M, F, F
               "Venkatnath Kukillaya", "Mini Pinto Sinha", "Bipradeep Chakraborty", "Suparna M", "Swati Kulkarni",
+              // Row 4 — M, M, M, M, F
+              "Abhishek Rane", "Ritesh Ghosal", "Karthik Kankanhalli", "Arnab Bhattacharya", "Janani Kandaswamy",
+              // Row 5 — F, M
+              "Sushmita Balasubramaniam", "Krishnarao Buddha",
             ]
               .map((name) => leaders.find((l) => l.name === name)!)
               .map((leader, index) => (

@@ -13,19 +13,31 @@ const partners = [
     name: "Purple Audacity",
     logo: "/partners/purple-audacity.png",
     url: "https://www.purpleaudacity.com/",
-    logoClass: "max-h-16",
+    logoClass: "max-h-20",
   },
   {
     name: "Eval360",
     logo: "/partners/eval360.png",
     url: "https://eval360r.com/",
-    logoClass: "max-h-16",
+    logoClass: "max-h-20",
   },
   {
     name: "The Alchemic",
     logo: "/partners/capsule.webp",
     url: "https://thealchemic.com/",
-    logoClass: "max-h-10",
+    logoClass: "max-h-8",
+  },
+  {
+    name: "Aisles & Shelves",
+    logo: "/partners/aisles-shelves.jpeg",
+    url: "",
+    logoClass: "max-h-14",
+  },
+  {
+    name: "Crisp",
+    logo: "/partners/crisp.png",
+    url: "",
+    logoClass: "max-h-14",
   },
 ];
 
@@ -148,16 +160,13 @@ export default function Partners() {
                 className="group relative bg-background border border-border p-6 sm:p-8 flex flex-col items-center justify-center gap-4 hover:border-primary/30 active:border-primary/30 transition-all hover:shadow-lg"
               >
                 <div className="absolute top-0 left-0 w-full h-px bg-primary scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
-                <div className="h-16 flex items-center justify-center">
+                <div className="h-20 flex items-center justify-center">
                   <img
                     src={partner.logo}
                     alt={partner.name}
                     className={`${partner.logoClass} max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300`}
                   />
                 </div>
-                <span className="text-xs font-medium tracking-wider uppercase text-muted-foreground group-hover:text-primary transition-colors text-center">
-                  {partner.name}
-                </span>
               </motion.a>
             ))}
           </div>
