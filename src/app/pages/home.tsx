@@ -27,6 +27,8 @@ import arnabImage from "@/assets/arnab-bhattacharya.jpeg";
 import jananiImage from "@/assets/janani-kandaswamy.jpeg";
 import sushmitaImage from "@/assets/sushmita-balasubramaniam.jpeg";
 import krishnaraoImage from "@/assets/krishnarao-buddha.png";
+import ashutoshImage from "@/assets/ashutosh.jpeg";
+import seemaImage from "@/assets/seema.jpeg";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -401,6 +403,30 @@ const leaders: Leader[] = [
     ],
     linkedin: "https://www.linkedin.com/in/bkrishnarao/",
     image: krishnaraoImage,
+  },
+  {
+    name: "Ashutosh Sinha",
+    role: "Partner – Growth, Sales & Strategic Partnerships",
+    bio: "Brings over two decades of experience across enterprise technology and consulting, driving growth through client partnerships, market expansion, and strategic engagement.",
+    expertise: [
+      "Growth strategy",
+      "Enterprise sales",
+      "Strategic partnerships",
+    ],
+    linkedin: "https://www.linkedin.com/in/ashutosh-sinha-3285a3116",
+    image: ashutoshImage,
+  },
+  {
+    name: "Seema Kapur",
+    role: "Partner – Program Strategy, Governance & Transformation",
+    bio: "Experienced leader in program management and business operations, driving large-scale transformation, process excellence, and cross-functional alignment across global teams.",
+    expertise: [
+      "Program governance",
+      "Transformation delivery",
+      "Operational excellence",
+    ],
+    linkedin: "https://www.linkedin.com/in/seema-kapur-4642371",
+    image: seemaImage,
   },
 ];
 
@@ -1025,7 +1051,7 @@ export default function Home() {
               "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Pankaj Jha", "Ruchika Aggarwal",
               "Venkatnath Kukillaya", "Mini Pinto Sinha", "Bipradeep Chakraborty", "Suparna M", "Swati Kulkarni",
               "Abhishek Rane", "Ritesh Ghosal", "Karthik Kankanhalli", "Arnab Bhattacharya", "Janani Kandaswamy",
-              "Sushmita Balasubramaniam", "Krishnarao Buddha",
+              "Sushmita Balasubramaniam", "Krishnarao Buddha", "Ashutosh Sinha", "Seema Kapur",
             ]
               .map((name) => leaders.find((l) => l.name === name)!)
               .map((leader, index) => (
