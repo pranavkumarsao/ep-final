@@ -16,7 +16,7 @@ import ronitaImage from "figma:asset/c93f1b93c3de091194dbffdc6c47f527c3efc269.pn
 import bipradeepImage from "figma:asset/66f34e1ef888f51e4e93588ff206041ef921f6f8.png";
 import dipanyitaImage from "figma:asset/99398e657e579b93569ae21a3c80a85d0fa8bbcc.png";
 import miniPintoImage from "@/assets/mini-pinto.jpeg";
-import ruchikaImage from "@/assets/ruchika.jpeg";
+import silkyImage from "@/assets/silky-rout.jpeg";
 import swatiImage from "@/assets/swati-kulkarni.jpeg";
 import venkatnathImage from "@/assets/venkatnath.jpeg";
 import suparnaImage from "@/assets/suparna.jpeg";
@@ -273,16 +273,17 @@ const leaders: Leader[] = [
     image: dipanyitaImage,
   },
   {
-    name: "Ruchika Aggarwal",
-    role: "Partner – Strategic Consulting & Enablement",
-    bio: "Brings strong consulting and programme leadership experience, aligning strategic intent with execution across complex initiatives.",
+    name: "Silky Rout",
+    role: "Partner – Insights, Analytics & Digital Transformation",
+    bio: "Brings over two decades of experience in insights and analytics across global industries, with deep expertise in customer, market, and audience insights. A proven leader of large global teams, Silky drives AI-powered, 360° insights that translate into meaningful business impact.",
     expertise: [
-      "Strategic consulting",
-      "Programme enablement",
-      "Execution alignment across complex initiatives",
+      "Customer, market, and audience insights",
+      "Analytics, storytelling, and digital transformation",
+      "AI-powered, 360° insights for business impact",
+      "Leadership of large global teams",
     ],
-    linkedin: "https://www.linkedin.com/in/ruchikaaggarwal/",
-    image: ruchikaImage,
+    linkedin: "https://www.linkedin.com/in/silky-rout-90378b114/",
+    image: silkyImage,
   },
   {
     name: "Mini Pinto Sinha",
@@ -418,12 +419,12 @@ const leaders: Leader[] = [
   },
   {
     name: "Seema Kapur",
-    role: "Partner – Program Strategy, Governance & Transformation",
-    bio: "Experienced leader in program management and business operations, driving large-scale transformation, process excellence, and cross-functional alignment across global teams.",
+    role: "Partner – B2B & Industrial Research, Strategy Consulting and Policy Initiatives",
+    bio: "Seema has core expertise in Strategic Insights and Action Initiatives for Market Entry, Strategic Positioning, Market Growth and Category Leadership, supported by a judicious blend of Primary and Secondary Research.",
     expertise: [
-      "Program governance",
-      "Transformation delivery",
-      "Operational excellence",
+      "Market Landscape (Potential/sizing, Environment Scanning, Competition, Customer, Channel Analysis) and Diagnostic studies",
+      "Market Entry/Market Growth Strategy and Business/Industry Risk Assessment",
+      "Economic Consulting/Research, Policy initiatives, Regulatory environment and Sectoral studies",
     ],
     linkedin: "https://www.linkedin.com/in/seema-kapur-4642371",
     image: seemaImage,
@@ -1048,7 +1049,7 @@ export default function Home() {
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2">
             {[
               "Vivek Gupta", "Nilakshi Sengupta", "Sanjay Pal", "Sharmila Das", "Vikram Jain",
-              "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Pankaj Jha", "Ruchika Aggarwal",
+              "Ronita Mitra", "Vinay Pant", "Dipanyita Ray", "Pankaj Jha", "Silky Rout",
               "Venkatnath Kukillaya", "Mini Pinto Sinha", "Bipradeep Chakraborty", "Suparna M", "Swati Kulkarni",
               "Abhishek Rane", "Ritesh Ghosal", "Karthik Kankanhalli", "Arnab Bhattacharya", "Janani Kandaswamy",
               "Sushmita Balasubramaniam", "Krishnarao Buddha", "Ashutosh Sinha", "Seema Kapur",

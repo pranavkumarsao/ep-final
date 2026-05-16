@@ -39,6 +39,12 @@ const partners = [
     url: "https://crispinsights.io/",
     logoClass: "max-h-14",
   },
+  {
+    name: "Yuktiva",
+    logo: "/partners/yuktiva.jpeg",
+    url: "https://yuktiva.com/",
+    logoClass: "max-h-16",
+  },
 ];
 
 const constellationWings = [
